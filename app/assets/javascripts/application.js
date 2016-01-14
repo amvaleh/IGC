@@ -11,11 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery_ujs
 //= require jquery-migrate-1.1.1
 //= require jquery.mobilemenu
 //= require jquery.cookie
 //= require jquery.easing.1.3
-//= require turbolinks
 //= require varnish.compiled.application.en
 //= require jquery.equalheights
 //= require ahoy
