@@ -1,0 +1,71 @@
+
+<div class="col-md-12 col-sm-12">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+     <h3><%= @news.title %>
+      <small>
+        created on:
+      </small>
+      <%= @news.created_at %>
+     </h3>
+    </div>
+    <div class="panel-body">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#home" data-toggle="tab">Project</a>
+        </li>
+        <li class=""><a href="#profile" data-toggle="tab">Title</a>
+        </li>
+        <li class=""><a href="#messages" data-toggle="tab">Pictures</a>
+        </li>
+        <li class=""><a href="#settings" data-toggle="tab">Caption</a>
+        </li>
+        <li class="pull-right ">
+
+          <%= link_to 'Edit', edit_news_path(@news),class: "btn  btn-sm btn-warning" %>
+
+        </li>
+        <li class="pull-right">
+          <%= link_to 'Back', news_index_path , class: "btn  btn-sm  btn-success" %>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane fade active in" id="home">
+          <% if @news.project_id.present?%>
+          <h4>Project:   <%= @news.project_id %>
+          </h4>
+          <p>
+            <%= @news.project.title  %>
+          </p>
+              <% else %>
+          <h4>No project defined!
+          <small>click edit to add a related project.</small></h4>
+          <% end %>
+        </div>
+        <div class="tab-pane fade" id="profile">
+          <h4>News title:</h4>
+          <p>
+            <%= @news.title%>
+          </p>
+
+        </div>
+        <div class="tab-pane fade" id="messages">
+          <h4>Pictures uploaded:</h4>
+          <% @news.avatars.each do |a| %>
+          <div class="col-md-3 well-sm">
+            <%= image_tag a.url , width: "100%" %>
+          </div>
+          <% end %>
+
+        </div>
+        <div class="tab-pane fade" id="settings">
+          <h4>News Caption:</h4>
+          <p>
+            <%= @news.caption %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

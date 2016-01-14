@@ -1,0 +1,77 @@
+<div class="col-md-12">
+  <div class="panel panel-default">
+
+    <div class="panel-heading">
+      <h3>
+        complete the form
+      </h3>
+      <%= link_to 'Back', projects_path , class: "btn btn-warning pull-right"%>
+
+    </div>
+
+    <div class="panel-body">
+
+      <%= form_for(@project) do |f| %>
+          <% if @project.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+                <ul>
+                  <% @project.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+
+          <div class="field">
+            <%= f.label :title %><br>
+            <%= f.text_area :title ,:class=>"form-control" %>
+          </div>
+          <div class="field">
+            <%= f.label :client_name %><br>
+            <%= f.text_field :client_name,:class=>"form-control" %>
+          </div>
+          <div class="field">
+            <%= f.label :start_date %><br>
+            <%#= f.date_select :start_date ,:class=>"form-control" , :html => {data_provide: 'datepicker'}%>
+            <input name="project[start_date]" type="text" data-provide='datepicker' class="form-control"  placeholder="click to choose">
+          </div>
+          <div class="field">
+            <%= f.label :contract_type %><br>
+            <%= f.text_field :contract_type ,:class=>"form-control" %>
+          </div>
+          <div class="field">
+            <%= f.label :location %><br>
+            <%= f.text_field :location ,:class=>"form-control" %>
+          </div>
+          <div class="field">
+            <%= f.label :duration %><br>
+            <%= f.text_field :duration ,:class=>"form-control" %>
+          </div>
+          <div class="field">
+            <%= f.label :design_capacity %><br>
+            <%= f.text_area :design_capacity ,:class=>"form-control" %>
+          </div>
+          <div class="field">
+            <%= f.label :construction_man_hour %><br>
+            <%= f.text_field :construction_man_hour ,:class=>"form-control" %>
+          </div>
+          <div class="field">
+            <%= f.label :avatars %><br>
+            <%= f.file_field :avatars, multiple: true ,:class=>"form-control" %>
+          </div>
+          <div class="actions">
+            <%= f.submit "Submit" , :class => "btn btn-default pull-right" %>
+            <%= link_to 'Back', projects_path , class: "btn btn-warning"%>
+
+          </div>
+      <% end %>
+
+    </div>
+  </div>
+
+
+
+</div>
+

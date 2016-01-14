@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Webigc</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<body>
+
+<div class="global">
+
+<!--header-->
+<%= render 'shared/header' %>
+
+  <%= yield %>
+
+</div>
+<!--footer-->
+<%= render 'shared/footer' %>
+<!--<script src="js/bootstrap.js"></script>-->
+<!--<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">-->
+<script>
+    $('.search a').hover(function(){
+        $(this).stop().animate({opacity:0.5},350, "easeOutSine");		 
+            }, function(){
+        $(this).stop().animate({opacity:1},350, "easeOutSine");						 
+    })
+    $('.companyBox ul li a').hover(function(){
+        $(this).stop().animate({opacity:0.5},350, "easeOutSine");		 
+            }, function(){
+        $(this).stop().animate({opacity:1},350, "easeOutSine");						 
+    })
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7078796-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<a href="#" id="toTop" style="right: 50%; margin-right: -44px; display: block;">
+  <span id="toTopHover"></span>
+</a>
+</body>
+
+
+</body>
+</html>

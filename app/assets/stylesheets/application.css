@@ -1,0 +1,83 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ * CURRENT INCLUDED CSS ARE OK
+ *
+ *= require bootstrap
+ *= require bootstrap_main
+ *= require camera
+ *= require docs
+ *= require responsive
+ *= require style
+*= require owl.carousel
+*= require owl.theme
+*= require font-awesome
+ *= require_self
+ */
+
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PT Sans'), local('PTSans-Regular'), url(http://fonts.gstatic.com/s/ptsans/v8/ATKpv8nLYAKUYexo8iqqrg.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('PT Sans Bold'), local('PTSans-Bold'), url(http://fonts.gstatic.com/s/ptsans/v8/0XxGQsSc1g4rdRdjJKZrNPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+}
+
+
+.section_image{
+    width: 100% !important;
+    margin-top: 0px; position: absolute; margin-left: 0px; width: 1302px;
+}
+
+.services_image{
+    width: 833px;
+    height: 347px;
+    visibility: visible;
+    height: 347px;
+    margin-left: 0px;
+    margin-top: 0px;
+    position: absolute;
+    width: 833px;
+}
+
+#owl-demo .item{
+    margin: 3px;
+}
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#owl-project.item{
+    margin: 0px;
+}
+#owl-project .item img{
+    display: block;
+    width: 100%;
+    /*height: auto;*/
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+
+#owl-services .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,103 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <article class="span12">
+        <div class="searchBox">
+          <div>
+            <ul>
+              <li><% if I18n.locale == I18n.default_locale %>
+                    <%= link_to "Arabic", :locale=>'ar'%>
+                <% else %>
+                    <%= link_to "English", :locale=>'en'%>
+                <%end%>
+              </li>
+              <li>
+                <%= link_to main_our_company_path do %>
+                    <%= t("header.member_area") %>
+                <% end %>
+              </li>
+            </ul>
+            <form id="search" class="search" action="search.php" method="GET" accept-charset="utf-8">
+              <input type="text" onfocus="if(this.value =='' ) this.value=''" onblur="if(this.value=='') this.value=''" value="" name="s">
+              <a href="#" onclick="document.getElementById('search').submit()">
+              <%= image_tag "magnify.png" %>
+              </a>
+            </form>
+          </div>
+        </div>
+        <div class="logoBox clearfix">
+          <h1 class="brand">
+            <%= link_to main_home_path do %>
+                <%= image_tag "logonewblue.png" %>
+            <% end %>
+          </h1>
+          <div class="navbar navbar_ clearfix">
+            <div class="navbar-inner">
+              <div class="clearfix">
+                <div class="nav-collapse nav-collapse_ collapse">
+                  <ul class="nav sf-menu clearfix sf-js-enabled">
+                    <li class="active">
+                      <%= link_to main_our_company_path do  %>
+                          <%= t("header.out_compnay") %>
+                      <% end %>
+                    </li>
+                    <li class="sub-menu">
+                      <a href="index-1.html" class="sf-with-ul">
+                        Products & Services
+                        <span></span><b class="sf-sub-indicator"></b></a>
+                      <ul class="submenu sub-menu" style="display: none;">
+
+                        <li class="">
+                          <a href="#" class="sf-with-ul">
+                            Oil Platform Construction
+                            <span></span><b class="sf-sub-indicator"></b></a>
+                          <ul class="submenu-1 sub-menu" style="display: none;">
+                            <li><a href="#">Gheshm</a></li>
+                            <li><a href="#">South Pars</a></li>
+                            <!--<li><a href="#">Mauris accum</a></li>-->
+                          </ul>
+                        </li>
+                        <li><a href="#">
+                          Civil Construction Equipment
+                        </a></li>
+                        <li><a href="#">
+                          Transmission Line
+                        </a></li>
+                        <li><a href="#">
+                          Refinery Construction
+                        </a></li>
+
+                      </ul>
+                    </li>
+                    <li class="sub-menu">
+                      <%= link_to main_gallery_path, :class => "sf-with-ul" do %>
+                          <%= t("header.gallery")%>
+                      <% end %>
+                      <span></span><b class="sf-sub-indicator"></b>
+
+                    </li>
+                    <li>
+                      <%= link_to main_stack_holders_path do %>
+                          <%= t("header.stackholders") %>
+                      <% end %>
+                    </li>
+                    <li>
+                      <%= link_to main_news_path do  %>
+                          <%= t("header.news") %>
+                      <% end %>
+                    </li>
+                    <li>
+                      <%= link_to main_contact_us_path do %>
+                          <%= t("header.contact_us") %>
+                      <% end %>
+                    </li>
+                  </ul><select class="select-menu" style="display: inline-block;"><option value="#">Navigate to...</option><option value="http://livedemo00.template-help.com/wt_46513/index.html">About us</option><option value="http://livedemo00.template-help.com/wt_46513/index-1.html">Our Industry</option><option value="http://livedemo00.template-help.com/wt_46513/#">––Vestibulum iaculis</option><option value="http://livedemo00.template-help.com/wt_46513/#">––Fusce euismod conuat</option><option value="http://livedemo00.template-help.com/wt_46513/#">–––Pellentesque sed</option><option value="http://livedemo00.template-help.com/wt_46513/#">–––Aliquam congue ferm</option><option value="http://livedemo00.template-help.com/wt_46513/#">–––Mauris accum</option><option value="http://livedemo00.template-help.com/wt_46513/#">––Pellentesque</option><option value="http://livedemo00.template-help.com/wt_46513/index-2.html">Exploration &amp; Production</option><option value="http://livedemo00.template-help.com/wt_46513/index-3.html">Contacts</option><option value="http://livedemo00.template-help.com/wt_46513/index-4.html">Blog</option></select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</header>

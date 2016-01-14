@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyText
+  client_name: MyString
+  start_date: 2015-12-27
+  contract_type: MyString
+  location: MyString
+  duration: 
+  design_capacity: MyText
+  construction_man_hour: MyString
+  avatars: MyText
+
+two:
+  title: MyText
+  client_name: MyString
+  start_date: 2015-12-27
+  contract_type: MyString
+  location: MyString
+  duration: 
+  design_capacity: MyText
+  construction_man_hour: MyString
+  avatars: MyText

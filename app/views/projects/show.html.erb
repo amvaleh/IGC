@@ -1,0 +1,60 @@
+<div class="col-md-12 col-sm-12">
+
+  <div class="row well">
+    <%= link_to 'Edit', edit_project_path(@project),class: "btn  btn btn-warning pull-right" %>
+
+    <p>
+      <strong>Title:</strong>
+      <%= @project.title %>
+    </p>
+
+    <p>
+      <strong>Client name:</strong>
+      <%= @project.client_name %>
+    </p>
+
+    <p>
+      <strong>Start date:</strong>
+      <%= @project.start_date %>
+    </p>
+
+    <p>
+      <strong>Contract type:</strong>
+      <%= @project.contract_type %>
+    </p>
+
+    <p>
+      <strong>Location:</strong>
+      <%= @project.location %>
+    </p>
+
+    <p>
+      <strong>Duration:(month)</strong>
+      <%= @project.duration %>
+    </p>
+
+    <p>
+      <strong>Design capacity:</strong>
+      <%= @project.design_capacity %>
+    </p>
+
+    <p>
+      <strong>Construction man hour:</strong>
+      <%= @project.construction_man_hour %>
+    </p>
+
+      <strong>Avatars:</strong>
+      <div class="row">
+      <% @project.avatars.each do |a| %>
+      <div class="col-md-3 well-sm">
+          <%= image_tag a.url , width: "100%" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+  <%= link_to 'Edit', edit_project_path(@project),class: "btn  btn btn-warning pull-right" %>
+  <%= link_to 'Back', projects_path  , class: "btn  btn  btn-success pull-left" %>
+</div>
+
+
