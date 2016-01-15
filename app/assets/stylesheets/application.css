@@ -18,11 +18,12 @@
  *= require docs
  *= require responsive
  *= require style
-*= require owl.carousel
-*= require owl.theme
-*= require font-awesome
+ *= require owl.carousel
+ *= require owl.theme
+ *= require font-awesome
  *= require_self
  */
+
 
 @font-face {
     font-family: 'PT Sans';

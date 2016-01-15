@@ -1,12 +1,12 @@
-/*@import url(//fonts.googleapis.com/css?family=Open+Sans:300);*/
+@import url(//fonts.googleapis.com/css?family=Open+Sans:300);
 
-/*@import url(//fonts.googleapis.com/css?family=Open+Sans:400);*/
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400);
 
-/*@import url(//fonts.googleapis.com/css?family=Open+Sans:600);*/
+@import url(//fonts.googleapis.com/css?family=Open+Sans:600);
 
-/*@import url(//fonts.googleapis.com/css?family=Open+Sans:700);*/
+@import url(//fonts.googleapis.com/css?family=Open+Sans:700);
 
-/*@import url(//fonts.googleapis.com/css?family=Roboto);*/
+@import url(//fonts.googleapis.com/css?family=Roboto);
 /*------ template stylization ------*/
 body {
   background: #333333;
@@ -36,7 +36,7 @@ h1.brand {
 }
 h1.brand a {
   display: inline-block;
-}Nm
+}
 h2 {
   color: #333;
   font: bold 60px/60px 'Open Sans', Open Sans, Arial, Helvetica, sans-serif;
