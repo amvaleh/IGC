@@ -212,7 +212,7 @@
                   <div class="box_inner">
                     <div class="thumbnail">
                       <figure>
-                        <div id="owl-project">
+                        <div id="owl-project" name="project" class="proj">
                           <% x.avatars.each do |a| %>
                               <div class="item">
                                 <%= image_tag a.url %>
@@ -257,7 +257,7 @@
                           <!--<% end %>-->
                       <!--</figure>-->
                       <figure class="text-center">
-                        <div id="owl-project">
+                        <div id="owl-project" class="news">
                           <% if x.avatars.present? %>
                               <% x.avatars.each do |a| %>
                                   <div class="item">
@@ -336,8 +336,7 @@
             singleItem:true
         });
 
-
-        $("#owl-project").owlCarousel({
+        $(".proj").owlCarousel({
             autoPlay : 3000,
             stopOnHover : true,
             navigation:false,
@@ -347,6 +346,19 @@
             autoHeight : false,
             transitionStyle:"fade"
         });
+
+        $(".news").owlCarousel({
+            autoPlay : 3000,
+            stopOnHover : true,
+            navigation:false,
+            paginationSpeed : 1000,
+            goToFirstSpeed : 2000,
+            singleItem : true,
+            autoHeight : false,
+            transitionStyle:"fade"
+        });
+
+
         $("#owl-services").owlCarousel({
             navigation : true, // Show next and prev buttons
             slideSpeed : 300,
@@ -363,6 +375,8 @@
 //            itemsDesktopSmall : [979,3]
 
         });
+
+
 
     });
 </script>
