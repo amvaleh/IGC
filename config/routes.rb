@@ -1,17 +1,33 @@
 Rails.application.routes.draw do
 
+  devise_for :admins
   root 'main#home'
 
   get 'admin' => 'admin#dashboard'
   get 'admin/dashboard'
   get 'admin/news_index'
-  resources :projects
-  resources :news
+
+  resources :projects do
+    collection do
+      get :appindex
+    end
+    member do
+      get :appshow
+    end
+  end
+
+  resources :news do
+    collection do
+      get :appindex
+    end
+    member do
+      get :appshow
+    end
+  end
 
   scope "(:locale)", :locale => /en|ar/ do
 
     get 'main/home'
-
     get 'main/our_company'
     get 'main/gallery'
     get 'main/contact_us'

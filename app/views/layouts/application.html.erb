@@ -15,6 +15,22 @@
 <!--header-->
 <%= render 'shared/header' %>
 
+  <% if notice %>
+      <div class="alert alert-success">
+
+        <strong>Well Done!</strong>
+        <%= notice %>
+      </div>
+  <% end %>
+
+  <% if alert %>
+      <div class="alert alert-success">
+
+        <strong>Oh snap!</strong>
+        <%= alert %>
+      </div>
+  <% end %>
+
   <%= yield %>
 
 </div>

@@ -1,8 +1,20 @@
 class NewsController < ApplicationController
   
-  layout 'admin'
+  layout 'admin' , :except => [:appshow,:appindex]
+  # layout 'application' , :only => [:appshow,:appindex]
 
-  before_action :set_news, only: [:show, :edit, :update, :destroy]
+  before_action :set_news, only: [:show, :edit, :update, :destroy,:appshow]
+
+  #  app show
+
+  def appshow
+
+  end
+  # app index
+
+  def appindex
+    @news = News.all
+  end
 
   # GET /news
   # GET /news.json

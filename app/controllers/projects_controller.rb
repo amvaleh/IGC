@@ -1,7 +1,21 @@
 class ProjectsController < ApplicationController
-  layout 'admin'
 
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  layout 'admin' ,  :except => [:appshow,:appindex]
+  # layout 'application' , :only => [:appshow,:appindex]
+
+  before_action :set_project, only: [:show, :edit, :update, :destroy,:appshow]
+
+  #  app show
+
+  def appshow
+
+  end
+  # app index
+
+  def appindex
+    @projects = Project.all
+  end
+
 
   # GET /projects
   # GET /projects.json

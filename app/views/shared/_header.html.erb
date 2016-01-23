@@ -6,47 +6,51 @@
           <div>
             <ul>
               <li><% if I18n.locale == I18n.default_locale %>
-                    <%= link_to "Arabic", :locale=>'ar'%>
+                    <%= link_to "Ar", :locale=>'ar'%><small class="text-muted">| En</small>
                 <% else %>
-                    <%= link_to "English", :locale=>'en'%>
+                    <%= link_to "En", :locale=>'en'%><small class="text-muted">| Ar</small>
                 <%end%>
               </li>
-              <li>
-                <%= link_to admin_dashboard_path do %>
-                    <%= t("header.member_area") %>
-                <% end %>
-              </li>
+              <!--<li>-->
+                <!--<%= link_to admin_dashboard_path do %>-->
+                    <!--<%= t("header.member_area") %>-->
+                <!--<% end %>-->
+              <!--</li>-->
             </ul>
             <form id="search" class="search" action="search.php" method="GET" accept-charset="utf-8">
               <input type="text" onfocus="if(this.value =='' ) this.value=''" onblur="if(this.value=='') this.value=''" value="" name="s">
               <a href="#" onclick="document.getElementById('search').submit()">
-              <%= image_tag "magnify.png" %>
+              <%= image_tag "magnify.png"%>
               </a>
             </form>
           </div>
         </div>
         <div class="logoBox clearfix">
-          <h1 class="brand">
+          <h1 class="brand" style="text-align: center">
+
             <%= link_to main_home_path do %>
-                <%= image_tag "logonewblue.png" %>
-            <% end %>
+                <%= image_tag "logonewblue.jpg" , :width => "100px"  %>
+                  <br>
+                <span style="font-size: 12px; color:rgb(12, 99, 231) ">
+                 <%= t("header.igc_o") %>
+                </span>
+          <% end %>
           </h1>
           <div class="navbar navbar_ clearfix">
             <div class="navbar-inner">
               <div class="clearfix">
                 <div class="nav-collapse nav-collapse_ collapse">
                   <ul class="nav sf-menu clearfix sf-js-enabled">
-                    <li class="active">
+                    <li class="">
                       <%= link_to main_our_company_path do  %>
                           <%= t("header.out_compnay") %>
                       <% end %>
                     </li>
                     <li class="sub-menu">
-                      <a href="index-1.html" class="sf-with-ul">
+                      <a href="index-1.html" class="">
                         Products & Services
                         <span></span><b class="sf-sub-indicator"></b></a>
                       <ul class="submenu sub-menu" style="display: none;">
-
                         <li class="">
                           <a href="#" class="sf-with-ul">
                             Oil Platform Construction
