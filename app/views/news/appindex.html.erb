@@ -14,7 +14,11 @@
               <div class="thumb-pad5">
                 <div class="thumbnail">
                   <figure>
-                    <%= image_tag news.avatars.first.url(:medium) %>
+                    <% if news.avatars.first.present? %>
+                        <%= image_tag news.avatars.first.url(:medium) %>
+                    <% else %>
+                        <%= image_tag "news.png" , :width => "20%"  %>
+                    <% end %>
                   </figure>
                   <div class="caption">
                     <time datetime="2013-01-01">
@@ -26,8 +30,8 @@
                     </a>
                     <% if news.project_id.present?%>
                         <%= link_to appshow_project_path(news.project_id), :class => "pull-right" do %>
-                                <i class="icon-bookmark"></i>
-                              <%= news.project.title %>
+                            <i class="icon-bookmark"></i>
+                            <%= news.project.title %>
                         <% end %>
                     <% end %>
                     <p>
