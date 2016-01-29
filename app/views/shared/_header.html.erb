@@ -1,4 +1,4 @@
-<header>
+<header class="indent">
   <div class="container">
     <div class="row">
       <article class="span12">
@@ -31,9 +31,9 @@
             <%= link_to main_home_path do %>
                 <%= image_tag "logonewblue.jpg" , :width => "100px"  %>
                   <br>
-                <span style="font-size: 12px; color:rgb(12, 99, 231) ">
-                 <%= t("header.igc_o") %>
-                </span>
+                <!--<span style="font-size: 12px; color:rgb(12, 99, 231) ">-->
+                 <!--<%= t("header.igc_o") %>-->
+                <!--</span>-->
           <% end %>
           </h1>
           <div class="navbar navbar_ clearfix">
@@ -41,52 +41,134 @@
               <div class="clearfix">
                 <div class="nav-collapse nav-collapse_ collapse">
                   <ul class="nav sf-menu clearfix sf-js-enabled">
+                    <li>
+                      <%= link_to root_path do %>
+                        <%= t("header.root") %>
+                          <% end %>
+                    </li>
                     <li class="">
                       <%= link_to main_our_company_path do  %>
-                          <%= t("header.out_compnay") %>
+                          <%= t("header.about_us") %>
                       <% end %>
                     </li>
+
                     <li class="sub-menu">
-                      <a href="index-1.html" class="">
-                        Products & Services
-                        <span></span><b class="sf-sub-indicator"></b></a>
+
+                      <a href="#" class="">
+                        <%= t("header.activities") %>
+                        <span></span>
+                        <b class="sf-sub-indicator"></b>
+                      </a>
                       <ul class="submenu sub-menu" style="display: none;">
                         <li class="">
                           <a href="#" class="sf-with-ul">
-                            Oil Platform Construction
+                            <%= t("header.sub_activities.onshore") %>
                             <span></span><b class="sf-sub-indicator"></b></a>
-                          <ul class="submenu-1 sub-menu" style="display: none;">
-                            <li><a href="#">Gheshm</a></li>
-                            <li><a href="#">South Pars</a></li>
-                            <!--<li><a href="#">Mauris accum</a></li>-->
-                          </ul>
+                          <!--<ul class="submenu-1 sub-menu" style="display: none;">-->
+                            <!--<li><a href="#">Gheshm</a></li>-->
+                            <!--<li><a href="#">South Pars</a></li>-->
+                            <!--&lt;!&ndash;<li><a href="#">Mauris accum</a></li>&ndash;&gt;-->
+                          <!--</ul>-->
+                        </li>
+                        <li>
+                          <a href="#">
+                          <%= t("header.sub_activities.offshore") %>
+                        </a>
                         </li>
                         <li><a href="#">
-                          Civil Construction Equipment
+                          <%= t("header.sub_activities.powerplant") %>
                         </a></li>
-                        <li><a href="#">
-                          Transmission Line
-                        </a></li>
-                        <li><a href="#">
-                          Refinery Construction
-                        </a></li>
-
                       </ul>
                     </li>
-                    <li class="sub-menu">
-                      <%= link_to main_gallery_path, :class => "sf-with-ul" do %>
-                          <%= t("header.gallery")%>
-                      <% end %>
-                      <span></span><b class="sf-sub-indicator"></b>
 
+                    <li class="sub-menu">
+
+                        <%= link_to appindex_projects_path do  %>
+                        <%= t("header.projects") %>
+                        <span></span>
+                        <b class="sf-sub-indicator"></b>
+                        <% end %>
+                      <ul class="submenu sub-menu" style="display: none;">
+                        <li>
+                          <a href="#">
+                            <%= t("header.sub_projects.ongoing") %>
+                          </a>
+                        </li>
+                        <li class="">
+                          <a href="#" class="sf-with-ul">
+                            <%= t("header.sub_projects.completed") %>
+                            <span></span><b class="sf-sub-indicator"></b></a>
+                          <ul class="submenu-1 sub-menu" style="display: none;">
+                          <li>
+                            <a href="#">
+                              <%= t("header.sub_projects.sub_completed.onshore") %>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <%= t("header.sub_projects.sub_completed.offshore") %>
+                            </a>
+                          </li>
+                            <li>
+                              <a href="#">
+                                <%= t("header.sub_projects.sub_completed.powerplant") %>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#">
+                                <%= t("header.sub_projects.sub_completed.abroad") %>
+                              </a>
+                            </li>
+                          <!--<li><a href="#">Mauris accum</a></li>-->
+                          </ul>
+                        </li>
+                      </ul>
                     </li>
-                    <li>
-                      <%= link_to main_stack_holders_path do %>
-                          <%= t("header.stackholders") %>
-                      <% end %>
+
+
+                    <li class="sub-menu">
+
+                      <a href="#" class="">
+                        <%= t("header.assets") %>
+                        <span></span>
+                        <b class="sf-sub-indicator"></b>
+                      </a>
+                      <ul class="submenu sub-menu" style="display: none;">
+                        <li>
+                          <a href="#">
+                            <%= t("header.sub_assets.offshore_yard") %>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <%= t("header.sub_assets.onshore_yard") %>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <%= t("header.sub_assets.warehouses") %>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <%= t("header.sub_assets.camps") %>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <%= t("header.sub_assets.contruction_equipment") %>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <%= t("header.sub_assets.offshore_facilities") %>
+                          </a>
+                        </li>
+                      </ul>
                     </li>
+
                     <li>
-                      <%= link_to main_news_path do  %>
+                      <%= link_to appindex_news_index_path do  %>
                           <%= t("header.news") %>
                       <% end %>
                     </li>
@@ -95,7 +177,21 @@
                           <%= t("header.contact_us") %>
                       <% end %>
                     </li>
-                  </ul><select class="select-menu" style="display: inline-block;"><option value="#">Navigate to...</option><option value="http://livedemo00.template-help.com/wt_46513/index.html">About us</option><option value="http://livedemo00.template-help.com/wt_46513/index-1.html">Our Industry</option><option value="http://livedemo00.template-help.com/wt_46513/#">––Vestibulum iaculis</option><option value="http://livedemo00.template-help.com/wt_46513/#">––Fusce euismod conuat</option><option value="http://livedemo00.template-help.com/wt_46513/#">–––Pellentesque sed</option><option value="http://livedemo00.template-help.com/wt_46513/#">–––Aliquam congue ferm</option><option value="http://livedemo00.template-help.com/wt_46513/#">–––Mauris accum</option><option value="http://livedemo00.template-help.com/wt_46513/#">––Pellentesque</option><option value="http://livedemo00.template-help.com/wt_46513/index-2.html">Exploration &amp; Production</option><option value="http://livedemo00.template-help.com/wt_46513/index-3.html">Contacts</option><option value="http://livedemo00.template-help.com/wt_46513/index-4.html">Blog</option></select>
+                  </ul>
+                  <select class="select-menu" style="display: inline-block;" onChange="window.location.href=this.value">
+                    <option value="#">Navigate to...</option>
+                    <option value="" >About us</option>
+                    <option value="http://livedemo00.template-help.com/wt_46513/index-1.html">Our Industry</option>
+                    <option value="http://livedemo00.template-help.com/wt_46513/#">––Vestibulum iaculis</option>
+                    <option value="http://livedemo00.template-help.com/wt_46513/#">––Fusce euismod conuat</option>
+                    <option value="http://livedemo00.template-help.com/wt_46513/#">–––Pellentesque sed</option>
+                    <option value="http://livedemo00.template-help.com/wt_46513/#">–––Aliquam congue ferm</option>
+                    <option value="http://livedemo00.template-help.com/wt_46513/#">–––Mauris accum</option>
+                    <option value="http://livedemo00.template-help.com/wt_46513/#">––Pellentesque</option>
+                    <option value="http://livedemo00.template-help.com/wt_46513/index-2.html">Exploration &amp; Production</option>
+                    <option value="<%= main_contact_us_path %>">Contacts</option>
+                    <option value="http://livedemo00.template-help.com/wt_46513/index-4.html">Blog</option>
+                  </select>
                 </div>
               </div>
             </div>

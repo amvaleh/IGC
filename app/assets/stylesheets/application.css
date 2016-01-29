@@ -13,7 +13,6 @@
  * CURRENT INCLUDED CSS ARE OK
  *
  *= require bootstrap
- *= require bootstrap_main
  *= require camera
  *= require docs
  *= require responsive
@@ -56,12 +55,19 @@
 }
 
 #owl-demo .item{
-    margin: 3px;
+    /*margin: 3px;*/
+    padding: 5px;
 }
 #owl-demo .item img{
+    /*display: block;*/
+    /*width: 100%;*/
+    /*height: auto;*/
     display: block;
     width: 100%;
     height: auto;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
 
 #owl-project.item{

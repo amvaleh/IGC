@@ -1,45 +1,27 @@
-<article class="span3 maxheight3 box1" style="height: 274px;">
+<article class="span3 maxheight3 box1" style="height: 167px;">
   <div class="box_inner">
-    <div class="thumb-pad1">
-      <div class="thumbnail" style="background: none !important;">
-        <!--<figure class="text-center">-->
-        <!--<% if x.avatars.present?  %>-->
-            <!--<%= image_tag x.avatars.first.url  %>-->
-            <!--<% else %>-->
-            <!--<%= image_tag "logo1.jpg" %>-->
-            <!--<% end %>-->
-        <!--</figure>-->
-        <figure class="text-center">
-          <div id="owl-project" class="news">
-            <% if x.avatars.present? %>
-                <% x.avatars.each do |a| %>
-                    <div class="item">
-                      <%= image_tag a.url %>
-                    </div>
-                <% end  %>
-            <% else %>
-                <%= image_tag "news.png" , :width => "20%" %>
-            <% end %>
-          </div>
-        </figure>
-        <div class="caption text-center">
-          <time datetime="2013-01-01">
-            <i class="icon icon-time"></i>
-            <%= x.created_at %>
-          </time> <br>
-          <!--<a href="#" class="lnk">-->
-          <%= link_to appshow_news_path(x) do %>
+  <div class="thumb-pad1">
+    <div class="thumbnail">
+      <figure>
+        <% if x.avatars.present? %>
+            <div>
+                    <%= image_tag x.avatars.first.url(:thumb) %>
+            </div>
+        <% else %>
+            <%= image_tag "news.png" , :width => "20%" %>
+        <% end %>
+      </figure>
+      <div class="caption">
+        <time datetime="2013-01-01">
+          <%= x.created_at %>
+        </time> <br>
+        <%= link_to appshow_news_path(x) do %>
             <%= truncate x.title.html_safe , length: 60  %>
-          <% end %>
-              <!--</a>-->
-          <p>
-            <%= x.caption %>
-          </p>
-          <!--<a href="#" class="btn btn-primary btn1">read more</a>-->
-          <%= link_to "READ MORE" , appshow_news_path(x) , :class => "btn btn-primary btn1"  %>
-          <br>
-        </div>
+        <% end %>
+        <!--<a href="#" class="lnk">Quisque nulla</a>-->
+        <p><%= x.caption %></p>
+        <%= link_to "read more" , appshow_news_path(x) , :class => "btn btn-primary btn1" %>
       </div>
     </div>
   </div>
-</article>
+</div></article>

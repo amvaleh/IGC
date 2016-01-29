@@ -4,26 +4,17 @@
     <!---->
 
     <div id="owl-demo">
-
       <div class="item">
-        <h1 style="position: fixed;
-                z-index: 100;
-                left: 30%;
-                top: 12%;
-                color: white;
-                font-size: 60px;
-                line-height: 95px;">
-          NATURAL RESOURCES          <br>
-
-          SERVE OF YOUR
-          NEEDS
-        </h1>
-        <%= image_tag "picture1.jpg" , width: "100%" %>
-
+        <%= image_tag "pic1.png" , width: "100%" %>
       </div>
-
       <div class="item">
-        <%= image_tag "picture2.jpg" , width: "100%" %>
+        <%= image_tag "pic2.png" , width: "100%" %>
+      </div>
+      <div class="item">
+        <%= image_tag "pic3.png" , width: "100%" %>
+      </div>
+      <div class="item">
+        <%= image_tag "pic4.png" , width: "100%" %>
       </div>
     </div>
   </article>
@@ -208,7 +199,7 @@
           </h3>
         </div>
         <div class="row">
-          <% Project.all.each do |x| %>
+          <% Project.all.first(4).each do |x| %>
               <%= render "projects/project" , :x => x %>
           <% end %>
         </div>
@@ -222,7 +213,7 @@
           <hr>
         </div>
         <div class="row">
-          <% News.all.first(4).each do |x| %>
+          <% News.all.first(8).each do |x| %>
               <%= render "news/news" , :x => x %>
           <% end %>
         </div>
@@ -266,13 +257,16 @@
     $(document).ready(function() {
 
         $("#owl-demo").owlCarousel({
-
-
-//            navigation : true, // Show next and prev buttons
-            autoPlay : 10000,
-            slideSpeed : 300,
+            autoPlay : 30000,
+            stopOnHover : true,
+            navigation:false,
             paginationSpeed : 1000,
-            singleItem:true
+            goToFirstSpeed : 2000,
+            singleItem : true,
+            autoHeight : true,
+            responsive: true,
+            transitionStyle:"fade"
+
         });
 
         $(".proj").owlCarousel({
@@ -312,10 +306,40 @@
             // itemsTablet: false,
             // itemsMobile : false
 //            itemsDesktopSmall : [979,3]
-
         });
-
-
-
     });
 </script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.search a').hover(function () {
+            $(this).stop().animate({opacity: 0.5}, 350, "easeOutSine");
+        }, function () {
+            $(this).stop().animate({opacity: 1}, 350, "easeOutSine");
+        })
+        $('.companyBox ul li a').hover(function () {
+            $(this).stop().animate({opacity: 0.5}, 350, "easeOutSine");
+        }, function () {
+            $(this).stop().animate({opacity: 1}, 350, "easeOutSine");
+        })
+    })
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-7078796-5']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    })
+</script>
+

@@ -6,7 +6,6 @@ class AdminController < ApplicationController
 
   end
 
-
 # NEWS section
 
   before_action :set_news, only: [:show, :edit, :update, :destroy]

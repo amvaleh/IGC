@@ -22,4 +22,6 @@
 //= require jquery.ui.totop
 //= require owl.carousel
 //= require superfish
-//= require bootstrap.min
+//= require strap
+//= require underscore
+//= require gmaps/google

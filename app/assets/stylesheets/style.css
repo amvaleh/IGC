@@ -950,7 +950,7 @@ header {
   /*border-top: 10px solid #fd6b32;*/
 }
 header.indent {
-  margin-bottom: 97px;
+  /*margin-bottom: 97px;*/
   -webkit-box-shadow: 0 6px 10px #bebebe;
   -moz-box-shadow: 0 6px 10px #bebebe;
   box-shadow: 0 6px 10px #bebebe;
@@ -1120,7 +1120,7 @@ header p > span {
   height: 6px;
   background: url(../img/menu-marker.png) no-repeat;
   width: 7px;
-  left: 60px;
+  left: 31px;
   top: 29px;
   position: absolute;
 }
@@ -1658,6 +1658,15 @@ header p > span {
   display: inline-block;
   width: 100%;
   line-height: 0;
+}
+.map script{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 500px ;
+    border: none;
+    line-height: 0;
 }
 .map iframe {
   -webkit-box-sizing: border-box;
@@ -2268,7 +2277,8 @@ footer .privacy br {
   h1.brand {
     text-align: center;
     width: 100%;
-    padding: 41px 0 28px 0 !important;
+    padding: 50px 0 28px 100px !important;
+      float: right;
   }
   .select-menu {
     margin-bottom: 14px;

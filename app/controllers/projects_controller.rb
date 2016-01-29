@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
   # app index
 
   def appindex
-    @projects = Project.all
+    @projects = Project.all.page(params[:page]).per(4)
   end
 
 

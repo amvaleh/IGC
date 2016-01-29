@@ -1,0 +1,93 @@
+<section class="map-box" style="margin-top: 90px">
+  <div class="container">
+    <div class="row">
+      <article class="span12">
+        <div class="holder">
+          <h2>contact info</h2>
+          <br>
+          <hr>
+        </div>
+        <figure class="map">
+          <script type="text/javascript" src="http://www.webestools.com/google_map_gen.js?lati=35.760510&long=51.440225&zoom=18&width=1200&height=400&mapType=normal&map_btn_normal=yes&map_btn_satelite=yes&map_btn_mixte=yes&map_small=yes&marqueur=yes&info_bulle=IGC"></script><br />
+          <a href="http://www.webestools.com/google-maps-code-generator-insert-map-on-website-javascript-free-google-map-script.html">Google Maps code Generator</a>
+        </figure>
+
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="row">
+    <article class="span4">
+      <div class="holder small">
+        <h2><%= t("contact_us.addresses") %></h2>
+        <br>
+        <hr>
+      </div>
+      <div class="info">
+        <h5><%= t("contact_us.address1") %></h5>
+        <p><span>
+          <%= t("header.igc_o") %>
+        </span><br>
+        <%= t("contact_us.address1_text") %>
+        </p>
+        <h5><%= t("contact_us.Telephones") %></h5>
+        <p><%= t("contact_us.tele1") %><br> <%= t("contact_us.tele2") %> </p>
+        <h5><%= t("contact_us.address2") %></h5>
+        <p><span>
+          <%= t("header.igc_o") %>
+        </span><br>
+        <%= t("contact_us.address2_text") %></p>
+      </div>
+    </article>
+    <article class="span8 form-box">
+      <div class="holder">
+        <h2><%= t("contact_us.feedback") %></h2>
+        <br>
+        <hr>
+      </div>
+      <form id="contact-form">
+        <div class="success" style="display: none;"> Contact form submitted! <strong>We will be in touch soon.</strong> </div>
+        <fieldset>
+          <div>
+            <div class="form-div-1">
+              <p>Name*</p>
+              <label class="name">
+                <input type="text" value="">
+                <br>
+                <span class="error" style="display: none;">*This is not a valid name.</span> <span class="empty" style="display: none;">*This field is required.</span> </label>
+            </div>
+            <div class="form-div-2">
+              <p>E-mail*</p>
+              <label class="email">
+                <input type="email" value="">
+                <br>
+                <span class="error" style="display: none;">*This is not a valid email address.</span> <span class="empty" style="display: none;">*This field is required.</span> </label>
+            </div>
+            <div class="form-div-3">
+              <p>Telephone</p>
+              <label class="phone notRequired">
+                <input type="tel" value="">
+                <br>
+                <span class="error" style="display: none;">*This is not a valid phone number.</span> <span class="empty" style="display: none;">*This field is required.</span> </label>
+            </div>
+          </div>
+          <div class="form-div-4">
+            <p>Message*</p>
+            <label class="message">
+              <textarea></textarea>
+              <br>
+              <span class="error" style="display: none;">*The message is too short.</span> <span class="empty" style="display: none;">*This field is required.</span>
+            </label>
+          </div>
+          <div class="btns">
+            <a href="#" data-type="submit" class="btn btn-primary btn1">Submit</a>
+            <p>*Required Fields</p>
+          </div>
+        </fieldset>
+      </form>
+    </article>
+  </div>
+</div>
+

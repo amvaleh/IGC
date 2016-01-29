@@ -13,7 +13,7 @@ class NewsController < ApplicationController
   # app index
 
   def appindex
-    @news = News.all
+    @news = News.all.page(params[:page]).per(2)
   end
 
   # GET /news
