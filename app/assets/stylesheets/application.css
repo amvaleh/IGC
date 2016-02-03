@@ -20,6 +20,10 @@
  *= require owl.carousel
  *= require owl.theme
  *= require font-awesome
+ *= require accordion-slider.min
+ *= require video-js.min
+ *= require jquery.fancybox
+ *= require examples
  *= require_self
  */
 
@@ -82,9 +86,11 @@
     border-radius: 3px;
 }
 
-
 #owl-services .item img{
     display: block;
     width: 100%;
     height: auto;
+}
+.text_blue{
+    color: #0dccd7;
 }

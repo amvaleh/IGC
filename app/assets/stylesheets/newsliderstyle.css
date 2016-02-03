@@ -1,0 +1,422 @@
+body {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	font-family: 'Open Sans', Arial;
+	color: #333;
+}
+
+.logo {
+	display: block;
+	width: 104px;
+	margin: 20px auto;
+}
+
+h1, h2 {
+	font-weight: 400;
+}
+
+.product-page .subheading {
+	max-width: 500px;
+	margin: 20px auto;
+	line-height: 1.7;
+}
+
+.product-page h1 {
+	font-weight: 300;
+	font-size: 50px;
+	text-align: center;
+	line-height: 1;
+}
+
+.product-page h2 {
+	font-size: 25px;
+	font-weight: 400;
+	text-align: center;
+	line-height: 1;
+}
+
+.product-page h3 {
+	font-weight: 400;
+}
+
+a {
+	color: #333;
+}
+
+img {
+	border: none;
+}
+
+.home section {
+	margin: 40px 20px 0;
+}
+
+.product-boxes {
+	overflow: hidden;
+	margin-left: -1%;
+}
+
+.product {
+	display: block;
+	float: left;
+	width: 18%;
+	text-align: center;
+	border-bottom: 2px solid #EEE;
+	border-radius: 10px;
+	margin: 1%;
+	padding: 1%;
+	background-color: #FAFAFA;
+	text-decoration: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.product-name {
+	font-size: 16px;
+	margin: 5px 0;
+}
+
+.product-type {
+	font-size: 14px;
+	margin: 5px 0;
+}
+
+.product-link {
+	font-size: 14px;
+	margin: 5px 0;
+}
+
+.github img {
+	opacity: 0.7;
+	padding: 8px;
+}
+
+.contact-links {
+	padding: 0;
+}
+
+.contact-links li {
+	display: inline;
+	margin-right: 20px;
+}
+
+.contact-links a {
+	padding-left: 20px;
+}
+
+.contact-links .email a {
+	background: url(../images/email-icon.png) no-repeat;
+}
+
+.contact-links .twitter a {
+	background: url(../images/twitter-icon.png) no-repeat;
+}
+
+.contact-links .github a {
+	background: url(../images/github-icon.png) no-repeat;
+}
+
+.contact-links .support a {
+	background: url(../images/support-icon.png) no-repeat;
+}
+
+@media (max-width: 700px) {
+	.product-boxes {
+		margin-left: -2%;
+	}
+
+	.product {
+		width: 46%;
+		margin: 2%;
+		padding: 2%;
+	}
+}
+
+@media (max-width: 510px) {
+	.product-boxes {
+		margin-left: -2%;
+	}
+
+	.product {
+		width: 98%;
+		margin: 2%;
+		padding: 2%;
+	}
+}
+
+header .link {
+	text-align: center;
+}
+
+.example {
+	margin: 20px 0 50px;
+}
+
+.example-switcher {
+	overflow: hidden;
+}
+
+.example-switcher div {
+	cursor: pointer;
+	display: block;
+	float: left;
+	width: 25%;
+	height: 50px;
+	border: 1px solid #FFF;
+	border-width: 0 1px;
+	background-color: #F4F4F4;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-moz-transition: height 0.5s;
+	-webkit-transition: height 0.5s;
+	transition: height 0.5s;
+}
+
+.grid-accordion-page .example-switcher div {
+	width: 33%;
+}
+
+@media (min-width: 800px) {
+	.example-switcher:hover div {
+		height: 170px;
+	}
+}
+
+.example-switcher p {
+	text-align: center;
+}
+
+.example-switcher ul {
+	font-size: 13px;
+	list-style: none;
+	padding-left: 20px;
+}
+
+.slider-pro-example-switcher {
+	overflow: hidden;
+}
+
+.slider-pro-example {
+	width: 20%;
+	cursor: pointer;
+	display: block;
+	float: left;
+	border: 1px solid #FFF;
+	border-width: 0 2px;
+	background-color: #F9F9F9;
+	text-align: center;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.slider-pro-example img {
+	padding: 20px 10px;
+	max-width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.example-description {
+	display: none;
+	width: 100%;
+	padding: 20px 30px;
+	background-color: #F9F9F9;
+	margin: 4px 2px;
+	color: #555;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.example-description p {
+	margin: 0 0 20px 0;
+}
+
+.example-description p:last-child {
+	margin-bottom: 0;
+}
+
+.hovered-example,
+.clicked-example {
+	display: block;
+}
+
+.slider-pro-example-switcher:hover .slider-pro-example:not(:hover) {
+	background-color: transparent;
+}
+
+.slider-pro-example-switcher:hover ~ .examples-description .example-description:not(.hovered-example) {
+	display: none;
+}
+
+.features {
+	margin-top: 80px;
+}
+
+.features h3 {
+	text-align: center;
+	font-weight: 400;
+	margin-top: 30px;
+	font-size: 22px
+}
+
+.features h4 {
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.features .feature {
+	display: inline-block;
+	vertical-align: top;
+	width: 33%;
+	padding: 0 10px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.features p {
+	font-size: 13px;
+}
+
+@media (max-width: 960px) {
+	.example {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+
+@media (max-width: 820px) {
+	.features .feature {
+		width: 49%;
+	}
+}
+
+@media (max-width: 530px) {
+	.features .feature {
+		width: 100%;
+	}
+}
+
+.like-it {
+	text-align: center;
+	margin-top: 80px;
+	padding: 30px;
+	background-color: #F7F7F7;
+}
+
+.like-it h3 {
+	font-size: 22px;
+	margin: 0 0 40px 0;
+}
+
+.like-it p {
+	font-size: 16px;
+	margin: 0 0 20px 0;
+}
+
+.purchase {
+	text-align: center;
+	margin-top: 80px;
+}
+
+.purchase p {
+	font-size: 16px;
+	display: inline-block;
+	margin: 0;
+	border: 1px solid #999;
+	font-weight: bold;
+}
+
+.purchase a {
+	display: inline-block;
+	padding: 13px;
+	margin: 13px;
+	text-decoration: none;
+}
+
+.purchase a:first-child {
+	border-right: 1px solid #999;
+	padding-right: 28px;
+	margin-right: 0;
+}
+
+.slider-pro-page .purchase {
+	margin-top: 50px;
+	padding: 30px;
+	background-color: #F7F7F7;
+}
+
+.slider-pro-page .purchase a {
+	border: none;
+	display: inline;
+	text-decoration: underline;
+}
+
+@media (max-width: 580px) {
+	.purchase p, 
+	.purchase a:first-child {
+		border: 0;
+	}
+}
+
+.share {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.fb-share-button > span {
+	vertical-align: initial !important;
+}
+
+.social-button {
+	margin: 0 10px !important;
+}
+
+.copyright {
+	text-align: center;
+	margin: 50px 0;
+}
+
+.video {
+	margin-top: 70px;
+}
+
+.video-note {
+	text-align: center;
+	font-size: 17px;
+}
+
+.video-content {
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+}
+
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.separator {
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(200,200,200,0), rgba(200,200,200,0.75), rgba(200,200,200,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(200,200,200,0), rgba(200,200,200,0.75), rgba(200,200,200,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(200,200,200,0), rgba(200,200,200,0.75), rgba(200,200,200,0)); 
+    background-image:      -o-linear-gradient(left, rgba(200,200,200,0), rgba(200,200,200,0.75), rgba(200,200,200,0));
+    margin: 60px 0;
+}

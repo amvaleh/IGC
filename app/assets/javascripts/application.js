@@ -25,3 +25,15 @@
 //= require strap
 //= require underscore
 //= require gmaps/google
+
+//= require main
+
+//= require video
+// bullshit require here
+//= require jquery.fancybox.pack
+//= require jquery.accordionSlider.min
+//= require examples
+
+
+
+

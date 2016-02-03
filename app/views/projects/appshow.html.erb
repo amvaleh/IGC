@@ -1,60 +1,187 @@
-<div class="col-md-12 col-sm-12">
+<div class="container" style="margin-top: 90px">
+  <div class="row">
+    <article class="span12 list6-box padTop">
+      <div class="holder">
+        <h2>
+          <%= @project.title %>
+        </h2>
+        <br>
+        <hr>
+      </div>
 
-  <div class="row well">
-    <%= link_to 'Edit', edit_project_path(@project),class: "btn  btn btn-warning pull-right" %>
+    </article>
+  </div>
+  <div class="row">
+    <section class="example">
+      <div id="example2" class="accordion-slider">
+        <div class="as-panels">
+          <% @project.avatars.each do |a| %>
 
-    <p>
-      <strong>Title:</strong>
-      <%= @project.title %>
-    </p>
+              <div class="as-panel">
 
-    <p>
-      <strong>Client name:</strong>
-      <%= @project.client_name %>
-    </p>
+                <%= image_tag a.url(:medium) , :class => "as-background" %>
+                <%= link_to a.url do %>
+                    <%= image_tag a.url() , :class => "as-background-opened" %>
+                <% end %>
+              </div>
 
-    <p>
-      <strong>Start date:</strong>
-      <%= @project.start_date %>
-    </p>
+          <% end %>
 
-    <p>
-      <strong>Contract type:</strong>
-      <%= @project.contract_type %>
-    </p>
+        </div>
+      </div>
+    </section>
 
-    <p>
-      <strong>Location:</strong>
-      <%= @project.location %>
-    </p>
+  </div>
 
-    <p>
-      <strong>Duration:(month)</strong>
-      <%= @project.duration %>
-    </p>
+  <div class="row">
+    <article class="banner-holder">
+      <div class="span2 thumb-pad-bann maxheight " style="height: 346px;"><div class="box_inner">
+        <figure>
+          <%= image_tag "contract.png", :width => "60%" %>
+        </figure>
+        <p>
+          <!--<small>contract type:</small> -->
+          <a> <%= @project.contract_type %> </a>
+        </p>
+      </div></div>
+      <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
+        <figure>
+          <%= image_tag "map.png", :width => "60%" %>
+        </figure>
+        <a href="#">
+          <%= @project.location %>
+        </a>
+      </div></div>
+      <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
+        <figure>
+          <%= image_tag "duration.png", :width => "60%" %>
+        </figure>
+        <p>
+          <!--<small>contract type:</small> -->
+          <a>            '<%= @project.duration %>' month
+          </a>
+        </p>
+      </div></div>
+      <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
+        <figure>
+          <%= image_tag "capacity.png", :width => "60%" %>
+        </figure>
+        <a href="#">
+          <%= @project.design_capacity %>
+        </a>
+      </div></div>
+      <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
+        <figure>
+          <%= image_tag "manhour.png", :width => "60%" %>
+        </figure>
+        <a href="#">
+          <%= @project.construction_man_hour %> man hour
+        </a>
+      </div></div>
+      <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
+        <figure>
+          <%= image_tag "date.png", :width => "60%" %>
+        </figure>
+        <a> <%= @project.start_date %>
+        </a>
+      </div></div>
+    </article>
+    <div class="span6 ">
 
-    <p>
-      <strong>Design capacity:</strong>
-      <%= @project.design_capacity %>
-    </p>
 
-    <p>
-      <strong>Construction man hour:</strong>
-      <%= @project.construction_man_hour %>
-    </p>
+      <!--<p>-->
+      <!--<strong>Client name:</strong>-->
+      <!--<%= @project.client_name %>-->
+      <!--</p>-->
 
-    <strong>Avatars:</strong>
-    <div class="row">
-      <% @project.avatars.each do |a| %>
-          <div class="col-md-3 well-sm">
-            <%= image_tag a.url , width: "100%" %>
-          </div>
-      <% end %>
+      <!--<p>-->
+      <!--<strong>Start date:</strong>-->
+      <!--<%= @project.start_date %>-->
+      <!--</p>-->
+
+      <!--<p>-->
+      <!--<strong>Contract type:</strong>-->
+      <!--<%= @project.contract_type %>-->
+      <!--</p>-->
+
+      <!--<p>-->
+      <!--<strong>Location:</strong>-->
+      <!--<%= @project.location %>-->
+      <!--</p>-->
+
+      <!--<p>-->
+      <!--<strong>Duration:(month)</strong>-->
+      <!--<%= @project.duration %>-->
+      <!--</p>-->
+
+      <!--<p>-->
+      <!--<strong>Design capacity:</strong>-->
+      <!--<%= @project.design_capacity %>-->
+      <!--</p>-->
+
+      <!--<p>-->
+      <!--<strong>Construction man hour:</strong>-->
+      <!--<%= @project.construction_man_hour %>-->
+      <!--</p>-->
     </div>
   </div>
 
-  <%= link_to 'Edit', edit_project_path(@project),class: "btn  btn btn-warning pull-right" %>
-  <%= link_to 'Back', projects_path  , class: "btn  btn  btn-success pull-left" %>
+  <div class="row">
+  </div>
 </div>
 
+
+
+
+<!--<style type="text/css">.fancybox-margin{margin-right:15px;}</style>-->
+
+<!--<body class="product-page accordion-slider-page">-->
+
+<!--<div class="container" style="margin-top: 90px">-->
+<!--<div class="row">-->
+<!--<article class="span12 list6-box padTop">-->
+<!--<div class="holder">-->
+<!--<h2>-->
+<!--<%= @project.title %>-->
+<!--</h2>-->
+<!--<br>-->
+<!--<hr>-->
+<!--</div>-->
+
+<!--</article>-->
+<!--</div>-->
+
+<!--<br>-->
+
+
+
+<!--</div>-->
+
+
+
+
+
+<!--&lt;!&ndash;<div class="col-md-12 col-sm-12">&ndash;&gt;-->
+
+<!--&lt;!&ndash;<div class="row well">&ndash;&gt;-->
+<!--&lt;!&ndash;<%= link_to 'Edit', edit_project_path(@project),class: "btn  btn btn-warning pull-right" %>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;<strong>Avatars:</strong>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;<% @project.avatars.each do |a| %>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="col-md-3 well-sm">&ndash;&gt;-->
+    <!--&lt;!&ndash;<%= image_tag a.url , width: "100%" %>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<% end %>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<%= link_to 'Edit', edit_project_path(@project),class: "btn  btn btn-warning pull-right" %>&ndash;&gt;-->
+<!--&lt;!&ndash;<%= link_to 'Back', projects_path  , class: "btn  btn  btn-success pull-left" %>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+
+
+<!--</body>-->
 

@@ -1134,7 +1134,7 @@ header p > span {
   list-style: none !important;
   zoom: 1;
   z-index: 11;
-  background: #352ffd;
+  background: #184DE3;
   padding: 30px 0 30px 0;
   margin: 0;
   text-align: center;
@@ -1181,7 +1181,7 @@ header p > span {
 }
 .nav-collapse .sub-menu > ul li a:hover {
   text-decoration: none;
-  color: #50aafd !important;
+  color: #2cfd7c !important;
   background: none !important;
   border: none !important;
   -webkit-box-shadow: 0;
@@ -1199,7 +1199,7 @@ header p > span {
   -webkit-box-shadow: 0;
   -moz-box-shadow: 0;
   box-shadow: 0;
-  color: #424242 !important;
+  color: #2cfd7c !important;
 }
 /*-----subMenu2-----*/
 .nav-collapse .sub-menu ul ul {
