@@ -32,7 +32,6 @@
       </div>
     </section>
     <br><br>
-
   </div>
 
   <div class="row" style="text-align: center">
@@ -48,8 +47,14 @@
     <article class="banner-holder">
       <div class="span2 thumb-pad-bann maxheight " style="height: 346px;"><div class="box_inner">
         <figure>
-          <%= image_tag "contract.png", :width => "60%" %>
+          <%= image_tag "contract.png", :width => "40%" %>
+          <br>          <br>
+          <span>
+            <%= t("projects.contract_type") %>
+          </span>
         </figure>
+        <p>
+        </p>
         <p>
           <!--<small>contract type:</small> -->
           <a> <%= @project.contract_type %> </a>
@@ -57,7 +62,12 @@
       </div></div>
       <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
         <figure>
-          <%= image_tag "map.png", :width => "60%" %>
+          <%= image_tag "map.png", :width => "40%" %>
+          <br>          <br>
+          <span>
+            <%= t("projects.locatoin") %>
+          </span>
+        </figure>
         </figure>
         <a href="#">
           <%= @project.location %>
@@ -65,7 +75,11 @@
       </div></div>
       <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
         <figure>
-          <%= image_tag "duration.png", :width => "60%" %>
+          <%= image_tag "duration.png", :width => "40%" %>
+          <br>          <br>
+          <span>
+                        <%= t("projects.duration") %>
+          </span>
         </figure>
         <p>
           <!--<small>contract type:</small> -->
@@ -75,7 +89,11 @@
       </div></div>
       <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
         <figure>
-          <%= image_tag "capacity.png", :width => "60%" %>
+          <%= image_tag "capacity.png", :width => "40%" %>
+          <br>          <br>
+          <span>
+            <%= t("projects.design_capacity") %>
+          </span>
         </figure>
         <a href="#">
           <%= @project.design_capacity %>
@@ -83,15 +101,24 @@
       </div></div>
       <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
         <figure>
-          <%= image_tag "manhour.png", :width => "60%" %>
+          <%= image_tag "manhour.png", :width => "40%" %>
+          <br>          <br>
+          <span>
+            <%= t("projects.constr_man_hour") %>
+          </span>
         </figure>
         <a href="#">
-          <%= @project.construction_man_hour %> man hour
+          <%= @project.construction_man_hour %>
+          <%= t("projects.man_hour") %>
         </a>
       </div></div>
       <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
         <figure>
-          <%= image_tag "date.png", :width => "60%" %>
+          <%= image_tag "date.png", :width => "40%" %>
+          <br>          <br>
+          <span>
+            <%= t("projects.start_date") %>
+          </span>
         </figure>
         <a> <%= @project.start_date %>
         </a>

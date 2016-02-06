@@ -215,7 +215,7 @@
           <hr>
         </div>
         <div class="row">
-          <% News.all.first(8).each do |x| %>
+          <% News.all.first(4).each do |x| %>
               <%= render "news/news" , :x => x %>
           <% end %>
         </div>
@@ -286,7 +286,7 @@
             paginationSpeed : 1000,
             goToFirstSpeed : 2000,
             singleItem : true,
-            autoHeight : true,
+            autoHeight : false,
             transitionStyle:"fade"
         });
 

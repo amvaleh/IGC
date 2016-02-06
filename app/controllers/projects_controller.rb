@@ -18,11 +18,11 @@ class ProjectsController < ApplicationController
   def appindex
 
     if params[:status].present? and params[:type].present?
-      @projects = Project.all.where(:status => params[:status], :project_type=>params[:type]).page(params[:page]).per(16)
+      @projects = Project.all.where(:status => params[:status], :project_type=>params[:type]).page(params[:page]).per(8)
     elsif params[:status].present?
-      @projects = Project.all.where(:status => params[:status]).page(params[:page]).per(16)
+      @projects = Project.all.where(:status => params[:status]).page(params[:page]).per(8)
     else
-      @projects = Project.all.page(params[:page]).per(16)
+      @projects = Project.all.page(params[:page]).per(8)
     end
 
   end
