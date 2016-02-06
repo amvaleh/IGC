@@ -4,6 +4,7 @@ class NewsController < ApplicationController
   # layout 'application' , :only => [:appshow,:appindex]
 
   before_action :set_news, only: [:show, :edit, :update, :destroy,:appshow]
+  before_action :authenticate_admin!, except: [:appindex,:appshow]
 
   #  app show
 

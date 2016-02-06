@@ -1,70 +1,68 @@
-<div class="col-md-12 col-sm-12">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3><%= @news.title %>
-        <small>
-          created on:
-        </small>
-        <%= @news.created_at %>
-      </h3>
-    </div>
-    <div class="panel-body">
-      <ul class="nav nav-tabs">
-        <li class="active"><a href="#home" data-toggle="tab">Project</a>
-        </li>
-        <li class=""><a href="#profile" data-toggle="tab">Title</a>
-        </li>
-        <li class=""><a href="#messages" data-toggle="tab">Pictures</a>
-        </li>
-        <li class=""><a href="#settings" data-toggle="tab">Caption</a>
-        </li>
-        <li class="pull-right ">
 
-          <%= link_to 'Edit', edit_news_path(@news),class: "btn  btn-sm btn-warning" %>
+<div class="container" style="margin-top: 90px">
+  <div class="row">
+    <article class="span12 list6-box padTop">
+      <div class="holder">
+        <i class="icon icon-comment icon-2x pull-right"></i>
+        <h2>
+          <%= @news.title %>
+        </h2>
+        <p style="    line-height: 30px;
+                text-align: justify;
+                font-weight: bold;">
+          <%= @news.caption %>
+        </p>
+        <br>
+        <p>
 
-        </li>
-        <li class="pull-right">
-          <%= link_to 'Back', news_index_path , class: "btn  btn-sm  btn-success" %>
-        </li>
-      </ul>
-
-      <div class="tab-content">
-        <div class="tab-pane fade active in" id="home">
-          <% if @news.project_id.present?%>
-              <h4>Project:   <%= @news.project_id %>
-              </h4>
-              <p>
-                <%= @news.project.title  %>
-              </p>
-          <% else %>
-              <h4>No project defined!
-                <small>click edit to add a related project.</small></h4>
+          <% if @news.project_id.present? %>
+              <%= link_to appshow_project_path(@news.project_id) , :class => "btn btn_primary pull-right" do %>
+                  <%= t("projects.check_out") %> <%= @news.project.title %> <i class="icon-bookmark"></i>
+              <% end %>
           <% end %>
-        </div>
-        <div class="tab-pane fade" id="profile">
-          <h4>News title:</h4>
-          <p>
-            <%= @news.title%>
-          </p>
+        </p>
+        <br>
+        <br>
+        <hr>
+      </div>
 
-        </div>
-        <div class="tab-pane fade" id="messages">
-          <h4>Pictures uploaded:</h4>
+    </article>
+  </div>
+  <div class="row" style="text-align:  center;">
+    <section class="example">
+      <div id="example2" class="accordion-slider">
+        <div class="as-panels">
           <% @news.avatars.each do |a| %>
-              <div class="col-md-3 well-sm">
-                <%= image_tag a.url , width: "100%" %>
+
+              <div class="as-panel">
+
+                <%= image_tag a.url(:medium) , :class => "as-background" %>
+                <%= link_to a.url do %>
+                    <%= image_tag a.url() , :class => "as-background-opened" %>
+                <% end %>
               </div>
+
           <% end %>
 
-        </div>
-        <div class="tab-pane fade" id="settings">
-          <h4>News Caption:</h4>
-          <p>
-            <%= @news.caption %>
-          </p>
         </div>
       </div>
-    </div>
+    </section>
+    <br>    <br>
+    <br>
+
+    <hr>
+    <br>
+    <br>
+
   </div>
+
+  <!--<div class="row">-->
+  <!--<article class="span6 well offset3">-->
+
+  <!--</article>-->
+  <!--</div>-->
+
+
 </div>
+
 

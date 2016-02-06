@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  resources :gadgets do
+    member do
+      get :appshow
+    end
+  end
+
+  resources :feedbacks
   devise_for :admins
   root 'main#home'
 
@@ -15,6 +22,8 @@ Rails.application.routes.draw do
       get :appshow
     end
   end
+
+
 
   resources :news do
     collection do
@@ -33,7 +42,8 @@ Rails.application.routes.draw do
     get 'main/contact_us'
     get 'main/stack_holders'
     get 'main/news'
-
+    get 'main/success'
+    get 'main/search'
 
   end
 

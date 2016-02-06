@@ -18,17 +18,16 @@
 //= require jquery.easing.1.3
 //= require varnish.compiled.application.en
 //= require jquery.equalheights
+
 //= require ahoy
 //= require jquery.ui.totop
-//= require owl.carousel
+
 //= require superfish
 //= require strap
 //= require underscore
 //= require gmaps/google
 
-//= require main
 
-//= require video
 // bullshit require here
 //= require jquery.fancybox.pack
 //= require jquery.accordionSlider.min

@@ -2,34 +2,43 @@
   <div class="thumb-pad8 maxheight2" style="height: 376px;">
     <div class="box_inner">
       <div class="thumbnail">
-            <figure>
-              <div id="owl-project" name="project" class="proj">
-                <% x.avatars.each do |a| %>
-                    <div class="item">
-                      <%= image_tag a.url %>
-                    </div>
-                <% end  %>
-              </div>
-            </figure>
+        <figure>
+          <div id="owl-project" name="project" class="proj">
+            <% x.avatars.each do |a| %>
+                <div class="item">
+                  <%= image_tag a.url %>
+                </div>
+            <% end  %>
+          </div>
+        </figure>
         <%= link_to appshow_project_path(x) do %>
 
-        <div class="caption">
-          <div class="icon">
-            <%= image_tag "icon2.png" %>
-          </div>
-          <br>
+            <div class="caption">
+              <div class="icon">
+                <%= image_tag "icon2.png" %>
+              </div>
+              <br>
               <%= x.title %>
-          <br>
-          <hr class="hr">
-          <p>
-            <i class="icon-user"></i>
-            <%= x.client_name %>
-          </p>
-            <p>
-              <i class="icon-map-marker"></i>
-              <%= x.location %>
-            </p>
-          <% end %>
+              <br>
+              <hr class="hr">
+              <p>
+                <i class="icon-user"></i>
+                <%= x.client_name %>
+              </p>
+              <p>
+                <i class="icon-map-marker"></i>
+                <%= x.location %>
+              </p>
+              <p>
+                <% case x.status %>
+                <% when true %>
+                    <i class="icon-play"></i>
+                <% when false %>
+                    <i class="icon-check"></i>
+                <% end %>
+                <%= get_status(x) %>
+              </p>
+        <% end %>
 
         </div>
       </div>

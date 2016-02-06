@@ -2,6 +2,7 @@
   <div class="row">
     <article class="span12 list6-box padTop">
       <div class="holder">
+        <i class="icon icon-bookmark icon-2x pull-right"></i>
         <h2>
           <%= @project.title %>
         </h2>
@@ -30,10 +31,20 @@
         </div>
       </div>
     </section>
+    <br><br>
 
   </div>
 
-  <div class="row">
+  <div class="row" style="text-align: center">
+    <article class="span12 list6-box padTop">
+      <div class="holder">
+        <h6 style="    font-size: 18px;">
+            <%= t("projects.specifications") %>
+        </h6>
+      </div>
+    </article>
+    <br>
+    <hr>
     <article class="banner-holder">
       <div class="span2 thumb-pad-bann maxheight " style="height: 346px;"><div class="box_inner">
         <figure>
@@ -86,102 +97,69 @@
         </a>
       </div></div>
     </article>
-    <div class="span6 ">
-
-
-      <!--<p>-->
-      <!--<strong>Client name:</strong>-->
-      <!--<%= @project.client_name %>-->
-      <!--</p>-->
-
-      <!--<p>-->
-      <!--<strong>Start date:</strong>-->
-      <!--<%= @project.start_date %>-->
-      <!--</p>-->
-
-      <!--<p>-->
-      <!--<strong>Contract type:</strong>-->
-      <!--<%= @project.contract_type %>-->
-      <!--</p>-->
-
-      <!--<p>-->
-      <!--<strong>Location:</strong>-->
-      <!--<%= @project.location %>-->
-      <!--</p>-->
-
-      <!--<p>-->
-      <!--<strong>Duration:(month)</strong>-->
-      <!--<%= @project.duration %>-->
-      <!--</p>-->
-
-      <!--<p>-->
-      <!--<strong>Design capacity:</strong>-->
-      <!--<%= @project.design_capacity %>-->
-      <!--</p>-->
-
-      <!--<p>-->
-      <!--<strong>Construction man hour:</strong>-->
-      <!--<%= @project.construction_man_hour %>-->
-      <!--</p>-->
-    </div>
+    <br>
+    <br>
+    <br>
   </div>
 
-  <div class="row">
+  <% if @project.news.present? %>
+      <div class="row" style="text-align: center">
+        <article class="span12 list6-box padTop">
+          <div class="holder">
+            <h6 style="    font-size: 18px;">
+            <%= t("projects.news_related") %>
+            </h6>
+          </div>
+        </article>
+        <br>
+        <br>
+        <hr>
+        </div>
+      <div class="row">
+        <ul class="list6">
+          <% count=0 %>
+          <% @project.news.order(:created_at).each do |news| %>
+              <% count = count + 1 %>
+          .<li>
+          <div class="thumb-pad5">
+            <div class="thumbnail">
+              <figure>
+                <% if news.avatars.first.present? %>
+                    <%= image_tag news.avatars.first.url(:medium) %>
+                <% else %>
+                    <%= image_tag "news.png" , :width => "20%"  %>
+                <% end %>
+              </figure>
+              <div class="caption">
+                <time datetime="2013-01-01" class="">
+                  <small>
+                    posted on:
+                  </small>
+                  <%= news.created_at %>
+                </time>
+                <br>
+
+                <a href="#" class="lnk">
+                  <%= count  %> )  <%= news.title %>
+                </a>
+                <p>
+                  <%= news.caption %>
+                </p>
+                <%= link_to t("news.read_more ") , appshow_news_path(news) , :class => "btn btn-primary btn1" %>
+              </div>
+            </div>
+          </div>
+        </li>
+          <% end %>
+        </ul>
+        </div>
+        <div class="row" style="text-align: center">
+        <br>
+        <hr>
+          <br>
+      </div>
+  <% end %>
+
   </div>
 </div>
-
-
-
-
-<!--<style type="text/css">.fancybox-margin{margin-right:15px;}</style>-->
-
-<!--<body class="product-page accordion-slider-page">-->
-
-<!--<div class="container" style="margin-top: 90px">-->
-<!--<div class="row">-->
-<!--<article class="span12 list6-box padTop">-->
-<!--<div class="holder">-->
-<!--<h2>-->
-<!--<%= @project.title %>-->
-<!--</h2>-->
-<!--<br>-->
-<!--<hr>-->
-<!--</div>-->
-
-<!--</article>-->
-<!--</div>-->
-
-<!--<br>-->
-
-
-
-<!--</div>-->
-
-
-
-
-
-<!--&lt;!&ndash;<div class="col-md-12 col-sm-12">&ndash;&gt;-->
-
-<!--&lt;!&ndash;<div class="row well">&ndash;&gt;-->
-<!--&lt;!&ndash;<%= link_to 'Edit', edit_project_path(@project),class: "btn  btn btn-warning pull-right" %>&ndash;&gt;-->
-
-
-<!--&lt;!&ndash;<strong>Avatars:</strong>&ndash;&gt;-->
-<!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
-<!--&lt;!&ndash;<% @project.avatars.each do |a| %>&ndash;&gt;-->
-    <!--&lt;!&ndash;<div class="col-md-3 well-sm">&ndash;&gt;-->
-    <!--&lt;!&ndash;<%= image_tag a.url , width: "100%" %>&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;<% end %>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;<%= link_to 'Edit', edit_project_path(@project),class: "btn  btn btn-warning pull-right" %>&ndash;&gt;-->
-<!--&lt;!&ndash;<%= link_to 'Back', projects_path  , class: "btn  btn  btn-success pull-left" %>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-
-
-<!--</body>-->
 

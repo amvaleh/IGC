@@ -126,6 +126,12 @@ color:#F0433D;
 background-color: #fff;
 color:#f0ad4e;
 }
+
+.bg-color-purple {
+    background-color: #fff;
+    color: #b81f69;
+}
+
 .back-footer-green {
 background-color: #5cb85c;
 color:#fff;
@@ -145,6 +151,12 @@ border-top: 0px solid #fff;
 background-color: #f0ad4e;
 color:#fff;
 border-top: 0px solid #fff;
+}
+
+.back-footer-purple{
+    background-color: #b81f69;
+    color:#fff;
+    border-top: 0px solid #fff;
 }
  .icon-box-right {
 display: block;

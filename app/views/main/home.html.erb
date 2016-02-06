@@ -48,56 +48,58 @@
         <div class="row">
           <article class="banner-holder">
             <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
-              <figure><div>
-                <%= image_tag "page1_icon1.png" %>
-              </div></figure>
+              <figure>
+
+                <%= image_tag "contract.png", :width => "60%" %>
+
+              </figure>
               <a href="#">
-                Pipe Spools
+                International Contracts
               </a>
               <p>IGC’s well trained and highly experienced managerial staff, engineering supervisors and administrative staff, together with highly skilled technicians, ensure all of our clients the best in economical and construction services on or ahead of schedule</p>
             </div></div>
             <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
-              <figure><div>
-                <%= image_tag "page1_icon2.png" %>
-              </div></figure>
+              <figure>
+                <%= image_tag "map.png", :width => "60%" %>
+              </figure>
               <a href="#">
-                Civil Construction Equipment
+                Everywhere projects
               </a>
               <p>IGC’s well trained and highly experienced managerial staff, engineering supervisors and administrative staff, together with highly skilled technicians, ensure all of our clients the best in economical and construction services on or ahead of schedule</p>
             </div></div>
             <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
-              <figure><div>
-                <%= image_tag "page1_icon3.png" %>
-              </div></figure>
+              <figure>
+                <%= image_tag "duration.png", :width => "60%" %>
+              </figure>
               <a href="#">
-                Gas and Oil Equipment and Machinery
+                Minimum Timing
               </a>
               <p>IGC’s well trained and highly experienced managerial staff, engineering supervisors and administrative staff, together with highly skilled technicians, ensure all of our clients the best in economical and construction services on or ahead of schedule</p>
             </div></div>
             <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
-              <figure><div>
-                <%= image_tag "page1_icon4.png" %>
-              </div></figure>
+              <figure>
+                <%= image_tag "capacity.png", :width => "60%" %>
+              </figure>
               <a href="#">
-                Reactors
+                Great Design Capacity
               </a>
               <p>IGC’s well trained and highly experienced managerial staff, engineering supervisors and administrative staff, together with highly skilled technicians, ensure all of our clients the best in economical and construction services on or ahead of schedule</p>
             </div></div>
             <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
-              <figure><div>
-                <%= image_tag "page1_icon5.png" %>
-              </div></figure>
+              <figure>
+                <%= image_tag "manhour.png", :width => "60%" %>
+              </figure>
               <a href="#">
-                Off Shore Construction Equipment
+                Manhours Contrsuctions
               </a>
               <p>IGC’s well trained and highly experienced managerial staff, engineering supervisors and administrative staff, together with highly skilled technicians, ensure all of our clients the best in economical and construction services on or ahead of schedule</p>
             </div></div>
             <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
-              <figure><div>
-                <%= image_tag "page1_icon6.png" %>
-              </div></figure>
+              <figure>
+                <%= image_tag "date.png", :width => "60%" %>
+              </figure>
               <a href="#">
-                Galvanized Steel Pipes
+                Day Deep Scheduling
               </a>
               <p>IGC’s well trained and highly experienced managerial staff, engineering supervisors and administrative staff, together with highly skilled technicians, ensure all of our clients the best in economical and construction services on or ahead of schedule</p>
             </div></div>
@@ -257,20 +259,28 @@
     $(document).ready(function() {
 
         $("#owl-demo").owlCarousel({
-            autoPlay : 30000,
+//            autoPlay : 30000,
+//            stopOnHover : true,
+//            navigation:false,
+//            paginationSpeed : 1000,
+//            goToFirstSpeed : 2000,
+//            singleItem : true,
+//            autoHeight : true,
+//            responsive: true,
+//            transitionStyle:"fade"
+            autoPlay : 3000,
             stopOnHover : true,
             navigation:false,
             paginationSpeed : 1000,
             goToFirstSpeed : 2000,
             singleItem : true,
             autoHeight : true,
-            responsive: true,
             transitionStyle:"fade"
 
         });
 
         $(".proj").owlCarousel({
-            autoPlay : 3000,
+            autoPlay : 7000,
             stopOnHover : true,
             navigation:false,
             paginationSpeed : 1000,
@@ -280,16 +290,16 @@
             transitionStyle:"fade"
         });
 
-        $(".news").owlCarousel({
-            autoPlay : 3000,
-            stopOnHover : true,
-            navigation:false,
-            paginationSpeed : 1000,
-            goToFirstSpeed : 2000,
-            singleItem : true,
-            autoHeight : true,
-            transitionStyle:"fade"
-        });
+//        $(".news").owlCarousel({
+//            autoPlay : 3000,
+//            stopOnHover : true,
+//            navigation:false,
+//            paginationSpeed : 1000,
+//            goToFirstSpeed : 2000,
+//            singleItem : true,
+//            autoHeight : true,
+//            transitionStyle:"fade"
+//        });
 
 
         $("#owl-services").owlCarousel({
@@ -298,7 +308,6 @@
             paginationSpeed : 400,
             singleItem:true,
             autoHeight: true
-
             // "singleItem:true" is a shortcut for:
             // items : 1,
             // itemsDesktop : false,
@@ -309,37 +318,3 @@
         });
     });
 </script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('.search a').hover(function () {
-            $(this).stop().animate({opacity: 0.5}, 350, "easeOutSine");
-        }, function () {
-            $(this).stop().animate({opacity: 1}, 350, "easeOutSine");
-        })
-        $('.companyBox ul li a').hover(function () {
-            $(this).stop().animate({opacity: 0.5}, 350, "easeOutSine");
-        }, function () {
-            $(this).stop().animate({opacity: 1}, 350, "easeOutSine");
-        })
-    })
-</script>
-<script type="text/javascript">
-    $(document).ready(function() {
-
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-7078796-5']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    })
-</script>
-

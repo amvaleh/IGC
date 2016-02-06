@@ -5,10 +5,7 @@
                 complete the form
         </h3>
       </div>
-
         <div class="panel-body">
-
-
           <%= form_for(@news,:html => {role: "form"} ) do |f| %>
               <% if @news.errors.any? %>
                   <div id="error_explanation">
@@ -25,7 +22,7 @@
               <div class="form-group">
                 <%= f.label :project_id %><br>
                 <%#= f.number_field :project_id,:class=>"form-control" %>
-                 <%= f.select :project_id , Project.all.map { |f| [f.title, f.id ] } ,{}, :class=>"form-control" %>
+                 <%= f.select :project_id , Project.all.map { |f| [f.title, f.id ] } ,{ :include_blank => true}, :class=>"form-control" %>
               </div>
               <div class="form-group">
                 <%= f.label :title %><br>

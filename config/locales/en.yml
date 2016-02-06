@@ -27,6 +27,7 @@ en:
     sitemap: "Site Map"
     about_us: "About Us"
     activities: "Activities"
+    navigate_to: "Navigate to..."
     sub_activities:
       onshore: "Oil & Gas Onshore"
       offshore: "Oil & Gas Offshore"
@@ -66,6 +67,9 @@ en:
     read_more : "READ MORE"
   projects:
     title: "PROJECTS"
+    check_out: "Check out"
+    news_related: "News related to this project: "
+    specifications: "Project specifications:"
   contact_us:
     addresses: "Addresses"
     address1: "Address 1"
@@ -81,3 +85,28 @@ en:
     telephone: "Telephone"
     message: "Message"
     required_fields: "REQUIRED FIELDS"
+  footer:
+    get_in_toch: "GET IN TOUCH"
+    caption_1: "You can contact us using the"
+    caption_2: "link or catch up with us in social activities:"
+  search:
+    showing: "Showing "
+    results_for: "results for: "
+    no_results: "No results found."
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
+    helpers:
+      page_entries_info:
+        one_page:
+          display_entries:
+            zero: "No %{entry_name} found"
+            one: "Displaying <b>1</b> %{entry_name}"
+            other: "Displaying <b>all %{count}</b> %{entry_name}"
+        more_pages:
+          display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
+

@@ -1,0 +1,23 @@
+
+<p>
+  <strong>Name:</strong>
+  <%= @gadget.name %>
+</p>
+
+
+<p>
+  <strong>Caption:</strong>
+  <%= @gadget.caption %>
+</p>
+
+  <strong>Avatars:</strong>
+<div class="row">
+  <% @gadget.avatars.each do |a| %>
+      <div class="col-md-3 well-sm">
+        <%= image_tag a.url , width: "100%" %>
+      </div>
+  <% end %>
+</div>
+
+<%= link_to 'Edit', edit_gadget_path(@gadget) %> |
+<%= link_to 'Back', gadgets_path %>

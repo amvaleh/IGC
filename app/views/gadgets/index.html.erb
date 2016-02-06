@@ -1,0 +1,38 @@
+<div class="col-md-12">
+  <div class="row">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3>Listing Assets(Gadgets)</h3>
+        <%= link_to 'New ', new_gadget_path, :class => "pull-right btn btn-default" %>
+
+      </div>
+      <div class="panel-body">
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered table-hover">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Avatars</th>
+              <th>Caption</th>
+              <th colspan="3"></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <% @gadgets.each do |gadget| %>
+                <tr>
+                  <td><%= gadget.name %></td>
+                  <td><%= gadget.avatars.count %></td>
+                  <td><%= gadget.caption %></td>
+                  <td><%= link_to 'Show', gadget %></td>
+                  <td><%= link_to 'Edit', edit_gadget_path(gadget) %></td>
+                  <td><%= link_to 'Destroy', gadget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

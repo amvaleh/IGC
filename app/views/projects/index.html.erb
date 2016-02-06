@@ -13,14 +13,12 @@
             <tr>
               <th>Title</th>
               <th>Client name</th>
-              <th>Start date</th>
               <th>Contract type</th>
               <th>Location</th>
-              <th>Duration</th>
-              <th>Design capacity</th>
-              <th>Construction man hour</th>
               <th>Avatars</th>
-              <th colspan="3"></th>
+              <th>Status</th>
+              <th>Type</th>
+              <th colspan="4"></th>
             </tr>
             </thead>
             <tbody>
@@ -28,14 +26,16 @@
                 <tr>
                   <td><%= project.title %></td>
                   <td><%= project.client_name %></td>
-                  <td><%= project.start_date %></td>
                   <td><%= project.contract_type %></td>
                   <td><%= project.location %></td>
-                  <td><%= project.duration %></td>
-                  <td><%= project.design_capacity %></td>
-                  <td><%= project.construction_man_hour %></td>
+                  <!--<td><%= project.design_capacity %></td>-->
+                  <!--<td><%= project.construction_man_hour %></td>-->
                   <td><%= project.avatars.count %></td>
+                  <td><%= get_status(project) %></td>
+                  <td><%= project.project_type %></td>
+
                   <td><%= link_to 'Show', project , class: "btn btn-info" %></td>
+                  <td><%= link_to 'web view', appshow_project_path(project) , class: "btn btn-default" %></td>
                   <td><%= link_to 'Edit', edit_project_path(project) , class: "btn btn-warning" %></td>
                   <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %></td>
                 </tr>

@@ -92,5 +92,15 @@
     height: auto;
 }
 .text_blue{
-    color: #0dccd7;
+    color: mintcream;
+}
+.text_blue:hover{
+    color: blue;
+}
+
+
+.contact_txt_area{
+    resize: none !important;
+    width: 100% !important;
+    min-height: 20px !important;
 }

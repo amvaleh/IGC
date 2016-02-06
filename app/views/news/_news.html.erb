@@ -19,7 +19,9 @@
             <%= truncate x.title.html_safe , length: 60  %>
         <% end %>
         <!--<a href="#" class="lnk">Quisque nulla</a>-->
-        <p><%= x.caption %></p>
+        <p>
+          <%= truncate(x.caption,:length=> 100 )%>
+        </p>
         <%= link_to "read more" , appshow_news_path(x) , :class => "btn btn-primary btn1" %>
       </div>
     </div>

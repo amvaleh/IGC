@@ -30,7 +30,7 @@
         <p><span>
           <%= t("header.igc_o") %>
         </span><br>
-        <%= t("contact_us.address1_text") %>
+          <%= t("contact_us.address1_text") %>
         </p>
         <h5><%= t("contact_us.Telephones") %></h5>
         <p><%= t("contact_us.tele1") %><br> <%= t("contact_us.tele2") %> </p>
@@ -38,7 +38,7 @@
         <p><span>
           <%= t("header.igc_o") %>
         </span><br>
-        <%= t("contact_us.address2_text") %></p>
+          <%= t("contact_us.address2_text") %></p>
       </div>
     </article>
     <article class="span8 form-box">
@@ -47,46 +47,58 @@
         <br>
         <hr>
       </div>
-      <form id="contact-form">
-        <div class="success" style="display: none;"> Contact form submitted! <strong>We will be in touch soon.</strong> </div>
-        <fieldset>
-          <div>
-            <div class="form-div-1">
-              <p>Name*</p>
-              <label class="name">
-                <input type="text" value="">
-                <br>
-                <span class="error" style="display: none;">*This is not a valid name.</span> <span class="empty" style="display: none;">*This field is required.</span> </label>
+      <%= form_for(@feedback,:html => {role: "form"} ) do |f| %>
+          <% if @feedback.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@news.errors.count, "error") %> prohibited this news from being saved:</h2>
+
+                <ul>
+                  <% @feedback.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+          <div class="success" style="display: none;"> Contact form submitted! <strong>We will be in touch soon.</strong> </div>
+          <fieldset>
+            <div>
+              <div class="form-div-1">
+                <p>Name*</p>
+                <label class="name">
+                  <%= f.text_field :name %>
+                  <br>
+                  <span class="error" style="display: none;">*This is not a valid name.</span> <span class="empty" style="display: none;">*This field is required.</span> </label>
+              </div>
+              <div class="form-div-2">
+                <p>E-mail*</p>
+                <label class="email">
+                  <%= f.text_field :email%>
+                  <br>
+                  <span class="error" style="display: none;">*This is not a valid email address.</span> <span class="empty" style="display: none;">*This field is required.</span> </label>
+              </div>
+              <div class="form-div-3">
+                <p>Telephone</p>
+                <label class="phone notRequired">
+                  <%= f.text_field :telephone%>
+                  <br>
+                  <span class="error" style="display: none;">*This is not a valid phone number.</span> <span class="empty" style="display: none;">*This field is required.</span> </label>
+              </div>
             </div>
-            <div class="form-div-2">
-              <p>E-mail*</p>
-              <label class="email">
-                <input type="email" value="">
+            <div class="form-div-4">
+              <p>Message*</p>
+              <label class="message">
+                <%= f.text_area :message, :class=> "contact_txt_area"%>
                 <br>
-                <span class="error" style="display: none;">*This is not a valid email address.</span> <span class="empty" style="display: none;">*This field is required.</span> </label>
+                <span class="error" style="display: none;">*The message is too short.</span> <span class="empty" style="display: none;">*This field is required.</span>
+              </label>
             </div>
-            <div class="form-div-3">
-              <p>Telephone</p>
-              <label class="phone notRequired">
-                <input type="tel" value="">
-                <br>
-                <span class="error" style="display: none;">*This is not a valid phone number.</span> <span class="empty" style="display: none;">*This field is required.</span> </label>
+            <div class="btns">
+              <!--<a href="#" data-type="submit" class="btn btn-primary btn1">Submit</a>-->
+              <%= f.submit "submit" , :class => "btn btn-primary btn1" %>
+              <p>*Required Fields</p>
             </div>
-          </div>
-          <div class="form-div-4">
-            <p>Message*</p>
-            <label class="message">
-              <textarea></textarea>
-              <br>
-              <span class="error" style="display: none;">*The message is too short.</span> <span class="empty" style="display: none;">*This field is required.</span>
-            </label>
-          </div>
-          <div class="btns">
-            <a href="#" data-type="submit" class="btn btn-primary btn1">Submit</a>
-            <p>*Required Fields</p>
-          </div>
-        </fieldset>
-      </form>
+          </fieldset>
+      <% end %>
     </article>
   </div>
 </div>

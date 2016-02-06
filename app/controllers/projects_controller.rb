@@ -4,6 +4,8 @@ class ProjectsController < ApplicationController
   # layout 'application' , :only => [:appshow,:appindex]
 
   before_action :set_project, only: [:show, :edit, :update, :destroy,:appshow]
+  before_action :authenticate_admin!, except: [:appindex,:appshow]
+
 
   #  app show
 
@@ -14,7 +16,15 @@ class ProjectsController < ApplicationController
   # app index
 
   def appindex
-    @projects = Project.all.page(params[:page]).per(4)
+
+    if params[:status].present? and params[:type].present?
+      @projects = Project.all.where(:status => params[:status], :project_type=>params[:type]).page(params[:page]).per(16)
+    elsif params[:status].present?
+      @projects = Project.all.where(:status => params[:status]).page(params[:page]).per(16)
+    else
+      @projects = Project.all.page(params[:page]).per(16)
+    end
+
   end
 
 
@@ -78,13 +88,13 @@ class ProjectsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_project
-      @project = Project.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_project
+    @project = Project.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def project_params
-      params.require(:project).permit(:title, :client_name, :start_date, :contract_type, :location, :duration, :design_capacity, :construction_man_hour, {avatars: []})
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def project_params
+    params.require(:project).permit(:title, :client_name, :start_date, :contract_type, :location, :duration, :design_capacity, :status , :project_type , :construction_man_hour, {avatars: []})
+  end
 end

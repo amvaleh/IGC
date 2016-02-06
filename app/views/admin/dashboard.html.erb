@@ -41,14 +41,27 @@
     <div class="col-md-3 col-sm-12 col-xs-12">
       <div class="panel panel-primary text-center no-boder bg-color-brown">
         <div class="panel-body">
-          <i class="fa fa-picture-o fa-5x"></i>
-          <h3> 100 </h3>
+          <i class="fa fa-refresh fa-5x"></i>
+          <h3> <%= Feedback.all.count %> </h3>
         </div>
         <div class="panel-footer back-footer-brown">
-          Gallery
+          Feedbacks
         </div>
       </div>
     </div>
+
+    <div class="col-md-3 col-sm-12 col-xs-12">
+      <div class="panel panel-primary text-center no-boder bg-color-purple">
+        <div class="panel-body">
+          <i class="fa fa-gears fa-5x"></i>
+          <h3> <%= Gadget.all.count %> </h3>
+        </div>
+        <div class="panel-footer back-footer-purple">
+          Assets
+        </div>
+      </div>
+    </div>
+
   </div>
   <!-- /. ROW  -->
   <!--<div class="row">-->
@@ -84,8 +97,8 @@
 
   <!--</div>-->
 
-  <footer>
-    <p>All right reserved. Designed by: Amir Mahdi Valeh </p>
+  <footer style="position: fixed; bottom: 0">
+    <p> Designed by Amir Mahdi Valeh </p>
   </footer>
 </div>
 <!-- /. PAGE INNER  -->

@@ -1,0 +1,47 @@
+<div class="col-md-12">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3>
+        complete the form
+      </h3>
+    </div>
+    <div class="panel-body">
+      <%= form_for(@feedback,:html => {role: "form"} ) do |f| %>
+          <% if @feedback.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this news from being saved:</h2>
+
+                <ul>
+                  <% @feedback.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+
+          <div class="form-group">
+            <%= f.label :name %><br>
+            <%#= f.number_field :project_id,:class=>"form-control" %>
+            <%= f.text_area :name ,:class=>"form-control"%>
+          </div>
+          <div class="form-group">
+            <%= f.label :email %><br>
+            <%= f.text_area :email ,:class=>"form-control"%>
+          </div>
+          <div class="form-group">
+            <%= f.label :telephone %><br>
+            <%#= f.text_field :avatars %>
+            <%= f.text_area :telephone, :class=>"form-control"%>
+          </div>
+          <div class="form-group">
+            <%= f.label :message %><br>
+            <%= f.text_area :message,:class=>"form-control" , width: "100%" %>
+          </div>
+          <div class="actions">
+            <%= f.submit "submit" , :class => "btn btn-default pull-right" %>
+            <%= link_to 'Back', feedbacks_path , class: "btn btn-warning " %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
