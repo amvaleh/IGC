@@ -3,18 +3,17 @@
   <div class="row">
     <article class="span12 list6-box padTop">
       <div class="holder">
-        <i class="icon icon-comment icon-2x pull-right"></i>
         <h2>
           <%= @news.title %>
         </h2>
         <p style="    line-height: 30px;
                 text-align: justify;
                 font-weight: bold;">
+          <i class="icon icon-comment"></i>
           <%= @news.caption %>
         </p>
         <br>
         <p>
-
           <% if @news.project_id.present? %>
               <%= link_to appshow_project_path(@news.project_id) , :class => "btn btn_primary pull-right" do %>
                   <%= t("projects.check_out") %> <%= @news.project.title %> <i class="icon-bookmark"></i>
@@ -35,7 +34,6 @@
           <% @news.avatars.each do |a| %>
 
               <div class="as-panel">
-
                 <%= image_tag a.url(:medium) , :class => "as-background" %>
                 <%= link_to a.url do %>
                     <%= image_tag a.url() , :class => "as-background-opened" %>

@@ -16,3 +16,8 @@
  *= require_self
  *= require bootstrap-datepicker3
  */
+
+
+.foot:hover{
+    color: #000000 !important;
+}

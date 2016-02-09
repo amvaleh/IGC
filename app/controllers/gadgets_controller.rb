@@ -1,6 +1,6 @@
 class GadgetsController < ApplicationController
 
-  before_action :set_gadget, only: [:show, :edit, :update, :destroy]
+  before_action :set_gadget, only: [:show, :edit, :update, :destroy,:appshow]
 
   layout "admin" , :except => [:appshow]
 
@@ -9,12 +9,13 @@ class GadgetsController < ApplicationController
 
 
   def appshow
+    render :layout => 'application'
 
   end
   # GET /gadgets
   # GET /gadgets.json
   def index
-    @gadgets = Gadget.all
+    @gadgets = Gadget.all.page(params[:page]).per(20)
   end
 
   # GET /gadgets/1

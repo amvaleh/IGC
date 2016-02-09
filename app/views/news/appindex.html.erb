@@ -14,10 +14,12 @@
               <div class="thumb-pad5">
                 <div class="thumbnail">
                   <figure>
-                    <% if news.avatars.first.present? %>
-                        <%= image_tag news.avatars.first.url(:medium) %>
-                    <% else %>
-                        <%= image_tag "news.png" , :width => "20%"  %>
+                    <%= link_to appshow_news_path(news) do %>
+                        <% if news.avatars.first.present? %>
+                            <%= image_tag news.avatars.first.url(:medium) %>
+                        <% else %>
+                            <%= image_tag "news.png" , :width => "20%"  %>
+                        <% end %>
                     <% end %>
                   </figure>
                   <div class="caption">
@@ -25,9 +27,9 @@
                       <%= news.created_at %>
                     </time>
                     <br>
-                    <a href="#" class="lnk">
-                      <%= news.title %>
-                    </a>
+                    <%= link_to appshow_news_path(news) , :class => "lnk" do %>
+                        <%= news.title %>
+                    <% end %>
                     <% if news.project_id.present?%>
                         <%= link_to appshow_project_path(news.project_id), :class => "pull-right" do %>
                             <i class="icon-bookmark"></i>

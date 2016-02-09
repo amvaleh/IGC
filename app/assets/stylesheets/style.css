@@ -33,7 +33,7 @@ h1.brand {
     float: left;
     padding: 0 0 0 0 !important;
     margin-top: -60px;
-    margin-left: -60px;
+    margin-left: -36px;
 }
 h1.brand a {
     display: inline-block;
@@ -1993,7 +1993,7 @@ footer .privacy br {
 /*---------------------------------------------------------------------------------------------------------------------------*/
 @media (min-width: 980px) and (max-width: 1199px) {
     h1.brand {
-        margin: 0 !important;
+        /*margin: 0 !important;*/
     }
     .nav-collapse_ .nav li {
         margin-left: 30px;

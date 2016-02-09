@@ -8,7 +8,7 @@ class FeedbacksController < ApplicationController
   # GET /feedbacks
   # GET /feedbacks.json
   def index
-    @feedbacks = Feedback.all
+    @feedbacks = Feedback.all.page(params[:page]).per(20)
   end
 
   # GET /feedbacks/1

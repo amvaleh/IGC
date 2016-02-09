@@ -20,12 +20,101 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ar:
-  hello: "Hello world"
+  hello: "اهلا و سهلا"
   header:
+    root: "خانه"
     member_area: "Member Area"
     sitemap: "Site Map"
-    out_compnay: "Our Company"
-    gallery: "Gallery"
-    stackholders: "Stackholders"
+    about_us: "درباره ما"
+    activities: "فعالیت ها"
+    navigate_to: "برو به..."
+    sub_activities:
+      onshore: "دریایی"
+      offshore: "ساحلی"
+      powerplant: "نیروگاهی"
+    projects: "پروژه ها"
+    sub_projects:
+      ongoing: "در حال اجرا"
+      completed: "تمام شده"
+      sub_completed:
+        onshore: "Oil & Gas Onshore"
+        offshore: "Oil & Gas Offshore"
+        powerplant: "Powerplant"
+        abroad: "Abroad Projects"
+    assets: "Assets"
+    sub_assets:
+      offshore_yard: "Offshore Yard"
+      onshore_yard: "Onshore Yard"
+      warehouses: "Warehouses"
+      camps: "Camps"
+      contruction_equipment: "Construction Equipment"
+      offshore_facilities: "Offshore Facilities"
     contact_us: "Contact"
     news: "NEWS"
+    igc_o: "Iran International General Contractor Company"
+  home:
+    section_pic1: "Iran International General Contractor Company (IGC)"
+    caption_pic1: "Welcome to Iran International General Contractor Company (IGC)"
+    whatwedo: "What We Do"
+    caption_whatwedo: " since its foundation in 1991, has been engaged in engineering, procurement, project management and construction services for oil refineries, petrochemical plants, oil storage tanks, pipelines, and general engineering markets and all other industrial projects related to oil, gas and petrochemical industries of Iran, in strict accordance to international standards, and intends to utilize internal resources and potentials and prepare the ground for maximizing Iranian content of projects"
+    services:
+      title: "SERVICES"
+      caption_services: "Procurement and Construction"
+      blk_box_title: "Field of Activities"
+      blk_box_caption: "Our expertise encompasses all areas relating to the production, transportation, processing and delivery of the following but not limited to"
+  news:
+    title: "اخبار"
+    read_more : "READ MORE"
+  projects:
+    title: "PROJECTS"
+    check_out: "Check out"
+    news_related: "News related to this project: "
+    specifications: "Project specifications:"
+    contract_type: "Contract Type"
+    locatoin: "Location"
+    duration: "Duration"
+    design_capacity: "Design Capacity"
+    constr_man_hour: "Construction Man Hour"
+    man_hour: "Man hour"
+    start_date: "Start Date"
+  contact_us:
+    addresses: "Addresses"
+    address1: "Address "
+    address1_text: "No.6, North Razan st., Mirdamad Blvd., Tehran, Iran 1911638111"
+    address2: "Address 2"
+    address2_text: "P.O.Box 19395-6595"
+    Telephones: "Telephones"
+    tele1: "TEL: 0098-21 22924960-4"
+    fax: "FAX: 0098-21 22923142"
+    mail: "Email: Info@igc-ir.com"
+    feedback: "Feedback"
+    name: "Name"
+    email: "E-mail"
+    telephone: "Telephone"
+    message: "Message"
+    required_fields: "REQUIRED FIELDS"
+  footer:
+    get_in_toch: "GET IN TOUCH"
+    caption_1: "You can contact us using the"
+    caption_2: "link or catch up with us in social activities:"
+  search:
+    showing: "Showing "
+    results_for: "results for: "
+    no_results: "No results found."
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
+    helpers:
+      page_entries_info:
+        one_page:
+          display_entries:
+            zero: "No %{entry_name} found"
+            one: "Displaying <b>1</b> %{entry_name}"
+            other: "Displaying <b>all %{count}</b> %{entry_name}"
+        more_pages:
+          display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
+

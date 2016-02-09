@@ -8,7 +8,6 @@ Rails.application.routes.draw do
 
   resources :feedbacks
   devise_for :admins
-  root 'main#home'
 
   get 'admin' => 'admin#dashboard'
   get 'admin/dashboard'
@@ -24,7 +23,6 @@ Rails.application.routes.draw do
   end
 
 
-
   resources :news do
     collection do
       get :appindex
@@ -36,6 +34,8 @@ Rails.application.routes.draw do
 
   scope "(:locale)", :locale => /en|ar/ do
 
+    root 'main#home'
+
     get 'main/home'
     get 'main/our_company'
     get 'main/gallery'
@@ -44,6 +44,8 @@ Rails.application.routes.draw do
     get 'main/news'
     get 'main/success'
     get 'main/search'
+
+
 
   end
 
