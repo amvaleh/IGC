@@ -20,9 +20,7 @@
 //= require morris
 //= require custom-scripts
 //= require ahoy
-
 //= require bootstrap-datepicker/core
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.fa.js
-
-
 //= require chartkick.js
+
