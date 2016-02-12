@@ -52,6 +52,7 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
+    @project.start_date = Timeliness.parse(params[:project][:start_date], :format => 'mm/dd/yyyy')
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
@@ -68,6 +69,10 @@ class ProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @project.update(project_params)
+        if params[:project][:start_date].present?
+          @project.start_date = Timeliness.parse(params[:project][:start_date], :format => 'mm/dd/yyyy')
+          @project.save
+        end
         format.html { redirect_to @project, notice: 'Project was successfully updated.' }
         format.json { render :show, status: :ok, location: @project }
       else
@@ -90,7 +95,10 @@ class ProjectsController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_project
-    @project = Project.find(params[:id])
+    @project = Project.friendly.find(params[:id])
+    @title = @project.title
+    @content = @project.title + ' started at ' + @project.start_date.to_s + ' for ' + @project.client_name.to_s +
+        ' with ' + @project.contract_type + ' contract type ' + 'and lasted '+ @project.duration.to_s + ' month, located at '  + @project.location + ', ' + @project.design_capacity + ' design capacity and ' + @project.construction_man_hour.to_s + ' construction man hour.'
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

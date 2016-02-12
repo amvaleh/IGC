@@ -1,29 +1,31 @@
 <article class="span3 maxheight3 box1" style="height: 167px;">
   <div class="box_inner">
-  <div class="thumb-pad1">
-    <div class="thumbnail">
-      <figure>
-        <% if x.avatars.present? %>
-            <div>
-                    <%= image_tag x.avatars.first.url(:thumb) %>
-            </div>
-        <% else %>
-            <%= image_tag "news.png" , :width => "20%" %>
-        <% end %>
-      </figure>
-      <div class="caption">
-        <time datetime="2013-01-01">
-          <%= x.created_at %>
-        </time> <br>
+    <div class="thumb-pad1">
+      <div class="thumbnail">
         <%= link_to appshow_news_path(x) do %>
-            <%= truncate x.title.html_safe , length: 60  %>
+            <figure>
+              <% if x.avatars.present? %>
+                  <div>
+                    <%= image_tag x.avatars.first.url(:thumb) %>
+                  </div>
+              <% else %>
+                  <%= image_tag "news.png" , :width => "50%" %>
+              <% end %>
+            </figure>
+            <div class="caption">
+              <time datetime="2013-01-01">
+                <%= x.created_at %>
+              </time> <br>
+              <%= link_to appshow_news_path(x) do %>
+                  <%= truncate x.title.html_safe , length: 60  %>
+              <% end %>
+              <!--<a href="#" class="lnk">Quisque nulla</a>-->
+              <p>
+                <%= truncate(x.caption,:length=> 100 )%>
+              </p>
+              <%#= link_to "read more" , appshow_news_path(x) , :class => "btn btn-primary btn1" %>
+            </div>
         <% end %>
-        <!--<a href="#" class="lnk">Quisque nulla</a>-->
-        <p>
-          <%= truncate(x.caption,:length=> 100 )%>
-        </p>
-        <%= link_to "read more" , appshow_news_path(x) , :class => "btn btn-primary btn1" %>
       </div>
     </div>
-  </div>
-</div></article>
+  </div></article>

@@ -215,7 +215,7 @@
           <hr>
         </div>
         <div class="row">
-          <% News.all.first(4).each do |x| %>
+          <% News.all.visible.first(4).each do |x| %>
               <%= render "news/news" , :x => x %>
           <% end %>
         </div>

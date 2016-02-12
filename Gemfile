@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 # gem 'carrierwave'
 gem 'ahoy_matey'
 gem 'bootstrap-datepicker-rails'
+gem 'groupdate'
 
 # gem 'admin_interface'
 
@@ -21,7 +22,10 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'owlcarousel-rails'
 
 gem 'simple_form'
+gem "chartkick"
 
+gem 'publishable'
+gem 'whenever', :require => false
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby``
 gem 'devise'
@@ -33,6 +37,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+
+gem 'timeliness'
+
+gem 'friendly_id'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

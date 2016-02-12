@@ -3,6 +3,11 @@
 <head>
   <title>IGC</title>
   <%= javascript_include_tag 'admin', 'data-turbolinks-track' => true %>
+  <%= favicon_link_tag "igcfav.png" %>
+
+  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+  <%#= javascript_include_tag "path/to/highcharts.js", "chartkick" %>
+
   <%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>

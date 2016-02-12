@@ -1,0 +1,38 @@
+<div class="row">
+
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="panel panel-primary text-center no-boder bg-color-green">
+      <div class="panel-body">
+        <%= line_chart Visit.group_by_day(:started_at).count%>
+      </div>
+      <div class="panel-footer back-footer-blue">
+        Daily Visits
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="panel panel-primary text-center no-boder bg-color-green">
+      <div class="panel-body">
+        <%= line_chart Visit.group_by_week(:started_at).count %>
+        <div class="panel-footer back-footer-blue">
+          Weekly Visits
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="panel panel-primary text-center no-boder bg-color-green">
+      <div class="panel-body">
+        <%= line_chart Visit.group_by_month(:started_at).count %>
+        <div class="panel-footer back-footer-blue">
+          Monthly Visits
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

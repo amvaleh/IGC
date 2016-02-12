@@ -11,6 +11,10 @@ class AdminController < ApplicationController
   before_action :set_news, only: [:show, :edit, :update, :destroy]
 
 
+  def visits
+    
+  end
+
   def news_index
     @news = News.all
   end

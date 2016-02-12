@@ -57,7 +57,7 @@
         </p>
         <p>
           <!--<small>contract type:</small> -->
-          <a> <%= @project.contract_type %> </a>
+           <%= @project.contract_type %>
         </p>
       </div></div>
       <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
@@ -69,9 +69,7 @@
           </span>
         </figure>
         </figure>
-        <a href="#">
           <%= @project.location %>
-        </a>
       </div></div>
       <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
         <figure>
@@ -83,8 +81,8 @@
         </figure>
         <p>
           <!--<small>contract type:</small> -->
-          <a>            '<%= @project.duration %>' month
-          </a>
+           '<%= @project.duration %>' month
+
         </p>
       </div></div>
       <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
@@ -95,9 +93,7 @@
             <%= t("projects.design_capacity") %>
           </span>
         </figure>
-        <a href="#">
           <%= @project.design_capacity %>
-        </a>
       </div></div>
       <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
         <figure>
@@ -107,10 +103,8 @@
             <%= t("projects.constr_man_hour") %>
           </span>
         </figure>
-        <a href="#">
           <%= @project.construction_man_hour %>
           <%= t("projects.man_hour") %>
-        </a>
       </div></div>
       <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
         <figure>
@@ -120,8 +114,7 @@
             <%= t("projects.start_date") %>
           </span>
         </figure>
-        <a> <%= @project.start_date %>
-        </a>
+          <%= @project.start_date %>
       </div></div>
     </article>
     <br>
@@ -145,7 +138,7 @@
       <div class="row">
         <ul class="list6">
           <% count=0 %>
-          <% @project.news.order(:created_at).each do |news| %>
+          <% @project.news.visible.order("publish_date DESC").each do |news| %>
               <% count = count + 1 %>
           .<li>
           <div class="thumb-pad5">
@@ -166,9 +159,9 @@
                 </time>
                 <br>
 
-                <a href="#" class="lnk">
+                  <%= link_to appshow_news_path(news), class: "lnk" do %>
                   <%= count  %> )  <%= news.title %>
-                </a>
+                      <% end %>
                 <p>
                   <%= news.caption %>
                 </p>

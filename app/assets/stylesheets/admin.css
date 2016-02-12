@@ -21,3 +21,8 @@
 .foot:hover{
     color: #000000 !important;
 }
+
+
+.mywidth{
+    width: 20% !important;
+}

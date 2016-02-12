@@ -9,41 +9,43 @@
         <hr>
       </div>
       <ul class="list6">
-        <% @news.each do |news| %>
-            <li>
-              <div class="thumb-pad5">
-                <div class="thumbnail">
-                  <figure>
-                    <%= link_to appshow_news_path(news) do %>
-                        <% if news.avatars.first.present? %>
-                            <%= image_tag news.avatars.first.url(:medium) %>
-                        <% else %>
-                            <%= image_tag "news.png" , :width => "20%"  %>
+        <% @news.order("publish_date DESC").each do |news| %>
+            <% if news.published == true %>
+                <li>
+                  <div class="thumb-pad5">
+                    <div class="thumbnail">
+                      <figure>
+                        <%= link_to appshow_news_path(news) do %>
+                            <% if news.avatars.first.present? %>
+                                <%= image_tag news.avatars.first.url(:medium) %>
+                            <% else %>
+                                <%= image_tag "news.png" , :class => "mywidth"  %>
+                            <% end %>
                         <% end %>
-                    <% end %>
-                  </figure>
-                  <div class="caption">
-                    <time datetime="2013-01-01">
-                      <%= news.created_at %>
-                    </time>
-                    <br>
-                    <%= link_to appshow_news_path(news) , :class => "lnk" do %>
-                        <%= news.title %>
-                    <% end %>
-                    <% if news.project_id.present?%>
-                        <%= link_to appshow_project_path(news.project_id), :class => "pull-right" do %>
-                            <i class="icon-bookmark"></i>
-                            <%= news.project.title %>
+                      </figure>
+                      <div class="caption">
+                        <time datetime="2013-01-01">
+                          <%= news.published %>
+                        </time>
+                        <br>
+                        <%= link_to appshow_news_path(news) , :class => "lnk" do %>
+                            <%= news.title %>
                         <% end %>
-                    <% end %>
-                    <p>
-                      <%= news.caption %>
-                    </p>
-                    <%= link_to t("news.read_more ") , appshow_news_path(news) , :class => "btn btn-primary btn1" %>
+                        <% if news.project_id.present?%>
+                            <%= link_to appshow_project_path(news.project_id), :class => "pull-right" do %>
+                                <i class="icon-bookmark"></i>
+                                <%= news.project.title %>
+                            <% end %>
+                        <% end %>
+                        <p>
+                          <%= news.caption %>
+                        </p>
+                        <%= link_to t("news.read_more ") , appshow_news_path(news) , :class => "btn btn-primary btn1" %>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </li>
+                </li>
+            <% end %>
         <% end %>
 
       </ul>

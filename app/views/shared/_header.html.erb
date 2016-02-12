@@ -191,12 +191,11 @@
                     <option value=<%= appindex_projects_path(:status=> 0,:type=>"offshore") %>>––––––<%= t("header.sub_activities.offshore")%></option>
                     <option value= <%= appindex_projects_path(:status=> 0,:type=>"powerplant") %> >––––––<%= t("header.sub_activities.powerplant")%></option>
                     <option value=""> <%= t("header.assets") %></option>
-                    <option value=<%=  %>  >––<%= t("header.sub_assets.offshore_yard") %></option>
-                    <option value=<%= %>  >––<%= t("header.sub_assets.onshore_yard") %></option>
-                    <option value=<%= %>  >––<%= t("header.sub_assets.warehouses") %></option>
-                    <option value=<%= %>  >––<%= t("header.sub_assets.camps") %></option>
-                    <option value=<%= %>  >––<%= t("header.sub_assets.contruction_equipment") %></option>
-                    <option value=<%= %>  >––<%= t("header.sub_assets.offshore_facilities") %></option>
+                    <% Gadget.all.each do |g| %>
+                        <li>
+                          <option value=<%= appshow_gadget_path(g) %>  >––<%= g.name %></option>
+                        </li>
+                    <% end %>
                     <option value="<%= main_contact_us_path %>"> <%= t("header.contact_us") %> </option>
                   </select>
                 </div>

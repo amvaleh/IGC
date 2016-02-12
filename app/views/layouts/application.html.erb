@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>IGC </title>
+
+  <title>IGC
+    <%="|#{@title}" if @title.present? %>
+  </title>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= favicon_link_tag "igcfav.png" %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <% if @content.present? %>
+      <meta name="description" content= <%=@content%> >
+  <% else %>
+      <meta name="description" content=”Iran International General Contractor (IGC) is active in most relevant areas of Oil & Gas & Power Plants.” >
+  <% end %>
 </head>
 
 <body>
 
 <div class="global">
 
-<!--header-->
-<%= render 'shared/header' %>
+  <!--header-->
+  <%= render 'shared/header' %>
 
   <% if notice %>
       <div class="alert alert-success">

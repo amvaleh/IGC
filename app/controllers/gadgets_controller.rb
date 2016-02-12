@@ -6,8 +6,6 @@ class GadgetsController < ApplicationController
 
   before_action :authenticate_admin!, except: [:appshow]
 
-
-
   def appshow
     render :layout => 'application'
 
@@ -75,7 +73,7 @@ class GadgetsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_gadget
-      @gadget = Gadget.find(params[:id])
+      @gadget = Gadget.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

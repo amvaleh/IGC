@@ -43,11 +43,13 @@
             <%= f.label :client_name %><br>
             <%= f.text_field :client_name,:class=>"form-control" %>
           </div>
+
           <div class="field">
             <%= f.label :start_date %><br>
             <%#= f.date_select :start_date ,:class=>"form-control" , :html => {data_provide: 'datepicker'}%>
             <input name="project[start_date]" type="text" data-provide='datepicker' class="form-control"  placeholder="click to choose">
           </div>
+
           <div class="field">
             <%= f.label :contract_type %><br>
             <%= f.text_field :contract_type ,:class=>"form-control" %>

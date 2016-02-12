@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'admin' => 'admin#dashboard'
   get 'admin/dashboard'
   get 'admin/news_index'
+  get 'admin/visits'
 
   resources :projects do
     collection do
