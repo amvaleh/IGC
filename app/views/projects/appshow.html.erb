@@ -114,7 +114,7 @@
             <%= t("projects.start_date") %>
           </span>
         </figure>
-          <%= @project.start_date %>
+          <%= Timeliness.parse( @project.start_date, :format => 'mm/dd/yyyy').year  %>
       </div></div>
     </article>
     <br>
