@@ -39,9 +39,8 @@
                   <% end %>
                 </td>
                 <td><%= link_to 'Show', news , class: "btn btn-info" %></td>
-                <td><%= link_to appshow_news_path(news) do %>
-                    <i class="fa fa-eye"></i> web
-                  <% end %>
+                <td>
+                  <%= link_to 'web view', appshow_news_path(news) , class: "btn btn-default" %>
                 </td>
                 <td><%= link_to 'Edit', edit_news_path(news) , class: "btn btn-warning" %></td>
                 <td><%= link_to 'Delete', news, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %> </td>

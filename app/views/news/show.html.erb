@@ -23,6 +23,8 @@
         </li>
         <li class=""><a href="#settings" data-toggle="tab">Caption</a>
         </li>
+        <li class=""><a href="#status" data-toggle="tab">Publish Date</a>
+        </li>
         <li class="pull-right ">
 
           <%= link_to 'Edit', edit_news_path(@news),class: "btn  btn-sm btn-warning" %>
@@ -68,6 +70,17 @@
             <%= @news.caption %>
           </p>
         </div>
+
+        <div class="tab-pane fade" id="status">
+          <h4>News publish date:</h4>
+          <p>
+            <%= @news.publish_date if @news.published == false %>
+            <%= "published at: #{ @news.created_at }" if @news.published == true %>
+
+          </p>
+
+        </div>
+
       </div>
     </div>
   </div>
