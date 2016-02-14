@@ -2,7 +2,6 @@
 <section>
   <article class="slider">
     <!---->
-
     <div id="owl-demo">
       <div class="item">
         <%= image_tag "pic1.jpg" , width: "100%" %>
@@ -259,35 +258,26 @@
     $(document).ready(function() {
 
         $("#owl-demo").owlCarousel({
-//            autoPlay : 30000,
-//            stopOnHover : true,
-//            navigation:false,
-//            paginationSpeed : 1000,
-//            goToFirstSpeed : 2000,
-//            singleItem : true,
-//            autoHeight : true,
-//            responsive: true,
-//            transitionStyle:"fade"
-            autoPlay : 3000,
+            autoPlay : 30000,
             stopOnHover : true,
             navigation:false,
             paginationSpeed : 1000,
             goToFirstSpeed : 2000,
             singleItem : true,
             autoHeight : true,
+            responsive: true,
             transitionStyle:"fade"
 
         });
 
         $(".proj").owlCarousel({
-            autoPlay : 7000,
+            autoPlay : 6000,
             stopOnHover : true,
             navigation:false,
             paginationSpeed : 1000,
             goToFirstSpeed : 2000,
             singleItem : true,
-            autoHeight : false,
-            transitionStyle:"fade"
+            autoHeight : true
         });
 
 //        $(".news").owlCarousel({

@@ -13,50 +13,39 @@
   </div>
 
   <div class="row">
-      <% @projects.each do |project| %>
-          <%= render "projects/project" , :x => project %>
-      <% end %>
+    <% @projects.each do |project| %>
+        <%= render "projects/project" , :x => project %>
+    <% end %>
   </div>
-
 
   <br>
 
   <div class="list6 " style="text-align: center">
     <%= paginate @projects %>
   </div>
-
 </div>
-
 <br>
-
 
 <script type="application/javascript">
     $(document).ready(function() {
 
-        //Sort random function
-        function random(owlSelector){
-            owlSelector.children().sort(function(){
-                return Math.round(Math.random()) - 0.5;
-            }).each(function(){
-                $(this).appendTo(owlSelector);
-            });
-        }
 
-        var owl = $(".proj");
+        var $owl = $( '.proj' );
+        $owl.on('initialize.owl.carousel', function(event){
+            var selector = $('.proj');
+            random(selector);
+        });
+//        $owl.owlCarousel();
 
-        owl.owlCarousel({
-            autoPlay : 3000,
+
+        $owl.owlCarousel({
+            autoPlay : 6000,
             stopOnHover : true,
             navigation:false,
             paginationSpeed : 1000,
-            goToFirstSpeed : 500,
+            goToFirstSpeed : 2000,
             singleItem : true,
-            autoHeight : true,
-            transitionStyle:"fade",
-            beforeInit : function(owl){
-                //Parameter elem pointing to $("#owl-demo")
-                random(owl);
-            }
+            autoHeight : true
         });
     });
 </script>

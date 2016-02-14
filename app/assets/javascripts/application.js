@@ -25,8 +25,9 @@
 //= require superfish
 //= require strap
 //= require underscore
-//= require gmaps/google
 
+
+//= require owl.carousel
 
 // bullshit require here
 //= require jquery.fancybox.pack
