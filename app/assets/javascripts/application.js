@@ -14,17 +14,17 @@
 //= require jquery_ujs
 //= require jquery-migrate-1.1.1
 //= require jquery.mobilemenu
-//= require jquery.cookie
-//= require jquery.easing.1.3
-//= require varnish.compiled.application.en
+
 //= require jquery.equalheights
+
+//= require varnish.compiled.application.en
 
 //= require ahoy
 //= require jquery.ui.totop
 
 //= require superfish
 //= require strap
-//= require underscore
+
 
 
 //= require owl.carousel

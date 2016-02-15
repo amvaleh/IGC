@@ -6,7 +6,7 @@
           <div id="owl-project" name="project" class="proj owl-carousel owl-theme">
             <% x.avatars.each do |a| %>
                 <div class="item">
-                  <%= image_tag a.url %>
+                  <div class="eqsize" style="background-image:url(<%= image_path a.url(:medium) %>);"></div>
                 </div>
             <% end  %>
           </div>
@@ -17,9 +17,9 @@
               <div class="icon">
                 <%= image_tag "icon2.png" %>
               </div>
-              <br>
+              <p style="    height: 60px !important;">
               <%= x.title %>
-              <br>
+              </p>
               <hr class="hr">
               <p>
                 <i class="icon-user"></i>

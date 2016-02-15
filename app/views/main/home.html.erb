@@ -2,7 +2,7 @@
 <section>
   <article class="slider">
     <!---->
-    <div id="owl-demo">
+    <div id="" class="proj owl-carousel owl-theme">
       <div class="item">
         <%= image_tag "pic1.jpg" , width: "100%" %>
       </div>
@@ -258,7 +258,7 @@
     $(document).ready(function() {
 
         $("#owl-demo").owlCarousel({
-            autoPlay : 30000,
+            autoPlay : 8000,
             stopOnHover : true,
             navigation:false,
             paginationSpeed : 1000,
@@ -267,7 +267,6 @@
             autoHeight : true,
             responsive: true,
             transitionStyle:"fade"
-
         });
 
         $(".proj").owlCarousel({
@@ -277,7 +276,7 @@
             paginationSpeed : 1000,
             goToFirstSpeed : 2000,
             singleItem : true,
-            autoHeight : true
+            autoHeight : false
         });
 
 //        $(".news").owlCarousel({
@@ -298,13 +297,7 @@
             paginationSpeed : 400,
             singleItem:true,
             autoHeight: true
-            // "singleItem:true" is a shortcut for:
-            // items : 1,
-            // itemsDesktop : false,
-            // itemsDesktopSmall : false,
-            // itemsTablet: false,
-            // itemsMobile : false
-//            itemsDesktopSmall : [979,3]
+        
         });
     });
 </script>
