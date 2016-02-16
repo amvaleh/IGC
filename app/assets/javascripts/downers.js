@@ -10,27 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require jquery-migrate-1.1.1
-//= require jquery.mobilemenu
+//= require varnish_decomp
 
-//= require jquery.equalheights
+//= require jquery.ui.totop
 
-
-
-//= require ahoy
-//= require strap
-
-
-
-//= require owl.carousel
-
-// bullshit require here
-//= require jquery.fancybox.pack
-//= require jquery.accordionSlider.min
-//= require examples
-
-
-
-
+//= require superfish
