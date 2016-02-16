@@ -30,6 +30,6 @@ production:
   encoding: utf8
   database: igc_db
   username: root
-  password: 2736518
+  password: igc2016db
   host: 127.0.0.1
   port: 3306
