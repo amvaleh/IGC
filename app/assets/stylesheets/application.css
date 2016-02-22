@@ -121,3 +121,9 @@
     background-repeat:   no-repeat;
     background-size:     cover;
 }
+
+
+.mytext{
+    font-size: 20px !important;
+    line-height: 30px !important;
+}
