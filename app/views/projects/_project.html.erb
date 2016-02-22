@@ -6,7 +6,7 @@
           <div id="owl-project" name="project" class="proj owl-carousel owl-theme" >
             <% x.avatars.first(4).each do |a| %>
                 <div class="item">
-                  <div class="eqsize" style="background-image:url(<%= image_path a.url(:thumb) %>);"></div>
+                  <div class="eqsize" style="background-image:url(<%= image_path a.url(:medium) %>);"></div>
                 </div>
             <% end  %>
           </div>
