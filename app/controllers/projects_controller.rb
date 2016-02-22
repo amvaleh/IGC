@@ -18,7 +18,11 @@ class ProjectsController < ApplicationController
   def appindex
 
     if params[:status].present? and params[:type].present?
-      @projects = Project.all.where(:status => params[:status], :project_type=>params[:type]).page(params[:page]).per(8)
+      if params[:type] == "abroad"
+        @projects = Project.all.where(:is_abroad => true).page(params[:page]).per(8)
+      else
+        @projects = Project.all.where(:status => params[:status], :project_type=>params[:type]).page(params[:page]).per(8)
+      end
     elsif params[:status].present?
       @projects = Project.all.where(:status => params[:status]).page(params[:page]).per(8)
     else
@@ -103,6 +107,6 @@ class ProjectsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def project_params
-    params.require(:project).permit(:title, :client_name, :start_date, :contract_type, :location, :duration, :design_capacity, :status , :project_type , :construction_man_hour, {avatars: []})
+    params.require(:project).permit(:title, :client_name, :start_date, :contract_type, :location, :duration, :design_capacity, :status , :project_type , :construction_man_hour, :is_abroad , {avatars: []})
   end
 end

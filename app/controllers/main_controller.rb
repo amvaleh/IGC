@@ -6,7 +6,7 @@ class MainController < ApplicationController
   def home
   end
 
-  def our_company
+  def about_us
 
   end
 
@@ -45,6 +45,27 @@ class MainController < ApplicationController
         redirect_to :back
       end
   end
+
+
+
+
+  def onshore_activities
+
+  end
+
+  def offshore_activities
+
+  end
+
+  def powerplant_activities
+
+  end
+
+
+
+
+
+
 
 
 

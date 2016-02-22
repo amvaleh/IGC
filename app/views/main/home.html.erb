@@ -225,30 +225,31 @@
 <section class="companyBox">
   <div class="container">
     <div class="row">
-      <article class="span12">
-        <ul>
-          <li>
-            <a href="#">
-              <%= image_tag "comp_logo1.png" %>
-            </a>
-          </li>
-          <li><a href="#">
-            <%= image_tag "comp_logo2.png" %>
-          </a></li>
-          <li><a href="#">
-            <%= image_tag "comp_logo3.png" %>
-          </a></li>
-          <li><a href="#">
-            <%= image_tag "comp_logo4.png" %>
-          </a></li>
-          <li><a href="#">
-            <%= image_tag "comp_logo5.png" %>
-          </a></li>
-          <li><a href="#">
-            <%= image_tag "comp_logo6.png" %>
-          </a></li>
-        </ul>
-      </article>
+      <div class="span12">
+        <div class="span2">
+          <a href="#">
+          </a></div>
+          <div class="span2">
+            <%= link_to "http://pogc.ir" do %>
+            <%= image_tag "pogc.jpg" %>
+                <% end %>
+          </div>
+          <div class="span2">
+            <a href="http://iooc.co.ir" >
+            <%= image_tag "IOOC.jpg" %>
+          </a></div>
+          <div class="span2">
+            <a href="http://pedec.ir">
+            <%= image_tag "pedec.jpg" %>
+          </a></div>
+          <div class="span2">
+            <a href="http://petropars.com">
+            <%= image_tag "ppl.jpg" %>
+          </a></div>
+          <!--<li><a href="#">-->
+            <!--<%= image_tag "comp_logo6.png" %>-->
+          <!--</a></li>-->
+      </div>
     </div>
   </div>
 </section>

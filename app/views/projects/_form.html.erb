@@ -58,6 +58,13 @@
             <%= f.label :location %><br>
             <%= f.text_field :location ,:class=>"form-control" %>
           </div>
+
+          <div class="field">
+            <%= f.label "is abroad ?" %><br>
+            <%= f.select :is_abroad ,options_for_select([["No", false],["Yes", true] ]),{},:class=>"form-control"%>
+          </div>
+          <br>
+
           <div class="field">
             <%= f.label :duration %><br>
             <%= f.text_field :duration ,:class=>"form-control" %>

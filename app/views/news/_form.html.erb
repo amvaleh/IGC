@@ -34,22 +34,22 @@
             <%= f.file_field :avatars, multiple: true ,:class=>"form-control"%>
           </div>
 
-          <div class="row">
-            <div class="col-md-6">
-              <%= f.label "publish date" %><br>
-              <%#= f.date_select :start_date ,:class=>"form-control" , :html => {data_provide: 'datepicker'}%>
-              <!--<input name="news[published]" type="text" data-provide='datepicker' class="form-control"  placeholder="click to choose">-->
-              <%= f.select :published , options_for_select([ ["publish now", "true"], ["publish later", "false"]]) , {} , :class=>"form-control" %>
-            </div>
-            <div class="col-md-6">
-              <%= f.label "set date to publish this post (default is now)" %><br>
-              <%#= f.date_select :start_date ,:class=>"form-control" , :html => {data_provide: 'datepicker'}%>
-              <input name="news[publish_date]" type="text" data-provide='datepicker' class="form-control"  placeholder="click to choose" id="datepick">
-              <!--<input type="text" class='datepicker' >-->
+          <!--<div class="row">-->
+            <!--<div class="col-md-6">-->
+              <%#= f.label "publish date" %><br>
+              <!--<%#= f.date_select :start_date ,:class=>"form-control" , :html => {data_provide: 'datepicker'}%>-->
+              <!--&lt;!&ndash;<input name="news[published]" type="text" data-provide='datepicker' class="form-control"  placeholder="click to choose">&ndash;&gt;-->
+              <!--<%#= f.select :published , options_for_select([ ["publish now", "true"], ["publish later", "false"]]) , {} , :class=>"form-control" %>-->
+            <!--</div>-->
+            <!--<div class="col-md-6">-->
+              <%#= f.label "set date to publish this post (default is now)" %><br>
+              <!--<%#= f.date_select :start_date ,:class=>"form-control" , :html => {data_provide: 'datepicker'}%>-->
+              <!--<input name="news[publish_date]" type="text" data-provide='datepicker' class="form-control"  placeholder="click to choose" id="datepick">-->
+              <!--&lt;!&ndash;<input type="text" class='datepicker' >&ndash;&gt;-->
 
-            </div>
-          </div>
-          <br>          <br>
+            <!--</div>-->
+          <!--</div>-->
+          <!--<br>          <br>-->
           <div class="form-group">
             <%= f.label :caption %><br>
             <%= f.text_area :caption,:class=>"form-control" %>
@@ -57,7 +57,6 @@
           <div class="actions">
             <%= f.submit "submit" , :class => "btn btn-default pull-right" %>
             <%= link_to 'Back', news_index_path , class: "btn btn-warning " %>
-
           </div>
       <% end %>
     </div>

@@ -3,22 +3,22 @@
     <div class="box_inner">
       <div class="thumbnail">
         <figure>
-          <div id="owl-project" name="project" class="proj owl-carousel owl-theme">
+          <div id="owl-project" name="project" class="proj owl-carousel owl-theme" >
             <% x.avatars.first(4).each do |a| %>
                 <div class="item">
-                  <div class="eqsize" style="background-image:url(<%= image_path a.url(:medium) %>);"></div>
+                  <div class="eqsize" style="background-image:url(<%= image_path a.url(:thumb) %>);"></div>
                 </div>
             <% end  %>
           </div>
         </figure>
         <%= link_to appshow_project_path(x) do %>
 
-            <div class="caption">
+            <div class="caption" <% if x.avatars.count==1 %> style="    margin-top: 35px;" <%end%> >
               <div class="icon">
                 <%= image_tag "icon2.png" %>
               </div>
               <br>
-              <p>
+              <p style="    min-height: 35px;">
               <%= truncate(x.title , :length => 40)%>
               </p>
               <br>
@@ -41,7 +41,6 @@
                 <%= get_status(x) %>
               </p>
         <% end %>
-
         </div>
       </div>
     </div></div>

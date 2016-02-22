@@ -56,23 +56,24 @@
                       <% end %>
                     </li>
                     <li class="">
-                      <%= link_to main_our_company_path do  %>
+                      <%= link_to main_about_us_path do  %>
                           <%= t("header.about_us") %>
                       <% end %>
                     </li>
 
                     <li class="sub-menu">
 
-                      <a href="#" class="">
+                      <a >
                         <%= t("header.activities") %>
                         <span></span>
                         <b class="sf-sub-indicator"></b>
                       </a>
                       <ul class="submenu sub-menu" style="display: none;">
                         <li class="">
-                          <a href="#" class="sf-with-ul">
-                            <%= t("header.sub_activities.onshore") %>
-                            <b class="sf-sub-indicator"></b></a>
+                          <%= link_to main_onshore_activities_path, class: "sf-with-ul"  do%>
+                              <%= t("header.sub_activities.onshore") %>
+                              <b class="sf-sub-indicator"></b>
+                          <% end %>
                           <!--<ul class="submenu-1 sub-menu" style="display: none;">-->
                           <!--<li><a href="#">Gheshm</a></li>-->
                           <!--<li><a href="#">South Pars</a></li>-->
@@ -80,13 +81,15 @@
                           <!--</ul>-->
                         </li>
                         <li>
-                          <a href="#">
-                            <%= t("header.sub_activities.offshore") %>
-                          </a>
+                          <%= link_to main_offshore_activities_path do %>
+                              <%= t("header.sub_activities.offshore") %>
+                          <% end %>
                         </li>
-                        <li><a href="#">
-                          <%= t("header.sub_activities.powerplant") %>
-                        </a></li>
+                        <li>
+                          <%= link_to main_powerplant_activities_path do %>
+                              <%= t("header.sub_activities.powerplant") %>
+                          <% end %>
+                        </li>
                       </ul>
                     </li>
 
@@ -137,7 +140,7 @@
                             </li>
                             <li>
                               <!--<a href="#">-->
-                              <%= link_to appindex_projects_path(:status=> 0,:type=>"abroad") do %>
+                              <%= link_to appindex_projects_path(:status => 0 , :type => "abroad") do %>
                                   <%= t("header.sub_projects.sub_completed.abroad") %>
                               <% end %>
                               <!--</a>-->
@@ -147,10 +150,8 @@
                         </li>
                       </ul>
                     </li>
-
-
                     <li class="sub-menu">
-                      <a href="#" class="">
+                      <a >
                         <%= t("header.assets") %>
                         <span></span>
                         <b class="sf-sub-indicator"></b>
@@ -178,7 +179,7 @@
                   <select class="select-menu" style="display: inline-block;" onChange="window.location.href=this.value">
                     <option value="#"><%= t("header.navigate_to") %></option>
                     <option value=<%= root_path %>> <%= t("header.root") %></option>
-                    <option value= <%= main_our_company_path %> > <%= t("header.about_us") %> </option>
+                    <option value= <%= main_about_us_path %> > <%= t("header.about_us") %> </option>
                     <option value= <%=  %> >––<%= t("header.activities") %></option>
                     <option value="">–––<%= t("header.sub_activities.onshore") %></option>
                     <option value="">–––<%= t("header.sub_activities.offshore")%></option>

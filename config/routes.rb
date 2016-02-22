@@ -23,7 +23,6 @@ Rails.application.routes.draw do
     end
   end
 
-
   resources :news do
     collection do
       get :appindex
@@ -38,7 +37,7 @@ Rails.application.routes.draw do
     root 'main#home'
 
     get 'main/home'
-    get 'main/our_company'
+    get 'main/about_us'
     get 'main/gallery'
     get 'main/contact_us'
     get 'main/stack_holders'
@@ -46,7 +45,9 @@ Rails.application.routes.draw do
     get 'main/success'
     get 'main/search'
 
-
+    get 'main/onshore_activities'
+    get 'main/offshore_activities'
+    get 'main/powerplant_activities'
 
   end
 

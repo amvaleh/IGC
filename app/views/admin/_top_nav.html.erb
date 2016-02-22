@@ -9,41 +9,41 @@
     <!--<a class="navbar-brand" href="index.html">IGC</a>-->
     <%= link_to admin_dashboard_path, class: "navbar-brand" do %>
         <!--<span>IGC</span>-->
-        <%= image_tag "logonewblue.png" , :width => "100px" %>
+        <%= image_tag "adminlogo.png" , :width => "100px" %>
     <% end %>
   </div>
 
   <ul class="nav navbar-top-links navbar-right">
-    <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
-      </a>
-      <ul class="dropdown-menu dropdown-messages">
-        <div class="text-center">upcoming news:
-          <%= News.all.where(:published => false ).count %>
-        </div>
-        <%News.all.where(:published => false ).each do |n| %>
-            <li>
-              <%= link_to news_path(n) do%>
-                  <div>
-                    <strong><%= n.title %></strong>
-                                    <span class="pull-right text-muted">
-                                        <em><%= n.publish_date %></em>
-                                    </span>
-                  </div>
-                  <div>
-                    <%= truncate(n.caption , :length => 400) %>
-                  </div>
-              <% end %>
-            </li>
-            <li class="divider"></li>
-        <% end %>
-        <li>
-          <%= link_to news_index_path , :class => "text-center" do %>
-              <strong>See All News</strong>
-              <i class="fa fa-angle-right"></i>
-          <% end %>
-        </li>
+    <!--<li class="dropdown">-->
+      <!--<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">-->
+        <!--<i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>-->
+      <!--</a>-->
+      <!--<ul class="dropdown-menu dropdown-messages">-->
+        <!--<div class="text-center">upcoming news:-->
+          <!--<%= News.all.where(:published => false ).count %>-->
+        <!--</div>-->
+        <!--<%News.all.where(:published => false ).each do |n| %>-->
+            <!--<li>-->
+              <!--<%= link_to news_path(n) do%>-->
+                  <!--<div>-->
+                    <!--<strong><%= n.title %></strong>-->
+                                    <!--<span class="pull-right text-muted">-->
+                                        <!--<em><%= n.publish_date %></em>-->
+                                    <!--</span>-->
+                  <!--</div>-->
+                  <!--<div>-->
+                    <!--<%= truncate(n.caption , :length => 400) %>-->
+                  <!--</div>-->
+              <!--<% end %>-->
+            <!--</li>-->
+            <!--<li class="divider"></li>-->
+        <!--<% end %>-->
+        <!--<li>-->
+          <!--<%= link_to news_index_path , :class => "text-center" do %>-->
+              <!--<strong>See All News</strong>-->
+              <!--<i class="fa fa-angle-right"></i>-->
+          <!--<% end %>-->
+        <!--</li>-->
         <!--<li>-->
         <!--<a href="#">-->
         <!--<div>-->
@@ -70,9 +70,9 @@
         <!--<li class="divider"></li>-->
         <!--<li>-->
         <!--</li>-->
-      </ul>
+      <!--</ul>-->
       <!-- /.dropdown-messages -->
-    </li>
+    <!--</li>-->
     <!-- /.dropdown -->
     <!--<li class="dropdown">-->
     <!--<a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">-->

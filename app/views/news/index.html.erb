@@ -18,7 +18,7 @@
             <th>Related Project</th>
             <th>Title</th>
             <th>Avatars</th>
-            <th>Publish status</th>
+            <!--<th>Publish status</th>-->
             <th colspan="4"></th>
           </tr>
           </thead>
@@ -31,15 +31,15 @@
                 <td><%= news.title %></td>
                 <td><%= news.avatars.length %></td>
                 <!--<td><%= truncate(news.caption , :length=> 30)%></td>-->
-                <td class="text-center">
-                  <% if news.published==true %>
-                      <i class="fa fa-check"></i>
-                      published
-                  <% else %>
-                      upcoming:
-                      <%= news.publish_date %>
-                  <% end %>
-                </td>
+                <!--<td class="text-center">-->
+                  <!--<% if news.published==true %>-->
+                      <!--<i class="fa fa-check"></i>-->
+                      <!--published-->
+                  <!--<% else %>-->
+                      <!--upcoming:-->
+                      <!--<%= news.publish_date %>-->
+                  <!--<% end %>-->
+                <!--</td>-->
                 <td><%= link_to 'Show', news , class: "btn btn-info" %></td>
                 <td>
                   <%= link_to 'web view', appshow_news_path(news) , class: "btn btn-default" %>
