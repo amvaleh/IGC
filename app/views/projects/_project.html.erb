@@ -19,17 +19,16 @@
               </div>
               <br>
               <p style="    min-height: 35px;">
-              <%= truncate(x.title , :length => 40)%>
+              <%= truncate(x.title , :length => 30)%>
               </p>
-              <br>
               <hr class="hr">
               <p>
                 <i class="icon-user"></i>
-                <%= x.client_name %>
+                <%= truncate(x.client_name , :length => 15)%>
               </p>
               <p>
                 <i class="icon-map-marker"></i>
-                <%= x.location %>
+                <%= truncate(x.location , :length => 15)%>
               </p>
               <p>
                 <% case x.status %>
