@@ -1,0 +1,24 @@
+<div class="container" style="margin-top: 90px">
+  <div class="row">
+    <article class="span12 list6-box padTop">
+      <div class="holder">
+        <h2>
+          <%= t("offshorefacilities") %>
+        </h2>
+        <br>
+        <hr>
+      </div>
+
+    </article>
+  </div>
+
+  <div class="row">
+    <% OffshoreFacility.all.each do |o| %>
+        <%= render "asset" , :x => o %>
+    <% end %>
+  </div>
+
+  <br>
+
+</div>
+<br>

@@ -14,6 +14,23 @@
       </div>
     </div>
 
+
+    <div class="col-md-3 col-sm-12 col-xs-12">
+      <div class="panel panel-primary text-center no-boder bg-color-green">
+        <div class="panel-body">
+          <i class="fa  fa-picture-o fa-5x"></i>
+          <h3>
+            <%= HomeGallery.all.count %>
+          </h3>
+        </div>
+        <div class="panel-footer back-footer-green">
+          Home Gallery Pictures
+        </div>
+      </div>
+    </div>
+
+
+
     <div class="col-md-3 col-sm-12 col-xs-12">
       <div class="panel panel-primary text-center no-boder bg-color-blue">
         <div class="panel-body">
@@ -22,18 +39,17 @@
         </div>
         <div class="panel-footer back-footer-blue">
           NEWS
-
         </div>
       </div>
     </div>
 
     <div class="col-md-3 col-sm-12 col-xs-12">
-      <div class="panel panel-primary text-center no-boder bg-color-red">
+      <div class="panel panel-primary text-center no-boder bg-color-blue">
         <div class="panel-body">
           <i class="fa fa fa-briefcase fa-5x"></i>
           <h3><%= Project.all.count %></h3>
         </div>
-        <div class="panel-footer back-footer-red">
+        <div class="panel-footer back-footer-blue">
           Projects
 
         </div>
@@ -51,17 +67,48 @@
       </div>
     </div>
 
+
     <div class="col-md-3 col-sm-12 col-xs-12">
       <div class="panel panel-primary text-center no-boder bg-color-purple">
         <div class="panel-body">
           <i class="fa fa-gears fa-5x"></i>
-          <h3> <%= Gadget.all.count %> </h3>
+          <h3> <%= OnshoreYard.all.count %> </h3>
         </div>
         <div class="panel-footer back-footer-purple">
-          Assets
+          OnshoreYards
         </div>
       </div>
     </div>
+
+
+    <div class="col-md-3 col-sm-12 col-xs-12">
+      <div class="panel panel-primary text-center no-boder bg-color-purple">
+        <div class="panel-body">
+          <i class="fa fa-flag fa-5x"></i>
+          <h3> <%= OffshoreFacility.all.count %> </h3>
+        </div>
+        <div class="panel-footer back-footer-purple">
+          Offshore Facilities
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3 col-sm-12 col-xs-12">
+      <div class="panel panel-primary text-center no-boder bg-color-purple">
+        <div class="panel-body">
+          <i class="fa fa-columns fa-5x"></i>
+          <h3> <%= ConstructionEquipment.all.count %> </h3>
+        </div>
+        <div class="panel-footer back-footer-purple">
+          Construction Equipments
+        </div>
+      </div>
+    </div>
+
+
+
+
 
   </div>
   <!-- /. ROW  -->

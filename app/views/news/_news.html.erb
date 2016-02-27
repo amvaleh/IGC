@@ -1,4 +1,4 @@
-<article class="span3 maxheight3 box1" style="height: 167px;">
+<article class="span3 maxheight3 box4" style="height: 167px;">
   <div class="box_inner">
     <div class="thumb-pad1">
       <div class="thumbnail">
@@ -14,7 +14,7 @@
             </figure>
             <div class="caption">
               <time datetime="2013-01-01">
-                <%= x.created_at %>
+                <%= x.created_at.to_date %>
               </time> <br>
               <%= link_to appshow_news_path(x) do %>
                   <%= truncate x.title.html_safe , length: 60  %>

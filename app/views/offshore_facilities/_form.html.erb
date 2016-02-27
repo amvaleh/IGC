@@ -1,0 +1,14 @@
+<div class="col-md-12 well">
+<%= simple_form_for(@offshore_facility) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :equipment %>
+    <%= f.input :descripton %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+</div>

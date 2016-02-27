@@ -142,6 +142,9 @@
   .span1 {
     width: 70px;
   }
+  .span1_5{
+      width: 140px;
+  }
   .offset12 {
     margin-left: 1230px;
   }
@@ -466,6 +469,9 @@
   }
   .span1 {
     width: 42px;
+  }
+  .span1_5{
+
   }
   .offset12 {
     margin-left: 764px;

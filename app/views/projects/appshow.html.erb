@@ -3,7 +3,6 @@
     <article class="span12 list6-box padTop">
       <div class="holder">
         <h2>
-          <i class="icon icon-bookmark"></i>
           <%= @project.title %>
         </h2>
         <br>
@@ -38,85 +37,98 @@
     <article class="span12 list6-box padTop">
       <div class="holder">
         <h6 style="    font-size: 18px;">
-            <%= t("projects.specifications") %>
+          <%= t("projects.specifications") %>
         </h6>
       </div>
     </article>
     <br>
     <hr>
-    <article class="banner-holder">
-      <div class="span2 thumb-pad-bann maxheight " style="height: 346px;"><div class="box_inner">
+    <article class="">
+      <div class="span1_5 thumb-pad-bann maxheight " style="height: 346px;"><div class="box_inner">
         <figure>
-          <%= image_tag "contract.png", :width => "40%" %>
-          <br>          <br>
-          <span>
+          <%= image_tag "client-profile.png", :width => "35%"  %>
+          <br>
+          <p class="mrg">
+            <%= t("projects.client") %>
+          </p>
+        </figure>
+        <p>
+          <%= @project.client_name %>
+        </p>
+      </div></div>
+      <div class="span1_5 thumb-pad-bann maxheight " style="height: 346px;"><div class="box_inner">
+        <figure>
+          <%= image_tag "contract.png", :width => "35%" %>
+          <br>
+          <p class="mrg">
             <%= t("projects.contract_type") %>
-          </span>
+          </p>
         </figure>
-        <p>
-        </p>
-        <p>
+        <p class="mrg">
           <!--<small>contract type:</small> -->
-           <%= @project.contract_type %>
+          <%= @project.contract_type %>
         </p>
       </div></div>
-      <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
+      <div class="span1_5 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
         <figure>
-          <%= image_tag "map.png", :width => "40%" %>
-          <br>          <br>
-          <span>
+          <%= image_tag "map.png", :width => "35%" %>
+          <br>
+          <p class="mrg">
             <%= t("projects.locatoin") %>
-          </span>
+          </p>
         </figure>
         </figure>
-          <%= @project.location %>
+        <%= @project.location %>
       </div></div>
-      <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
+      <div class="span1_5 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
         <figure>
-          <%= image_tag "duration.png", :width => "40%" %>
-          <br>          <br>
-          <span>
+          <%= image_tag "duration.png", :width => "35%" %>
+          <br>
+          <p class="mrg">
                         <%= t("projects.duration") %>
-          </span>
+          </p>
         </figure>
         <p>
           <!--<small>contract type:</small> -->
-           '<%= @project.duration %>' month
+          '<%= @project.duration %>' month
 
         </p>
       </div></div>
-      <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
+      <div class="span1_5 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
         <figure>
-          <%= image_tag "capacity.png", :width => "40%" %>
-          <br>          <br>
-          <span>
-            <%= t("projects.design_capacity") %>
-          </span>
-        </figure>
-          <%= @project.design_capacity %>
-      </div></div>
-      <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
-        <figure>
-          <%= image_tag "manhour.png", :width => "40%" %>
-          <br>          <br>
-          <span>
-            <%= t("projects.constr_man_hour") %>
-          </span>
-        </figure>
-          <%= @project.construction_man_hour %>
-          <%= t("projects.man_hour") %>
-      </div></div>
-      <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
-        <figure>
-          <%= image_tag "date.png", :width => "40%" %>
-          <br>          <br>
-          <span>
+          <%= image_tag "date.png", :width => "35%" %>
+          <br>
+          <p class="mrg">
             <%= t("projects.start_date") %>
-          </span>
+          </p>
         </figure>
-          <%= Timeliness.parse( @project.start_date, :format => 'mm/dd/yyyy').year if @project.start_date.present?  %>
+        <%= Timeliness.parse( @project.start_date, :format => 'mm/dd/yyyy').year if @project.start_date.present?  %>
+      </div></div>
+
+      <div class="span1_5 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
+        <figure>
+          <%= image_tag "manhour.png", :width => "35%" %>
+          <br>
+          <p class="mrg">
+            <%= t("projects.constr_man_hour") %>
+          </p>
+        </figure>
+        <%= @project.construction_man_hour %>
+        <%= t("projects.man_hour") %>
+      </div></div>
+
+      <div class="span1_5 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
+        <figure>
+          <%= image_tag "capacity.png", :width => "35%" %>
+          <br>
+          <p class="mrg">
+            <%= t("projects.design_capacity") %>
+          </p>
+        </figure>
+        <%= @project.design_capacity %>
       </div></div>
     </article>
+
     <br>
     <br>
     <br>
@@ -127,20 +139,20 @@
         <article class="span12 list6-box padTop">
           <div class="holder">
             <h6 style="    font-size: 18px;">
-            <%= t("projects.news_related") %>
+              <%= t("projects.news_related") %>
             </h6>
           </div>
         </article>
         <br>
         <br>
         <hr>
-        </div>
+      </div>
       <div class="row">
         <ul class="list6">
           <% count=0 %>
           <% @project.news.visible.order("publish_date DESC").each do |news| %>
               <% count = count + 1 %>
-          .<li>
+              .<li>
           <div class="thumb-pad5">
             <div class="thumbnail">
               <figure>
@@ -159,9 +171,9 @@
                 </time>
                 <br>
 
-                  <%= link_to appshow_news_path(news), class: "lnk" do %>
-                  <%= count  %> )  <%= news.title %>
-                      <% end %>
+                <%= link_to appshow_news_path(news), class: "lnk" do %>
+                    <%= count  %> )  <%= news.title %>
+                <% end %>
                 <p>
                   <%= news.caption %>
                 </p>
@@ -172,14 +184,16 @@
         </li>
           <% end %>
         </ul>
-        </div>
-        <div class="row" style="text-align: center">
+      </div>
+      <div class="row" style="text-align: center">
         <br>
         <hr>
-          <br>
+        <br>
       </div>
+  <% else %>
+      <br><br><br>
   <% end %>
 
-  </div>
+</div>
 </div>
 

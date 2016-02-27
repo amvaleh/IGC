@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3>Listing Offshore Facilities</h3>
+          <%= link_to 'New Offshore facility', new_offshore_facility_path , :class => "pull-right btn btn-default"  %>
+        </div>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+              <thead>
+              <tr>
+                <th>Equipment</th>
+                <th>Descripton</th>
+                <th colspan="3"></th>
+              </tr>
+              </thead>
+              <tbody>
+              <% @offshore_facilities.each do |offshore_facility| %>
+                  <tr>
+                    <td><%= offshore_facility.equipment %></td>
+                    <td><%= offshore_facility.descripton %></td>
+                    <td><%= link_to 'Show', offshore_facility %></td>
+                    <td><%= link_to 'Edit', edit_offshore_facility_path(offshore_facility) %></td>
+                    <td><%= link_to 'Destroy', offshore_facility, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+              <% end %>
+              </tbody>
+            </table>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

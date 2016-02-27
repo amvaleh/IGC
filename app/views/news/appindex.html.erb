@@ -31,9 +31,11 @@
                         <%= link_to appshow_news_path(news) , :class => "lnk" do %>
                             <%= news.title %>
                         <% end %>
+                        <br>
+                        <%= news.created_at.to_date %>
+                        <br>
                         <% if news.project_id.present?%>
                             <%= link_to appshow_project_path(news.project_id), :class => "pull-right" do %>
-                                <i class="icon-bookmark"></i>
                                 <%= news.project.title %>
                             <% end %>
                         <% end %>

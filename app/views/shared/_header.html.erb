@@ -162,6 +162,15 @@
                               <%= link_to g.name , appshow_gadget_path(g) %>
                             </li>
                         <% end %>
+                        <li>
+                          <%= link_to "Onshore Yards" , appindex_onshore_yards_path %>
+                        </li>
+                        <li>
+                          <%= link_to "Offshore Facilities" , appindex_offshore_facilities_path %>
+                        </li>
+                        <li>
+                          <%= link_to "Construction Equipments" , appindex_construction_equipments_path %>
+                        </li>
                       </ul>
                     </li>
 
@@ -197,6 +206,15 @@
                           <option value=<%= appshow_gadget_path(g) %>  >––<%= g.name %></option>
                         </li>
                     <% end %>
+                    <li>
+                      <option value=<%= appindex_onshore_yards_path  %>  >––<%= t("onshoreyards") %></option>
+                    </li>
+                    <li>
+                      <option value=<%= appindex_offshore_facilities_path  %>  >––<%= t("offshorefacilities") %></option>
+                    </li>
+                    <li>
+                      <option value=<%= appindex_construction_equipments_path   %>  >––<%= t("construction_equipments") %></option>
+                    </li>
                     <option value="<%= main_contact_us_path %>"> <%= t("header.contact_us") %> </option>
                   </select>
                 </div>

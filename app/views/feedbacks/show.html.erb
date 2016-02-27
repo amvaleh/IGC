@@ -1,24 +1,39 @@
-<p id="notice"><%= notice %></p>
+<div class="col-md-12 col-sm-12">
 
-<p>
-  <strong>Name:</strong>
-  <%= @feedback.name %>
-</p>
+  <div class="row well">
 
-<p>
-  <strong>Email:</strong>
-  <%= @feedback.email %>
-</p>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Telephone:</strong>
-  <%= @feedback.telephone %>
-</p>
+    <p>
+      <strong>Name:</strong>
+      <%= @feedback.name %>
+    </p>
 
-<p>
-  <strong>Message:</strong>
-  <%= @feedback.message %>
-</p>
+    <p>
+      <strong>Email:</strong>
+      <%= @feedback.email %>
+    </p>
 
-<%= link_to 'Edit', edit_feedback_path(@feedback) , :class => "btn btn-warning" %> |
-<%= link_to 'Back', feedbacks_path , :class => "btn btn-primary"%>
+    <p>
+      <strong>Telephone:</strong>
+      <%= @feedback.telephone %>
+    </p>
+
+    <p>
+      <strong>Message:</strong>
+      <%= @feedback.message %>
+    </p>
+
+    <p>
+      <strong>Date:</strong>
+      <%= @feedback.created_at %>
+    </p>
+
+
+
+
+    <%= link_to 'Edit', edit_feedback_path(@feedback) , :class => "btn btn-warning" %> |
+    <%= link_to 'Back', feedbacks_path , :class => "btn btn-primary"%>
+
+  </div>
+</div>

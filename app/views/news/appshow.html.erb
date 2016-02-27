@@ -5,17 +5,21 @@
         <h2>
           <%= @news.title %>
         </h2>
+        <p>
+          <small>
+            <%= @news.created_at.to_date %>
+          </small>
+        </p>
         <p style="    line-height: 30px;
                 text-align: justify;
                 font-weight: bold;">
-          <i class="icon icon-comment"></i>
           <%= @news.caption %>
         </p>
         <br>
         <p>
           <% if @news.project_id.present? %>
               <%= link_to appshow_project_path(@news.project_id) , :class => "btn btn_primary pull-right" do %>
-                  <%= t("projects.check_out") %> <%= @news.project.title %> <i class="icon-bookmark"></i>
+                  <%= t("projects.check_out") %> <%= @news.project.title %>
               <% end %>
           <% end %>
         </p>

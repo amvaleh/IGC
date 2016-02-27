@@ -38,6 +38,13 @@ class MainController < ApplicationController
 
         @result2 = News.all.where("title LIKE ? OR caption LIKE ? ","%#{term}%", "%#{term}%")
 
+        @result3 = ConstructionEquipment.all.where("production_date LIKE ? OR Description LIKE ? ","%#{term}%", "%#{term}%")
+
+        @result4 = OnshoreYard.all.where("description LIKE ? OR location LIKE ? OR area LIKE ? OR remark LIKE ?" ,"%#{term}%", "%#{term}%", "%#{term}%", "%#{term}%")
+
+        @result5 = OffshoreFacility.all.where("equipment LIKE ? OR descripton LIKE ? ","%#{term}%", "%#{term}%")
+
+        @result6 = ConstructionEquipmentCategory.all.where("name LIKE ? " , "%#{term}%")
 
         @word = term
 

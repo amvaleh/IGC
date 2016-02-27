@@ -1,0 +1,28 @@
+<div class="container" style="margin-top: 90px">
+  <div class="row">
+    <article class="span12 list6-box padTop">
+      <div class="holder">
+        <h2>
+          <%= t("construction_equipments") %>
+        </h2>
+        <br>
+        <hr>
+      </div>
+
+    </article>
+  </div>
+
+  <div class="row">
+    <% @construction_equipments.all.order("construction_equipment_category_id ASC").each do |o| %>
+        <%= render "asset" , :x => o %>
+    <% end %>
+  </div>
+
+  <br>
+
+  <div class="list6 " style="text-align: center">
+    <%= paginate @construction_equipments %>
+  </div>
+
+</div>
+<br>

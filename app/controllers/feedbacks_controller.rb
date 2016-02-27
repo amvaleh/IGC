@@ -32,7 +32,7 @@ class FeedbacksController < ApplicationController
 
     respond_to do |format|
       if @feedback.save
-        Feedbackmailer.notif(@feedback).deliver
+        # Feedbackmailer.notif(@feedback).deliver
         format.html { redirect_to  main_success_path }
         format.json { render :show, status: :created, location: @feedback }
       else

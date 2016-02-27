@@ -65,6 +65,7 @@ en:
       caption_services: "Procurement and Construction"
       blk_box_title: "Field of Activities"
       blk_box_caption: "Our expertise encompasses all areas relating to the production, transportation, processing and delivery of the following but not limited to"
+    clients: "Clients"
   news:
     title: "NEWS"
     read_more : "READ MORE"
@@ -73,6 +74,7 @@ en:
     check_out: "Check out"
     news_related: "News related to this project: "
     specifications: "Project specifications:"
+    client: "Client Name"
     contract_type: "Contract Type"
     locatoin: "Location"
     duration: "Duration"
@@ -80,6 +82,11 @@ en:
     constr_man_hour: "Construction Man Hour"
     man_hour: "Man hour"
     start_date: "Start Date"
+    ongonin: "On Going"
+    completed: "Completed"
+  onshoreyards: "Onshore Yards"
+  offshorefacilities: "Offshore Facilities"
+  construction_equipments: "Construction Equipments"
   contact_us:
     addresses: "Address"
     address1: "Address "

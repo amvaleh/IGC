@@ -1,5 +1,29 @@
 Rails.application.routes.draw do
 
+
+
+  resources :construction_equipment_categories
+  resources :home_galleries
+
+
+  resources :offshore_facilities do
+    collection do
+      get :appindex
+    end
+  end
+  resources :construction_equipments do
+    collection do
+      get :appindex
+    end
+  end
+  resources :onshore_yards do
+    collection do
+      get :appindex
+    end
+  end
+
+
+
   resources :gadgets do
     member do
       get :appshow

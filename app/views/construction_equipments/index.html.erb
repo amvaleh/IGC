@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h1>Listing Construction Equipments</h1>
+          <%= link_to 'New Construction equipment', new_construction_equipment_path , :class => "pull-right btn btn-default"  %>
+        </div>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+              <thead>
+              <tr>
+                <th>Constructionequipmentcategory</th>
+                <th>Production date</th>
+                <th>Quantity</th>
+                <th>Description</th>
+                <th colspan="3"></th>
+              </tr>
+              </thead>
+              <tbody>
+              <% @construction_equipments.order("construction_equipment_category_id ASC").each do |construction_equipment| %>
+                  <tr>
+                    <td><%= construction_equipment.construction_equipment_category.name %></td>
+                    <td><%= construction_equipment.production_date %></td>
+                    <td><%= construction_equipment.quantity %></td>
+                    <td><%= construction_equipment.Description %></td>
+                    <td><%= link_to 'Show', construction_equipment %></td>
+                    <td><%= link_to 'Edit', edit_construction_equipment_path(construction_equipment) %></td>
+                    <td><%= link_to 'Destroy', construction_equipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+              <% end %>
+              </tbody>
+            </table>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

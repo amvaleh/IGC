@@ -9,11 +9,6 @@
 @import url(//fonts.googleapis.com/css?family=Roboto);
 
 
-
-
-/**/
-
-/**/
 body {
     background: #333333;
     font: 12px Open Sans, Arial, Helvetica, sans-serif;
@@ -514,7 +509,7 @@ hr {
     border-radius: 7px;
     text-align: center;
     padding-top: 18px;
-    height: 134px;
+    height: 120px;
     margin-bottom: 26px;
 }
 .thumb-pad-bann figure span{
@@ -1041,7 +1036,7 @@ header p > span {
     font-size: 24px;
     line-height: 24px;
     display: block;
-    margin-left: 30px;
+    margin-left: 22px;
 }
 .navbar_ .navbar-inner {
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -1221,7 +1216,7 @@ header p > span {
     position: absolute;
     display: none;
     width: 175px;
-    left: 146px;
+    left: 154px;
     top: -30px;
     list-style: none !important;
     zoom: 1;
@@ -1252,7 +1247,7 @@ header p > span {
 }
 .nav-collapse .sub-menu ul ul li a:hover {
     text-decoration: none;
-    color: #fd6b32 !important;
+    color: #184DE3!important;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -1522,7 +1517,7 @@ header p > span {
     width: 100%;
 }
 .newsBox {
-    padding: 113px 0 166px 0;
+    padding: 113px 0 19px 0;
 }
 /*-----subscribeForm-----*/
 #subscribe-form {

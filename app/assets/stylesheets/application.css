@@ -123,7 +123,21 @@
 }
 
 
-.mytext{
-    font-size: 20px !important;
+.mytext {
+    font-size: 17px !important;
     line-height: 30px !important;
+    text-align: left;
+}
+
+
+.lefted{
+    text-align: left!important;
+}
+
+.myspan2{
+    width: 11% ;
+}
+
+.mrg{
+    margin-top: 3%;
 }

@@ -1,0 +1,20 @@
+<div class="row well">
+<%= simple_form_for(@home_gallery) do |f| %>
+  <%= f.error_notification %>
+
+
+
+    <div class="field">
+      <%= f.label :avatars %><br>
+      <%= f.file_field :avatars, multiple: true ,:class=>"form-control" %>
+    </div>
+
+    <br>
+    <br>
+
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+</div>

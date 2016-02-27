@@ -1,0 +1,31 @@
+<article class="span3 box4">
+  <div class="thumb-pad8 " >
+    <div class="box_inner">
+      <div class="thumbnail">
+        <div class="caption" >
+          <div class="icon" style="margin-top: 8%;">
+            <i class="icon icon-cogs icon-2x" style="color: #5da5e3"></i>
+          </div>
+          <br>
+          <p>
+            <%= x.Description %>
+          </p>
+          <hr class="hr">
+          <div style="text-align: justify; padding-left: 6%" >
+          <p>
+            <small class="muted">quantity: </small>
+            <%= x.quantity %>
+          </p>
+          <p>
+            <small class="muted">production date: </small>
+            <%= x.production_date %>
+          </p>
+            <p>
+              <small class="muted">category:</small>
+              <%= x.construction_equipment_category.name %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div></div>
+</article>

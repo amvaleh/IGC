@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Constructionequipmentcategory:</strong>
+  <%= @construction_equipment.construction_equipment_category.name %>
+</p>
+
+<p>
+  <strong>Production date:</strong>
+  <%= @construction_equipment.production_date %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @construction_equipment.quantity %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @construction_equipment.Description %>
+</p>
+
+<%= link_to 'Edit', edit_construction_equipment_path(@construction_equipment) %> |
+<%= link_to 'Back', construction_equipments_path %>

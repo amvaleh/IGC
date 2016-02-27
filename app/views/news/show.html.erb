@@ -6,11 +6,7 @@
           created on:
         </small>
         <%= @news.created_at %>
-        <small class="pull-right">
-          <% if @news.published == false %>
-              upcoming at: <%= @news.publish_date %>
-          <% end %>
-        </small>
+
       </h3>
     </div>
     <div class="panel-body">
@@ -23,8 +19,7 @@
         </li>
         <li class=""><a href="#settings" data-toggle="tab">Caption</a>
         </li>
-        <li class=""><a href="#status" data-toggle="tab">Publish Date</a>
-        </li>
+
         <li class="pull-right ">
 
           <%= link_to 'Edit', edit_news_path(@news),class: "btn  btn-sm btn-warning" %>
@@ -38,7 +33,9 @@
       <div class="tab-content">
         <div class="tab-pane fade active in" id="home">
           <% if @news.project_id.present?%>
-              <h4>Project:   <%= @news.project_id %>
+              <h4>Project:
+                <%= @news.project.title %>
+
               </h4>
               <p>
                 <%= @news.project.title  %>
@@ -47,6 +44,9 @@
               <h4>No project defined!
                 <small>click edit to add a related project.</small></h4>
           <% end %>
+          <h6>
+            <%= @news.created_at %>
+          </h6>
         </div>
         <div class="tab-pane fade" id="profile">
           <h4>News title:</h4>
@@ -70,17 +70,6 @@
             <%= @news.caption %>
           </p>
         </div>
-
-        <div class="tab-pane fade" id="status">
-          <h4>News publish date:</h4>
-          <p>
-            <%= @news.publish_date if @news.published == false %>
-            <%= "published at: #{ @news.created_at }" if @news.published == true %>
-
-          </p>
-
-        </div>
-
       </div>
     </div>
   </div>

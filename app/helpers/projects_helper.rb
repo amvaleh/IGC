@@ -12,7 +12,7 @@ def get_status(project)
     elsif project.status == false
       return "completed"
     else
-      return "completed!"
+      return "completed"
     end
   end
 

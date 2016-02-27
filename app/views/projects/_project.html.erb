@@ -19,7 +19,7 @@
               </div>
               <br>
               <p style="    min-height: 35px;">
-              <%= truncate(x.title , :length => 30)%>
+                <%= truncate(x.title , :length => 30)%>
               </p>
               <hr class="hr">
               <p>
@@ -31,13 +31,19 @@
                 <%= truncate(x.location , :length => 15)%>
               </p>
               <p>
-                <% case x.status %>
-                <% when true %>
-                    <i class="icon-play"></i>
-                <% when false %>
+                <% if not x.status.present? %>
                     <i class="icon-check"></i>
+                    <%= t("projects.completed") %>
+                <% else %>
+                    <% case x.status %>
+                <% when true %>
+                        <i class="icon-play"></i>
+                        <%= t("projects.ongonin") %>
+                    <% when false %>
+                        <i class="icon-check"></i>
+                        <%= t("projects.completed") %>
+                    <% end %>
                 <% end %>
-                <%= get_status(x) %>
               </p>
         <% end %>
         </div>

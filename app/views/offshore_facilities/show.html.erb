@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Equipment:</strong>
+  <%= @offshore_facility.equipment %>
+</p>
+
+<p>
+  <strong>Descripton:</strong>
+  <%= @offshore_facility.descripton %>
+</p>
+
+<%= link_to 'Edit', edit_offshore_facility_path(@offshore_facility) %> |
+<%= link_to 'Back', offshore_facilities_path %>

@@ -3,33 +3,20 @@
   <article class="slider">
     <!---->
     <div id="" class="proj owl-carousel owl-theme">
-      <div class="item">
-        <%= image_tag "pic1.jpg" , width: "100%" %>
-      </div>
-      <div class="item">
-        <%= image_tag "pic2.jpg" , width: "100%" %>
-      </div>
-      <div class="item">
-        <%= image_tag "pic3.jpg" , width: "100%" %>
-      </div>
-      <div class="item">
-        <%= image_tag "pic4.jpg" , width: "100%" %>
-      </div>
+
+      <% HomeGallery.all.each do |home_gallery| %>
+          <% home_gallery.avatars.each do |hg| %>
+          <div class="item">
+            <%= image_tag hg.url %>
+          </div>
+              <% end %>
+          <% end %>
     </div>
   </article>
 </section>
-<!--<div class="sloganBox">-->
-<!--<div class="container">-->
-<!--<div class="row">-->
-<!--<article class="span12">-->
-<!--<p>-->
-<!--<%= t("home.caption_pic1") %>-->
-<!--</p>-->
-<!--</article>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--content-->
+
+
+
 <section class="banner-box">
   <div class="container">
     <div class="row">
@@ -105,89 +92,7 @@
           </article>
         </div>
       </article>
-      <article class="span12 servicesBox">
-        <div class="holder">
-          <h2>
-            <%= t("home.services.title") %>
-          </h2>
-          <br>
-          <hr>
-          <h3>
-            <%= t("home.services.caption_services") %>
-          </h3>
-        </div>
-        <div class="gallery">
-          <article class="box1">
-            <div>
-              <h4>
-                <%= t("home.services.blk_box_title") %>
-              </h4>
-              <p>
-                <%= t("home.services.blk_box_caption") %>
-              </p>
-              <a href="#" class="btn btn-primary">learn more</a>
-            </div>
-            <em></em>
-          </article>
 
-          <article class="box2">
-
-
-            <article class="slider2">
-              <div class="camera_wrap2 camera_wrap" style="display: block; height: 347px; margin-bottom: 98px;">
-                <div class="camera_fakehover">
-                  <div class="camera_src paused camerastarted">
-                    <div data-thumb=<%= image_tag "service1.jpg" %> data-src=<%= image_tag "service1.jpg" %>></div>
-                    <div data-thumb=<%= image_tag "service1.jpg" %> data-src=<%= image_tag "service1.jpg" %>></div>
-                    <div data-thumb=<%= image_tag "service1.jpg" %> data-src=<%= image_tag "service1.jpg" %>></div>
-                    <div data-thumb=<%= image_tag "service1.jpg" %> data-src=<%= image_tag "service1.jpg" %>></div>
-                  </div><div class="camera_target"><div class="cameraCont">
-                  <div class="cameraSlide cameraSlide_0 cameracurrent" style="visibility: visible; display: block; z-index: 999;">
-                    <!--<img src="img/sub_picture1.jpg?1451991421581" class="imgLoaded" data-alignment="" data-portrait="" width="833" height="347" style="visibility: visible; height: 347px; margin-left: 0px; margin-top: 0px; position: absolute; width: 833px;">-->
-                    <%= image_tag"service1.jpg" , class: "imgLoaded services_image" %>
-                    <div class="camerarelative" style="width: 833px; height: 347px;"></div>
-                  </div>
-                  <div class="cameraSlide cameraSlide_1 cameranext" style="display: none;">
-                    <img src="img/sub_picture2.jpg?1451991444986" class="imgLoaded" data-alignment="" data-portrait="" width="833" height="347" style="visibility: visible; height: 347px; margin-left: 0px; margin-top: 0px; position: absolute; width: 833px;">
-                    <div class="camerarelative" style="width: 833px; height: 347px;"></div></div>
-                  <div class="cameraSlide cameraSlide_2">
-                    <div class="camerarelative" style="width: 833px; height: 347px;"></div></div><div class="cameraSlide cameraSlide_3">
-                  <div class="camerarelative" style="width: 833px; height: 347px;"></div></div>
-                  <div class="cameraSlide cameraSlide_4" style="z-index: 1; display: none;">
-                    <div class="camerarelative" style="width: 833px; height: 347px;"></div></div></div></div>
-                  <div class="camera_target_content"><div class="cameraContents">
-                    <div class="cameraContent cameracurrent" style="display: block;"></div>
-                    <div class="cameraContent"></div><div class="cameraContent"></div>
-                    <div class="cameraContent"></div></div></div>
-                  <div class="camera_bar" style="display: none; top: auto; height: 7px;">
-                    <span class="camera_bar_cont" style="opacity: 0.8; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; background-color: rgb(34, 34, 34);"><span id="pie_0"></span></span></div>
-                  <div class="camera_prev"><span></span></div>
-                  <div class="camera_next"><span></span></div></div><div><div class="camera_thumbs"><div>
-                <div class="camera_command_wrap"><div class="camera_prevThumbs hideNav"><div></div></div>
-                  <div class="camera_nextThumbs hideNav"><div></div></div><div class="camera_thumbs_cont" style="visibility: visible;"><div><ul style="width: 752px; margin-left: auto; margin-right: auto; margin-top: 0px;">
-                  <li class="pix_thumb pix_thumb_0 cameracurrent camera_visThumb">
-                    <!--<img src="img/thumb1.jpg" class="camera_thumb" style="opacity: 1;">-->
-                    <%= image_tag "thumb1.jpg" , :class => "camera_thumb" %>
-                  </li>
-                  <li class="pix_thumb pix_thumb_1 camera_visThumb">
-                    <!--<img src="img/thumb2.jpg" class="camera_thumb" style="opacity: 0.5;">-->
-                    <%= image_tag "thumb2.jpg" , :class => "camera_thumb" %>
-                  </li>
-                  <li class="pix_thumb pix_thumb_2 camera_visThumb">
-                    <%= image_tag "thumb3.jpg" , :class => "camera_thumb" %>
-                  <li class="pix_thumb pix_thumb_3 camera_visThumb">
-                    <%= image_tag "thumb4.jpg" , :class => "camera_thumb" %>
-                </ul>
-                </div>
-                </div>
-                </div>
-              </div></div>
-              </div>
-                <div class="camera_loader" style="display: none;"></div></div>
-            </article>
-          </article>
-        </div>
-      </article>
       <article class="span12 operationsBox">
         <div class="holder">
           <%= link_to appindex_projects_path do %>
@@ -208,7 +113,7 @@
       <article class="span12 newsBox">
         <div class="holder">
           <%= link_to appindex_news_index_path do %>
-          <h2>News</h2>
+              <h2>News</h2>
           <%end %>
           <br>
           <hr>
@@ -219,40 +124,46 @@
           <% end %>
         </div>
       </article>
-    </div>
-  </div>
-</section>
-<section class="companyBox">
-  <div class="container">
-    <div class="row">
-      <div class="span12">
-        <div class="span2">
-          <a href="#">
-          </a></div>
-          <div class="span2">
+
+      <article class="span12" style="    margin-bottom: 150px;">
+        <div class="holder">
+              <h2>
+                <%= (t"home.clients") %>
+              </h2>
+          <br>
+          <hr>
+        </div>
+        <div class="row">
+          <article class="span3 maxheight3 box1">
             <%= link_to "http://pogc.ir" do %>
-            <%= image_tag "pogc.jpg" %>
-                <% end %>
-          </div>
-          <div class="span2">
-            <a href="http://iooc.co.ir" >
-            <%= image_tag "IOOC.jpg" %>
-          </a></div>
-          <div class="span2">
-            <a href="http://pedec.ir">
-            <%= image_tag "pedec.jpg" %>
-          </a></div>
-          <div class="span2">
-            <a href="http://petropars.com">
-            <%= image_tag "ppl.jpg" %>
-          </a></div>
-          <!--<li><a href="#">-->
-            <!--<%= image_tag "comp_logo6.png" %>-->
-          <!--</a></li>-->
-      </div>
+                <%= image_tag "pogc.jpg"   , :width => "60%" %>
+            <% end %>
+            </article>
+
+          <article class="span3 maxheight3 box1">
+
+          <a href="http://iooc.co.ir" >
+                <%= image_tag "IOOC.jpg" , :width => "60%" %>
+              </a>
+            </article>
+          <article class="span3 maxheight3 box1">
+
+          <a href="http://pedec.ir">
+                <%= image_tag "pedecmade.jpg" , :width => "60%"   %>
+              </a>
+            </article>
+          <article class="span3 maxheight3 box1">
+
+          <a href="http://petropars.com">
+                <%= image_tag "ppl.jpg"   , :width => "60%" %>
+              </a>
+            </article>
+        </div>
+      </article>
     </div>
   </div>
 </section>
+
 
 
 <script type="application/javascript">

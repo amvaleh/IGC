@@ -1,0 +1,17 @@
+<div class="row well">
+<p>
+  <strong>Avatars:</strong>
+
+</p>
+
+<div class="col-md-12">
+  <% @home_gallery.avatars.each do |a| %>
+      <div class="col-md-2">
+      <%= image_tag a.url(:thumb) %>
+      </div>
+  <% end %>
+</div>
+
+<%= link_to 'Edit', edit_home_gallery_path(@home_gallery) %> |
+<%= link_to 'Back', home_galleries_path %>
+</div>

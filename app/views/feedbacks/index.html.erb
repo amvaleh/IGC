@@ -14,6 +14,7 @@
               <th>Email</th>
               <th>Telephone</th>
               <th>Message</th>
+              <th>Date</th>
               <th colspan="2"></th>
             </tr>
             </thead>
@@ -24,6 +25,7 @@
                   <td><%= feedback.email %></td>
                   <td><%= feedback.telephone %></td>
                   <td><%= feedback.message %></td>
+                  <td><%= feedback.created_at %></td>
                   <td><%= link_to 'Show', feedback , class: "btn btn-info"%></td>
                   <!--<td><%#= link_to 'Edit', edit_feedback_path(feedback) %></td>-->
                   <td><%= link_to 'Destroy', feedback, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-sm btn-danger" %></td>
