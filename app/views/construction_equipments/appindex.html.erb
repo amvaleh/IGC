@@ -11,10 +11,58 @@
 
     </article>
   </div>
+    <div class="row">
+    <div class="span12">
+        <ul class="nav nav-tabs nav_portfolio" style="padding-left: 18%">
+          <% i=1 %>
+          <% ConstructionEquipmentCategory.all.each do |c| %>
+              <li class="tm_portfolio4 <% if i==1 %> active <% end %> "  style="color: #ffffff !important;">
+                <a href="#<%= c.id %>" data-toggle="tab">
+                  <span></span>
+                  <small>
+                    <%= c.name %>
+                  </small>
+                </a></li>
+              <% i = i +1 %>
+          <% end %>
+        </ul>
+    </div>
+    </div>
+
+  <div class="row">
+    <div class="span12">
+      <div class="tab-content">
+        <!-- Three with Caption Columns Begin -->
+        <% ConstructionEquipmentCategory.all.each do |c| %>
+            <div class="tab-pane"  id="<%= c.id %>">
+                <div class="row">
+                    <% c.construction_equipments.each do |x| %>
+                        <div class="thumb-pad " style="margin-left: 12%">
+                          <div class="">
+                            <!--<div class="caption">-->
+                            <!--<h5>Thumbnail label</h5>-->
+                            <!--<p>Quisque nulla. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque.</p>-->
+                            <!--<a href="#" class="btn">Read More</a>-->
+                            <!--</div>-->
+                            <%= render "asset" , :x => x %>
+                          </div>
+                        </div>
+                    <% end %>
+                </div>
+                <!--<div class="row">-->
+                <!--<div class="span12">-->
+                <!--<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"container"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">	</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span4"</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">			</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"thumb-pad"</span><span class="tag">&gt;</span></li><li class="L4"><span class="pln">				</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"thumbnail"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">					</span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"image_1.jpg"</span><span class="pln"> </span><span class="atn">alt</span><span class="pun">=</span><span class="atv">""</span><span class="tag">&gt;</span></li><li class="L6"><span class="pln">					</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"caption"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">					</span><span class="tag">&lt;h5&gt;</span><span class="pln">Thumbnail label</span><span class="tag">&lt;/h5&gt;</span></li><li class="L8"><span class="pln">					</span><span class="tag">&lt;p&gt;</span><span class="pln">Text.</span><span class="tag">&lt;/p&gt;</span></li><li class="L9"><span class="pln">					</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn"</span><span class="tag">&gt;</span><span class="pln">Read More</span><span class="tag">&lt;/a&gt;</span></li><li class="L0"><span class="pln">				</span><span class="tag">&lt;/div&gt;</span></li><li class="L1"><span class="pln">			</span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">		</span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="pln">		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span4"</span><span class="tag">&gt;</span></li><li class="L4"><span class="pln">			</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"thumb-pad"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">				</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"thumbnail"</span><span class="tag">&gt;</span></li><li class="L6"><span class="pln">					</span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"image_1.jpg"</span><span class="pln"> </span><span class="atn">alt</span><span class="pun">=</span><span class="atv">""</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">					</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"caption"</span><span class="tag">&gt;</span></li><li class="L8"><span class="pln">					</span><span class="tag">&lt;h5&gt;</span><span class="pln">Thumbnail label</span><span class="tag">&lt;/h5&gt;</span></li><li class="L9"><span class="pln">					</span><span class="tag">&lt;p&gt;</span><span class="pln">Text.</span><span class="tag">&lt;/p&gt;</span></li><li class="L0"><span class="pln">					</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn"</span><span class="tag">&gt;</span><span class="pln">Read More</span><span class="tag">&lt;/a&gt;</span></li><li class="L1"><span class="pln">				</span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">			</span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="pln">		</span><span class="tag">&lt;/div&gt;</span></li><li class="L4"><span class="pln">		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span4"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">			</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"thumb-pad"</span><span class="tag">&gt;</span></li><li class="L6"><span class="pln">				</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"thumbnail"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">					</span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"image_1.jpg"</span><span class="pln"> </span><span class="atn">alt</span><span class="pun">=</span><span class="atv">""</span><span class="tag">&gt;</span></li><li class="L8"><span class="pln">					</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"caption"</span><span class="tag">&gt;</span></li><li class="L9"><span class="pln">					</span><span class="tag">&lt;h5&gt;</span><span class="pln">Thumbnail label</span><span class="tag">&lt;/h5&gt;</span></li><li class="L0"><span class="pln">					</span><span class="tag">&lt;p&gt;</span><span class="pln">Text.</span><span class="tag">&lt;/p&gt;</span></li><li class="L1"><span class="pln">					</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn"</span><span class="tag">&gt;</span><span class="pln">Read More</span><span class="tag">&lt;/a&gt;</span></li><li class="L2"><span class="pln">				</span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="pln">			</span><span class="tag">&lt;/div&gt;</span></li><li class="L4"><span class="pln">		</span><span class="tag">&lt;/div&gt;</span></li><li class="L5"><span class="pln">	</span><span class="tag">&lt;/div&gt;</span></li><li class="L6"><span class="tag">&lt;/div&gt;</span></li></ol></pre>-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
   <div class="row">
     <% @construction_equipments.all.order("construction_equipment_category_id ASC").each do |o| %>
-        <%= render "asset" , :x => o %>
+        <%#= render "asset" , :x => o %>
     <% end %>
   </div>
 
