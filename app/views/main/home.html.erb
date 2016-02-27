@@ -1,4 +1,3 @@
-
 <section>
   <article class="slider">
     <!---->
@@ -7,7 +6,7 @@
       <% HomeGallery.all.each do |home_gallery| %>
           <% home_gallery.avatars.each do |hg| %>
           <div class="item">
-            <%= image_tag hg.url %>
+            <%= image_tag hg.url , :width => "100%" %>
           </div>
               <% end %>
           <% end %>
