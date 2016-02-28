@@ -129,6 +129,9 @@
     font-size: 16px;
 }
 
+.mysmall{
+    font-size: 77%;
+}
 
 .lefted{
     text-align: left!important;
