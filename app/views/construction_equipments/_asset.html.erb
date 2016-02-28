@@ -1,13 +1,13 @@
 <article class="span3 box4 ">
   <div class="thumb-pad8 " >
     <div class="box_inner">
-      <div class="thumbnail">
+      <div class="thumbnail" style="border-radius: 15px;">
         <div class="caption" >
           <div class="icon" style="margin-top: 8%;">
             <i class="icon icon-cogs icon-2x" style="color: #5da5e3"></i>
           </div>
           <br>
-          <p>
+          <p style="height: 30px ">
             <%= x.Description %>
           </p>
           <hr class="hr">
@@ -20,10 +20,8 @@
             <small class="muted">production date: </small>
             <%= x.production_date %>
           </p>
-            <p>
               <small class="muted">category:</small>
-              <%= x.construction_equipment_category.name %>
-            </p>
+              <span style="color: #ffffff"><%= x.construction_equipment_category.name %></span>
           </div>
         </div>
       </div>

@@ -8,12 +8,11 @@
         <br>
         <hr>
       </div>
-
     </article>
   </div>
     <div class="row">
     <div class="span12">
-        <ul class="nav nav-tabs nav_portfolio" style="padding-left: 18%">
+        <ul class="nav nav-tabs nav_portfolio" style="padding-left: 15%">
           <% i=1 %>
           <% ConstructionEquipmentCategory.all.each do |c| %>
               <li class="tm_portfolio4 <% if i==1 %> active <% end %> "  style="color: #ffffff !important;">
@@ -36,7 +35,7 @@
         <% ConstructionEquipmentCategory.all.each do |c| %>
             <div class="tab-pane"  id="<%= c.id %>">
                 <div class="row">
-                    <% c.construction_equipments.each do |x| %>
+                    <% c.construction_equipments.order("updated_at DESC").each do |x| %>
                         <div class="thumb-pad " style="margin-left: 12%">
                           <div class="">
                             <!--<div class="caption">-->

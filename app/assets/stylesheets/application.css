@@ -124,9 +124,9 @@
 
 
 .mytext {
-    font-size: 17px !important;
-    line-height: 30px !important;
-    text-align: left;
+    text-align: justify;
+    color: #3A3A3A;
+    font-size: 16px;
 }
 
 
