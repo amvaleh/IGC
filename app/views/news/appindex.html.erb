@@ -25,24 +25,26 @@
                       </figure>
                       <div class="caption">
                         <time datetime="2013-01-01">
-                          <%= news.published %>
+                          <%= news.publish_date %>
                         </time>
                         <br>
                         <%= link_to appshow_news_path(news) , :class => "lnk" do %>
                             <%= news.title %>
                         <% end %>
-                        <br>
-                        <%= news.created_at.to_date %>
-                        <br>
-                        <% if news.project_id.present?%>
-                            <%= link_to appshow_project_path(news.project_id), :class => "pull-right" do %>
-                                <%= news.project.title %>
-                            <% end %>
-                        <% end %>
                         <p>
                           <%= news.caption %>
                         </p>
+
                         <%= link_to t("news.read_more ") , appshow_news_path(news) , :class => "btn btn-primary btn1" %>
+                        <br>                        <br>
+
+                        <p>
+                          <% if news.project_id.present?%>
+                              <%= link_to appshow_project_path(news.project_id), :class => "" do %>
+                                  <%= news.project.title %>
+                              <% end %>
+                          <% end %>
+                        </p>
                       </div>
                     </div>
                   </div>
