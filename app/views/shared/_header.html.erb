@@ -194,9 +194,9 @@
                     <option value=<%= root_path %>> <%= t("header.root") %></option>
                     <option value= <%= main_about_us_path %> > <%= t("header.about_us") %> </option>
                     <option value= <%=  %> >––<%= t("header.activities") %></option>
-                    <option value="">–––<%= t("header.sub_activities.onshore") %></option>
-                    <option value="">–––<%= t("header.sub_activities.offshore")%></option>
-                    <option value="">–––<%= t("header.sub_activities.powerplant")%></option>
+                    <option value=<%= main_onshore_activities_path %>>–––<%= t("header.sub_activities.onshore") %></option>
+                    <option value=<%= main_offshore_activities_path %>>–––<%= t("header.sub_activities.offshore")%></option>
+                    <option value=<%= main_powerplant_activities_path %> >–––<%= t("header.sub_activities.powerplant")%></option>
 
                     <option value=<%= appindex_projects_path %>  >––<%= t("header.projects") %></option>
                     <option value=<%= appindex_projects_path(:status=>1) %>>–––<%= t("header.sub_projects.ongoing") %></option>

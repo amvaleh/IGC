@@ -1,17 +1,20 @@
-<section>
-  <article class="slider">
-    <!---->
-    <div id="" class="proj owl-carousel owl-theme">
-
-      <% HomeGallery.all.each do |home_gallery| %>
-          <% home_gallery.avatars.each do |hg| %>
-          <div class="item">
-            <%= image_tag hg.url , :width => "100%" %>
-          </div>
+<section class="row hidden-phone hidden-tablet">
+  <div class="  ">
+    <div style="height: 444px">
+      <div class="slides">
+        <ul> <!-- slides -->
+          <% HomeGallery.all.each do |home_gallery| %>
+              <% home_gallery.avatars.each do |hg| %>
+                  <li>
+                    <!--<img src="images/pic1.jpg" alt="image01" />-->
+                    <%= image_tag hg.url , :width => "100%" %>
+                  </li>
               <% end %>
           <% end %>
+        </ul>
+      </div>
     </div>
-  </article>
+  </div>
 </section>
 
 <section class="banner-box">
@@ -124,37 +127,39 @@
 
       <article class="span12" style="    margin-bottom: 150px;">
         <div class="holder">
-              <h2>
-                <%= (t"home.clients") %>
-              </h2>
+          <h2>
+            <%= (t"home.clients") %>
+          </h2>
           <br>
           <hr>
         </div>
         <div class="row">
-          <article class="span3 maxheight3 box1">
+          <article class="span2 maxheight3 box4 offset2">
             <%= link_to "http://pogc.ir" do %>
-                <%= image_tag "pogc.jpg"   , :width => "60%" %>
+                <%= image_tag "pogc.jpg"   , :width => "45%" %>
             <% end %>
-            </article>
+          </article>
 
-          <article class="span3 maxheight3 box1">
+          <article class="span2 maxheight3 box4">
 
-          <a href="http://iooc.co.ir" >
-                <%= image_tag "IOOC.jpg" , :width => "60%" %>
-              </a>
-            </article>
-          <article class="span3 maxheight3 box1">
+            <a href="http://iooc.co.ir" >
+              <%= image_tag "IOOC.jpg" , :width => "45%" %>
+            </a>
+          </article>
 
-          <a href="http://pedec.ir">
-                <%= image_tag "pedecmade.jpg" , :width => "60%"   %>
-              </a>
-            </article>
-          <article class="span3 maxheight3 box1">
+          <article class="span2 maxheight3 box4">
 
-          <a href="http://petropars.com">
-                <%= image_tag "ppl.jpg"   , :width => "60%" %>
-              </a>
-            </article>
+            <a href="http://pedec.ir">
+              <%= image_tag "pedecmade.jpg" , :width => "45%" %>
+            </a>
+          </article>
+
+          <article class="span2 maxheight3 box4">
+
+            <a href="http://petropars.com">
+              <%= image_tag "ppl.jpg"   , :width => "45%" %>
+            </a>
+          </article>
         </div>
       </article>
     </div>
@@ -166,17 +171,9 @@
 <script type="application/javascript">
     $(document).ready(function() {
 
-        $("#owl-demo").owlCarousel({
-            autoPlay : 8000,
-            stopOnHover : true,
-            navigation:false,
-            paginationSpeed : 1000,
-            goToFirstSpeed : 2000,
-            singleItem : true,
-            autoHeight : true,
-            responsive: true,
-            transitionStyle:"fade"
-        });
+
+
+
 
         $(".proj").owlCarousel({
             autoPlay : 6000,
