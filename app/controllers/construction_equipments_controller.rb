@@ -5,7 +5,7 @@ class ConstructionEquipmentsController < ApplicationController
   before_action :authenticate_admin!, except: [:appindex]
 
   def appindex
-    @construction_equipments = ConstructionEquipment.all.page(params[:page]).per(50)
+    @construction_equipments = ConstructionEquipment.all
   end
 
 
