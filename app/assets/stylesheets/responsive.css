@@ -7,7 +7,7 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-@-ms-viewport {
+ @-ms-viewport {
   width: device-width;
 }
 .clearfix {
@@ -143,7 +143,7 @@
     width: 70px;
   }
   .span1_5{
-      width: 140px;
+    width: 140px;
   }
   .offset12 {
     margin-left: 1230px;
@@ -1028,4 +1028,53 @@
     height: auto !important;
     overflow: visible !important;
   }
+}
+
+@media (min-width: 400px) and (max-width: 700px) {
+  .myheight{
+    height: 400px;
+  }
+
+}
+
+
+
+@media (max-width: 700px) {
+  .myheight{
+    height: 200px;
+  }
+
+}
+
+
+@media (min-width: 701px) and (max-width: 980px) {
+  .myheight{
+    height: 300px;
+  }
+
+}
+@media (min-width: 981px) and (max-width: 1200px) {
+  .myheight{
+    height: 410px;
+  }
+
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .myheight{
+    height: 550px;
+  }
+
+}
+@media (min-width: 1400px) and (max-width: 1800px) {
+  .myheight{
+    height: 600px;
+  }
+
+}
+
+@media (min-width: 1800px) {
+  .myheight{
+    height: 750px;
+  }
+
 }
