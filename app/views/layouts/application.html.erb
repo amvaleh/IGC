@@ -1,61 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%= I18n.locale %>">
 <head>
 
-  <title>IGC
+  <title>
+    IGC
     <%="|#{@title}" if @title.present? %>
   </title>
 
+  <% if is_arab %>
+  <%= stylesheet_link_tag    'ar_application', media: 'all', 'data-turbolinks-track' => true %>
+  <% else %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <% end %>
   <%= javascript_include_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
   <%= favicon_link_tag "igcfav.png" %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <% if @content.present? %>
-      <meta name="description" content= <%=@content%> >
+  <meta name="description" content= <%=@content%> >
   <% else %>
-      <meta name="description" content=”Iran International General Contractor (IGC) is active in most relevant areas of Oil & Gas & Power Plants.” >
+  <meta name="description" content=”Iran International General Contractor (IGC) is active in most relevant areas of Oil & Gas & Power Plants.” >
   <% end %>
 </head>
 
+
 <body>
 
-<div class="global">
+  <div class="global">
 
-  <!--header-->
-  <%= render 'shared/header' %>
+    <!--header-->
+    <%= render 'shared/header' %>
 
-  <% if notice %>
-      <div class="alert alert-success">
+    <% if notice %>
+    <div class="alert alert-success">
 
-        <strong>Well Done!</strong>
-        <%= notice %>
-      </div>
-  <% end %>
+      <strong>Well Done!</strong>
+      <%= notice %>
+    </div>
+    <% end %>
 
-  <% if alert %>
-      <div class="alert alert-success">
+    <% if alert %>
+    <div class="alert alert-success">
 
-        <strong>Oh snap!</strong>
-        <%= alert %>
-      </div>
-  <% end %>
+      <strong>Oh snap!</strong>
+      <%= alert %>
+    </div>
+    <% end %>
 
-  <%= yield %>
+    <%= yield %>
 
-</div>
+  </div>
 
-<!--footer-->
+  <!--footer-->
 
-<%= render 'shared/footer' %>
+  <%= render 'shared/footer' %>
 
-<!--<script src="js/bootstrap.js"></script>-->
-<!--<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">-->
+  <!--<script src="js/bootstrap.js"></script>-->
+  <!--<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">-->
 
-<a href="#" id="toTop" style="right: 50%; margin-right: -44px; display: block;">
-  <span id="toTopHover"></span>
-</a>
+  <a href="#" id="toTop" style="right: 50%; margin-right: -44px; display: block;">
+    <span id="toTopHover"></span>
+  </a>
 
 
 </body>
@@ -65,4 +71,3 @@
 
 
 </html>
-

@@ -5,9 +5,18 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
   layout :layout_by_resource
 
+  helper_method :is_arab
+
+
+
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end
+
+  def is_arab
+     I18n.locale != I18n.default_locale
+  end
+
 
   private
 

@@ -6,10 +6,15 @@
           <%= t("footer.get_in_toch") %>
         </p>
         <p class="title1">
-        <%= t("footer.caption_1") %>
-         <%= link_to "CONTACT" , main_contact_us_path , :class => "text_blue" %>
+          <%= t("footer.caption_1") %>
+          <% if I18n.locale == I18n.default_locale %>
+          <%= link_to "CONTACT" , main_contact_us_path , :class => "text_blue" %>
+          <% else %>
+          <%= link_to "الاتصال" , main_contact_us_path , :class => "text_blue" %>
+          <%end%>
           <%= t("footer.caption_2") %>
         </p>
+
         <ul class="follow_icon">
           <li><a href="#" class="icon-google-plus"></a></li>
           <li><a href="#" class="icon-twitter"></a></li>
@@ -21,11 +26,11 @@
         <p class="privacy">
           @2016 Iran International General Contractor Company
           <p>
-          <a href="#"><small>
-            design by amvaleh
-          </small></a></p>
-      </article>
-    </div>
-    <!-- {%FOOTER_LINK} -->
-  </div>
-</footer>
+            <a href="#"><small>
+              design by amvaleh
+            </small></a></p>
+          </article>
+        </div>
+        <!-- {%FOOTER_LINK} -->
+      </div>
+    </footer>

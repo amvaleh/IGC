@@ -1,16 +1,8 @@
-@import url(//fonts.googleapis.com/css?family=Open+Sans:300);
 
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400);
-
-@import url(//fonts.googleapis.com/css?family=Open+Sans:600);
-
-@import url(//fonts.googleapis.com/css?family=Open+Sans:700);
-
-@import url(//fonts.googleapis.com/css?family=Roboto);
 
 body {
     background: #333333;
-    /*font: 12px Open Sans, Arial, Helvetica, sans-serif;*/
+    font: 12px;
     line-height: 18px;
     color: #4c4c4c;
 }
@@ -40,7 +32,7 @@ h1.brand a {
 }
 h2 {
     color: #333;
-    font: bold 35px/60px 'Open Sans', Open Sans, Arial, Helvetica, sans-serif;
+    font: bold 35px/60px;
     margin: 0 0 23px 0;
     text-transform: uppercase;
     display: block;
@@ -52,7 +44,7 @@ h2 span {
 }
 h3 {
     color: #929292;
-    font: 14px/24px 'Open Sans', Open Sans, Arial, Helvetica, sans-serif;
+    font-size: 15px;
     margin: 4px 0 0 0;
 }
 h3 > span {
@@ -60,7 +52,7 @@ h3 > span {
 }
 h4 {
     color: #10a1e9;
-    font: 300 16px/20px 'Open Sans', Open Sans, Arial, Helvetica, sans-serif;
+    font: 300 16px/20px ;
     margin: 0;
     text-transform: uppercase;
 }
@@ -70,7 +62,7 @@ h4.lh {
 }
 h5 {
     color: #10a1e9;
-    font: bold 18px/18px 'Open Sans', Open Sans, Arial, Helvetica, sans-serif;
+    font: bold 18px/18px ;
     margin: 0 0 8px 0;
 }
 #content ul {
@@ -110,7 +102,7 @@ hr {
     border-radius: 7px;
     display: inline-block;
     padding: 10px 25px 10px 26px;
-    font: 16px Open Sans, Arial, Helvetica, sans-serif;
+    font: 16px ;
     color: #ffffff;
     text-shadow: none;
     border: none;
@@ -140,7 +132,7 @@ hr {
     border-radius: 0;
     display: inline-block;
     padding: 9px 26px 9px 25px;
-    font: 16px 'Roboto', Open Sans, Arial, Helvetica, sans-serif;
+    font: 16px ;
     color: #ffffff;
     border: none;
     text-shadow: none;
@@ -170,7 +162,7 @@ hr {
     border-radius: 0;
     display: inline-block;
     padding: 9px 26px 9px 25px;
-    font: 16px 'Roboto', Open Sans, Arial, Helvetica, sans-serif;
+    font: 16px ;
     color: #ffffff;
     border: none;
     text-shadow: none;
@@ -197,7 +189,7 @@ hr {
     position: relative;
     text-decoration: underline;
     padding: 0;
-    font: 11px 'Roboto', Open Sans, Arial, Helvetica, sans-serif;
+    font: 11px ;
     margin: 0;
     text-transform: uppercase;
     text-shadow: none;
@@ -286,7 +278,7 @@ hr {
     margin-top: 28px;
 }
 .list-box .numb {
-    font: bold 60px/60px Open Sans, Arial, Helvetica, sans-serif;
+    font: bold 60px/60px ;
     color: #929292;
     display: block;
     margin-bottom: 16px;
@@ -368,7 +360,7 @@ hr {
     text-align: center;
     text-shadow: none;
     background: none;
-    font: 20px/20px Open Sans, Arial, Helvetica, sans-serif;
+    font: 20px/20px ;
     color: #ffffff;
     float: left;
     margin-right: 20px;
@@ -406,7 +398,7 @@ hr {
     margin-top: 18px;
 }
 .list5 li a {
-    font: 12px/18px Open Sans, Arial, Helvetica, sans-serif;
+    font: 12px/18px ;
     color: #efede0;
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
@@ -437,17 +429,17 @@ hr {
     overflow: hidden;
 }
 .list6 .badge time {
-    font: 20px/20px Open Sans, Arial, Helvetica, sans-serif;
+    font: 20px/20px ;
     color: #ffffff;
 }
 .list6 .badge .numb {
-    font: 14px/16px Open Sans, Arial, Helvetica, sans-serif;
+    font: 14px/16px ;
     color: #ffffff;
     text-transform: uppercase;
     margin-top: -3px;
 }
 .list6 li .extra-wrap p {
-    font: 12px Open Sans, Arial, Helvetica, sans-serif;
+    font: 12px ;
     color: #4c4c4c;
     width: 100%;
     float: left;
@@ -456,7 +448,7 @@ hr {
     display: none;
 }
 .list6 li .extra-wrap > a {
-    font: bold 14px Open Sans, Arial, Helvetica, sans-serif;
+    font: bold 14px ;
     color: #333;
     text-transform: uppercase;
     margin-bottom: 19px;
@@ -467,7 +459,7 @@ hr {
     transition: all 0.25s ease;
 }
 .list6 li .extra-wrap p a {
-    font: 12px Open Sans, Arial, Helvetica, sans-serif;
+    font: 12px ;
     color: #4c4c4c;
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
@@ -530,7 +522,7 @@ hr {
 }
 .thumb-pad-bann a {
     color: #10a1e9;
-    font: normal 16px/21px 'Open Sans', Open Sans, Arial, Helvetica, sans-serif;
+    font-size: 12px;
     margin: 0 0 18px 0;
     text-transform: uppercase;
     display: inline-block;
@@ -556,7 +548,7 @@ hr {
     margin-bottom: 5px;
     display: inline-block;
     color: #ffffff;
-    font: 33px/33px 'Anton', Open Sans, Arial, Helvetica, sans-serif;
+    font: 33px/33px 'Anton', ;
     text-transform: uppercase;
     -webkit-transition: all 0.35s ease;
     -moz-transition: all 0.35s ease;
@@ -727,7 +719,7 @@ time {
 }
 .thumb-pad4 .thumbnail .caption a {
     color: #378673;
-    font: 16px/20px Open Sans, Arial, Helvetica, sans-serif;
+    font: 16px/20px ;
     margin: 0;
     -webkit-transition: all 0.35s ease;
     -moz-transition: all 0.35s ease;
@@ -946,7 +938,7 @@ time {
                             margin-bottom: 19px;
                         }
 blockquote p {
-    font: italic 18px Open Sans, Arial, Helvetica, sans-serif;
+    font: italic 18px ;
     line-height: 23px;
     color: #4c4c4c;
 }
@@ -989,7 +981,7 @@ header .span12 .searchBox ul li:first-child + li {
     border-right: none;
 }
 header .span12 .searchBox ul li a {
-    font: 10px 'Open Sans';
+    font: 10px ;
     color: #aeaeae;
     line-height: 10px;
     text-transform: uppercase;
@@ -1009,7 +1001,7 @@ header .span12 .logoBox {
     display: block;
 }
 header p {
-    font: 11px Open Sans, Arial, Helvetica, sans-serif;
+    font: 11px ;
     color: #abaaa7;
     float: left;
 }
@@ -1031,7 +1023,7 @@ header p > span {
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .navbar_ .nav-collapse_ .nav li li {
-    font-size: 24px;
+    font-size: 12px;
     line-height: 24px;
     display: block;
     margin-left: 22px;
@@ -1094,7 +1086,7 @@ header p > span {
     text-shadow: none;
     color: #4c4c4c;
     box-shadow: none !important;
-    font: 300 17px 'Open Sans', Open Sans, Arial, Helvetica, sans-serif;
+    font-size: 14px;
     text-transform: uppercase;
     padding: 0;
     -webkit-transition: all 0.35s ease;
@@ -1143,9 +1135,9 @@ header p > span {
     zoom: 1;
     z-index: 11;
     background: #184DE3;
-    padding: 30px 0 30px 0;
+    padding: 30px 20px 30px 0;
     margin: 0;
-    text-align: left;
+    text-align: right;
 }
 .nav-collapse .sub-menu > ul li {
     background: none;
@@ -1164,7 +1156,7 @@ header p > span {
     background: none;
     padding: 0;
     margin: 0;
-    font: 12px Open Sans, Arial, Helvetica, sans-serif;
+    font: 12px ;
     color: #ffffff;
     text-transform: none;
     display: inline-block;
@@ -1179,13 +1171,19 @@ header p > span {
     transition: all 0.35s ease;
 }
 .nav-collapse .sub-menu > ul li a span {
-    margin-left: 10px;
+    right: 50px;
     display: inline-block;
     background: url(../img/menu-marker2.png) no-repeat;
     width: 6px;
     height: 5px;
     position: relative;
     top: -2px;
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: fliph; /*IE*/
+    filter: fliph; /*IE*/
 }
 .nav-collapse .sub-menu > ul li a:hover {
     text-decoration: none;
@@ -1214,22 +1212,22 @@ header p > span {
     position: absolute;
     display: none;
     width: 175px;
-    left: 154px;
+    right: 175px;
     top: -30px;
     list-style: none !important;
     zoom: 1;
     z-index: 11;
     background: #ffffff;
-    padding: 30px 0 30px 0;
+    padding: 30px 20px 30px 0;
     margin: 0;
-    text-align: left;
+    text-align: right;;
 }
 .nav-collapse .sub-menu ul ul li a {
     display: block;
     background: none;
     padding: 0;
     margin: 0;
-    font: 12px Open Sans, Arial, Helvetica, sans-serif;
+    font: 12px ;
     color: #424242;
     text-transform: none;
     display: inline-block;
@@ -1286,7 +1284,7 @@ header p > span {
     background: url(../img/top.png) 0 bottom no-repeat;
 }
 .mail {
-    font: 14px Open Sans, Arial, Helvetica, sans-serif;
+    font: 14px ;
     color: #fd6b32;
     -webkit-transition: all 0.35s ease;
     -moz-transition: all 0.35s ease;
@@ -1465,7 +1463,7 @@ header p > span {
     padding: 14px 0 5px 0;
 }
 .sloganBox p {
-    font: 300 italic 17px 'Open Sans';
+    font: 300 italic 17px ;
     color: #10a1e9;
 }
 .servicesBox {
@@ -1531,7 +1529,7 @@ header p > span {
     top: 45px;
     text-align: left;
     left: 0;
-    font: 11px Open Sans, Arial, Helvetica, sans-serif;
+    font: 11px ;
     color: #4c4c4c;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -1543,7 +1541,7 @@ header p > span {
     outline: 0;
     box-shadow: none;
     color: #787878;
-    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-family: ;
     font-size: 12px;
     line-height: 19px;
     border-radius: 0;
@@ -1608,7 +1606,7 @@ header p > span {
     outline: none;
     border: 1px solid #d3d0d2;
     background: #ffffff;
-    font: 12px Open Sans, Arial, Helvetica, sans-serif;
+    font: 12px ;
     line-height: 18px;
     color: #4c4c4c;
     height: 40px;
@@ -1646,7 +1644,7 @@ header p > span {
     box-shadow: none !important;
     border: none;
     color: #4c4c4c;
-    font: 11px Open Sans, Arial, Helvetica, sans-serif;
+    font: 11px ;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
@@ -1715,7 +1713,7 @@ header p > span {
     margin: 7px 0 105px 0;
     padding: 0 0 0 0;
     vertical-align: top;
-    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-family: ;
 }
 .txt-form {
     display: block;
@@ -1788,7 +1786,7 @@ header p > span {
     outline: none;
     border: 1px solid #d3d0d2;
     background: #ffffff;
-    font: 12px Open Sans, Arial, Helvetica, sans-serif;
+    font: 12px ;
     line-height: 18px;
     color: #4c4c4c;
     height: 40px;
@@ -1824,7 +1822,7 @@ header p > span {
     text-align: center;
     text-transform: none;
     font-size: 14px;
-    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-family: ;
     line-height: 22px;
 }
 #contact-form .error,
@@ -1841,7 +1839,7 @@ header p > span {
     text-transform: none;
     font-size: 11px;
     line-height: 1.27em;
-    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-family: ;
 }
 #contact-form .message .error,
 #contact-form .message .empty {
@@ -1869,14 +1867,14 @@ footer {
     border-top: 6px solid #494949;
 }
 footer .title {
-    font: 30px 'Open Sans';
+    font-size: 30px ;
     color: #ffffff;
     text-transform: uppercase;
     margin-bottom: 25px;
     letter-spacing: 1px;
 }
 footer .title1 {
-    font: 18px/24px 'Open Sans';
+    font-size: 20px ;
     color: #989898;
     text-transform: none;
 }
@@ -1933,7 +1931,7 @@ footer .privacy br {
         margin-left: 57px;
     }
     .nav-collapse_ .nav > li > a {
-        font-size: 18px;
+        font-size: 14px;
     }
     .list5 {
         padding-bottom: 59px;
@@ -1998,7 +1996,7 @@ footer .privacy br {
         margin-left: 30px;
     }
     .nav-collapse_ .nav > li > a {
-        font-size: 17px;
+        font-size: 14px;
     }
     .companyBox ul li {
         margin-left: 7px;

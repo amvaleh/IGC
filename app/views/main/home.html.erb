@@ -4,12 +4,12 @@
       <div class="slides">
         <ul> <!-- slides -->
           <% HomeGallery.all.each do |home_gallery| %>
-              <% home_gallery.avatars.each do |hg| %>
-                  <li>
-                    <!--<img src="images/pic1.jpg" alt="image01" />-->
-                    <%= image_tag hg.url , :width => "100%" %>
-                  </li>
-              <% end %>
+          <% home_gallery.avatars.each do |hg| %>
+          <li>
+            <!--<img src="images/pic1.jpg" alt="image01" />-->
+            <%= image_tag hg.url , :width => "100%" %>
+          </li>
+          <% end %>
           <% end %>
         </ul>
       </div>
@@ -40,49 +40,54 @@
 
               </figure>
               <a href="#">
-                International Contracts
+                <%= t("home.b1") %>
               </a>
-                        </div></div>
+            </div></div>
             <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
               <figure>
                 <%= image_tag "map.png", :width => "60%" %>
               </figure>
               <a href="#">
-                Everywhere projects
+                <%= t("home.b2") %>
+
               </a>
-                        </div></div>
+            </div></div>
             <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
               <figure>
                 <%= image_tag "duration.png", :width => "60%" %>
               </figure>
               <a href="#">
-                Minimum Timing
+                <%= t("home.b3") %>
+
               </a>
-                        </div></div>
+            </div></div>
             <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
               <figure>
                 <%= image_tag "capacity.png", :width => "60%" %>
               </figure>
               <a href="#">
-                Great Design Capacity
+                <%= t("home.b4") %>
+
               </a>
-                        </div></div>
+            </div></div>
             <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
               <figure>
                 <%= image_tag "manhour.png", :width => "60%" %>
               </figure>
               <a href="#">
-                Manhours Contrsuctions
+                <%= t("home.b5") %>
+
               </a>
-                        </div></div>
+            </div></div>
             <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
               <figure>
                 <%= image_tag "date.png", :width => "60%" %>
               </figure>
               <a href="#">
-                Day Deep Scheduling
+                <%= t("home.b6") %>
+
               </a>
-                        </div></div>
+            </div></div>
           </article>
         </div>
       </article>
@@ -90,31 +95,31 @@
       <article class="span12 operationsBox">
         <div class="holder">
           <%= link_to appindex_projects_path do %>
-              <h2>Projects</h2>
+          <h2><%= (t"projects.title") %></h2>
           <% end %>
           <br>
           <hr>
           <h3>
-            Super leadership combines highly qualified staff with the latest systems and equipment, in a dedicated team approach to meet our commitments.
+            <%= (t"projects.caption") %>
           </h3>
         </div>
         <div class="row">
           <% Project.all.first(4).each do |x| %>
-              <%= render "projects/project" , :x => x %>
+          <%= render "projects/project" , :x => x %>
           <% end %>
         </div>
       </article>
       <article class="span12 newsBox">
         <div class="holder">
           <%= link_to appindex_news_index_path do %>
-              <h2>News</h2>
+          <h2><%= (t"news.title") %></h2>
           <%end %>
           <br>
           <hr>
         </div>
         <div class="row">
           <% News.all.visible.first(4).each do |x| %>
-              <%= render "news/news" , :x => x %>
+          <%= render "news/news" , :x => x %>
           <% end %>
         </div>
       </article>
@@ -130,7 +135,7 @@
         <div class="row">
           <article class="span2 maxheight3 box4 offset2">
             <%= link_to "http://pogc.ir" do %>
-                <%= image_tag "pogc.jpg"   , :width => "45%" %>
+            <%= image_tag "pogc.jpg"   , :width => "45%" %>
             <% end %>
           </article>
 
@@ -163,41 +168,41 @@
 
 
 <script type="application/javascript">
-    $(document).ready(function() {
+$(document).ready(function() {
 
 
 
 
 
-        $(".proj").owlCarousel({
-            autoPlay : 6000,
-            stopOnHover : true,
-            navigation:false,
-            paginationSpeed : 1000,
-            goToFirstSpeed : 2000,
-            singleItem : true,
-            autoHeight : false
-        });
+  $(".proj").owlCarousel({
+    autoPlay : 6000,
+    stopOnHover : true,
+    navigation:false,
+    paginationSpeed : 1000,
+    goToFirstSpeed : 2000,
+    singleItem : true,
+    autoHeight : false
+  });
 
-//        $(".news").owlCarousel({
-//            autoPlay : 3000,
-//            stopOnHover : true,
-//            navigation:false,
-//            paginationSpeed : 1000,
-//            goToFirstSpeed : 2000,
-//            singleItem : true,
-//            autoHeight : true,
-//            transitionStyle:"fade"
-//        });
+  //        $(".news").owlCarousel({
+  //            autoPlay : 3000,
+  //            stopOnHover : true,
+  //            navigation:false,
+  //            paginationSpeed : 1000,
+  //            goToFirstSpeed : 2000,
+  //            singleItem : true,
+  //            autoHeight : true,
+  //            transitionStyle:"fade"
+  //        });
 
 
-        $("#owl-services").owlCarousel({
-            navigation : true, // Show next and prev buttons
-            slideSpeed : 300,
-            paginationSpeed : 400,
-            singleItem:true,
-            autoHeight: true
+  $("#owl-services").owlCarousel({
+    navigation : true, // Show next and prev buttons
+    slideSpeed : 300,
+    paginationSpeed : 400,
+    singleItem:true,
+    autoHeight: true
 
-        });
-    });
+  });
+});
 </script>
