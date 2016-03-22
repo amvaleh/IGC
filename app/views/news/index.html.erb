@@ -1,67 +1,67 @@
 <div class="row">
 
-<div class="col-md-12">
+  <div class="col-md-12">
 
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3>
-        Listing NEWS
-      </h3>
-      <%= link_to 'New ', new_news_path, :class => "pull-right btn btn-default" %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3>
+          Listing NEWS
+        </h3>
+        <%= link_to 'New ', new_news_path, :class => "pull-right btn btn-default" %>
 
-    </div>
-    <div class="panel-body">
-      <div class="table-responsive">
-        <table class="table table-striped table-bordered table-hover">
-          <thead>
-          <tr>
-            <th>Related Project</th>
-            <th>Title</th>
-            <th>Avatars</th>
-            <!--<th>Publish status</th>-->
-            <th colspan="4"></th>
-          </tr>
-          </thead>
-          <tbody>
-          <% @news.each do |news| %>
+      </div>
+      <div class="panel-body">
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Related Project</th>
+                <th>Title</th>
+                <th>Avatars</th>
+                <!--<th>Publish status</th>-->
+                <th colspan="4"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @news.each do |news| %>
               <tr>
                 <td><%if news.project.present?%><%= truncate(news.project.title, :length => 30) %>
                   <%else%>
-                      <small class="text-muted">none</small><% end %></td>
-                <td><%= news.title %></td>
-                <td><%= news.avatars.length %></td>
-                <!--<td><%= truncate(news.caption , :length=> 30)%></td>-->
-                <!--<td class="text-center">-->
+                  <small class="text-muted">none</small><% end %></td>
+                  <td><%= news.title %></td>
+                  <td><%= news.avatars.length %></td>
+                  <!--<td><%= truncate(news.caption , :length=> 30)%></td>-->
+                  <!--<td class="text-center">-->
                   <!--<% if news.published==true %>-->
-                      <!--<i class="fa fa-check"></i>-->
-                      <!--published-->
+                  <!--<i class="fa fa-check"></i>-->
+                  <!--published-->
                   <!--<% else %>-->
-                      <!--upcoming:-->
-                      <!--<%= news.publish_date %>-->
+                  <!--upcoming:-->
+                  <!--<%= news.publish_date %>-->
                   <!--<% end %>-->
-                <!--</td>-->
-                <td><%= link_to 'Show', news , class: "btn btn-info" %></td>
-                <td>
-                  <%= link_to 'web view', appshow_news_path(news) , class: "btn btn-default" %>
-                </td>
-                <td><%= link_to 'Edit', edit_news_path(news) , class: "btn btn-warning" %></td>
-                <td><%= link_to 'Delete', news, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %> </td>
-              </tr>
-          <% end %>
-          </tbody>
-        </table>
+                  <!--</td>-->
+                  <td><%= link_to 'Show', news , class: "btn btn-info" %></td>
+                  <td>
+                    <%= link_to 'web view', appshow_news_path(news) , class: "btn btn-default" %>
+                  </td>
+                  <td><%= link_to 'Edit', edit_news_path(news) , class: "btn btn-warning" %></td>
+                  <td><%= link_to 'Delete', news, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %> </td>
+                </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
+
+
+
+      <%= paginate @news  %>
+
+
     </div>
+
+
+    <br>
+
   </div>
-
-
-
-  <%= paginate @news  %>
-
-
-</div>
-
-
-<br>
-
-</div>
