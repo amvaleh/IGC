@@ -421,6 +421,7 @@ hr {
     display: block;
     margin-top: 10px;
     margin-bottom: 123px;
+    direction: ltr;
 }
 .list6 li {
     font-size: 12px;
@@ -1836,7 +1837,7 @@ header p > span {
     text-transform: none;
     font-size: 11px;
     line-height: 1.27em;
-    
+
 }
 #contact-form .message .error,
 #contact-form .message .empty {
