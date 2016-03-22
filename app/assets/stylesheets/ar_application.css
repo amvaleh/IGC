@@ -29,9 +29,9 @@
 
 @font-face {
 	font-family: 'Droid Arabic Kufi';
-	src: url('/font/Droid Arabic Kufi.eot?') format('eot'),
-	     url('/font/Droid Arabic Kufi.ttf')  format('truetype'),
-	     url('/font/Droid Arabic Kufi.svg#Droid Arabic Kufi') format('svg');
+	src: url('/font/DroidArabicKufi.eot?') format('eot'),
+	     url('/font/DroidArabicKufi.ttf')  format('truetype'),
+	     url('/font/DroidArabicKufi.svg#Droid Arabic Kufi') format('svg');
 }
 
 body{
