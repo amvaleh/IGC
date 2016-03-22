@@ -15,9 +15,7 @@
               <tr>
                 <th>Title</th>
                 <th>Client name</th>
-                <th>Contract type</th>
                 <th>Location</th>
-                <th>Avatars</th>
                 <th>Status</th>
                 <th>Type</th>
                 <th colspan="4"></th>
@@ -28,23 +26,19 @@
               <tr>
                 <td><%= project.title %></td>
                 <td><%= project.client_name %></td>
-                <td><%= project.contract_type %></td>
                 <td>
                   <%= project.location %>
                   <% if project.is_abroad %>
                   <span class="text-muted"> (abroad)</span>
                   <% end %>
                 </td>
-                <!--<td><%= project.design_capacity %></td>-->
-                <!--<td><%= project.construction_man_hour %></td>-->
-                <td><%= project.avatars.count %></td>
                 <td><%= get_status(project) %></td>
                 <td><%= project.project_type %></td>
 
                 <td><%= link_to 'Show', project , class: "btn btn-info" %></td>
-                <td><%= link_to 'web view', appshow_project_path(project) , class: "btn btn-default" %></td>
-                <td><%= link_to 'Edit', edit_project_path(project) , class: "btn btn-warning" %></td>
-                <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %></td>
+                <td><%= link_to 'web view', appshow_project_path(project) , class: "btn btn-default btn-sm" %></td>
+                <td><%= link_to 'Edit', edit_project_path(project) , class: "btn btn-warning btn-sm" %></td>
+                <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger btn-sm" %></td>
               </tr>
               <% end %>
             </tbody>
