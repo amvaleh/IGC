@@ -1541,7 +1541,6 @@ header p > span {
     outline: 0;
     box-shadow: none;
     color: #787878;
-    font-family: ;
     font-size: 12px;
     line-height: 19px;
     border-radius: 0;
@@ -1713,7 +1712,6 @@ header p > span {
     margin: 7px 0 105px 0;
     padding: 0 0 0 0;
     vertical-align: top;
-    font-family: ;
 }
 .txt-form {
     display: block;
@@ -1822,7 +1820,6 @@ header p > span {
     text-align: center;
     text-transform: none;
     font-size: 14px;
-    font-family: ;
     line-height: 22px;
 }
 #contact-form .error,
@@ -1839,7 +1836,7 @@ header p > span {
     text-transform: none;
     font-size: 11px;
     line-height: 1.27em;
-    font-family: ;
+    
 }
 #contact-form .message .error,
 #contact-form .message .empty {
