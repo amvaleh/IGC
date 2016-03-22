@@ -1,62 +1,62 @@
 Rails.application.routes.draw do
 
-
-
-  resources :construction_equipment_categories
-  resources :home_galleries
-
-
-  resources :offshore_facilities do
-    collection do
-      get :appindex
-    end
-  end
-  resources :construction_equipments do
-    collection do
-      get :appindex
-    end
-  end
-  resources :onshore_yards do
-    collection do
-      get :appindex
-    end
-  end
-
-
-
-  resources :gadgets do
-    member do
-      get :appshow
-    end
-  end
-
-  resources :feedbacks
-  devise_for :admins
-
-  get 'admin' => 'admin#dashboard'
-  get 'admin/dashboard'
-  get 'admin/news_index'
-  get 'admin/visits'
-
-  resources :projects do
-    collection do
-      get :appindex
-    end
-    member do
-      get :appshow
-    end
-  end
-
-  resources :news do
-    collection do
-      get :appindex
-    end
-    member do
-      get :appshow
-    end
-  end
-
   scope "(:locale)", :locale => /en|ar/ do
+    
+
+    resources :construction_equipment_categories
+    resources :home_galleries
+
+
+    resources :offshore_facilities do
+      collection do
+        get :appindex
+      end
+    end
+    resources :construction_equipments do
+      collection do
+        get :appindex
+      end
+    end
+    resources :onshore_yards do
+      collection do
+        get :appindex
+      end
+    end
+
+
+
+    resources :gadgets do
+      member do
+        get :appshow
+      end
+    end
+
+    resources :feedbacks
+    devise_for :admins
+
+    get 'admin' => 'admin#dashboard'
+    get 'admin/dashboard'
+    get 'admin/news_index'
+    get 'admin/visits'
+
+    resources :projects do
+      collection do
+        get :appindex
+      end
+      member do
+        get :appshow
+      end
+    end
+
+    resources :news do
+      collection do
+        get :appindex
+      end
+      member do
+        get :appshow
+      end
+    end
+
 
     root 'main#home'
 
