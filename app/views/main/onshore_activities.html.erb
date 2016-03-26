@@ -4,7 +4,8 @@
 
     <div class="holder">
       <h2>
-        <%= t("header.sub_activities.onshore") %> <%= t("header.activities") %>
+        <%= t("header.sub_activities.offshore") %> <% if not is_arab %> <%= t("header.activities") %> <% end %>
+
       </h2>
       <br>
       <hr>
