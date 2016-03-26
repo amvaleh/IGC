@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
   scope "(:locale)", :locale => /en|ar/ do
-    
-
     resources :construction_equipment_categories
     resources :home_galleries
 
@@ -22,8 +20,6 @@ Rails.application.routes.draw do
         get :appindex
       end
     end
-
-
 
     resources :gadgets do
       member do
@@ -57,7 +53,6 @@ Rails.application.routes.draw do
       end
     end
 
-
     root 'main#home'
 
     get 'main/home'
@@ -68,7 +63,6 @@ Rails.application.routes.draw do
     get 'main/news'
     get 'main/success'
     get 'main/search'
-
     get 'main/onshore_activities'
     get 'main/offshore_activities'
     get 'main/powerplant_activities'

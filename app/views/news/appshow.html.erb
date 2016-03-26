@@ -10,60 +10,59 @@
             <%= @news.created_at.to_date %>
           </small>
         </p>
-        <p style="    line-height: 30px;
-                text-align: justify;
-                font-weight: bold;">
+        <div class="well" style="direction: ltr !important;"> <p style="    line-height: 30px;
+          text-align: justify;
+          font-weight: bold;">
           <%= @news.caption %>
         </p>
-        <br>
-        <p>
-          <% if @news.project_id.present? %>
-              <%= link_to appshow_project_path(@news.project_id) , :class => "btn btn_primary pull-right" do %>
-                  <%= t("projects.check_out") %> <%= @news.project.title %>
-              <% end %>
-          <% end %>
-        </p>
-        <br>
-        <br>
-        <hr>
       </div>
+      <br>
+      <p>
+        <% if @news.project_id.present? %>
+        <%= link_to appshow_project_path(@news.project_id) , :class => "btn btn_primary pull-right" do %>
+        <%= t("projects.check_out") %> <%= @news.project.title %>
+        <% end %>
+        <% end %>
+      </p>
+      <br>
+      <br>
+      <hr>
+    </div>
 
-    </article>
-  </div>
-  <div class="row" style="text-align:  center;">
-    <section class="example">
-      <div id="example2" class="accordion-slider">
-        <div class="as-panels">
-          <% @news.avatars.each do |a| %>
+  </article>
+</div>
+<div class="row" style="text-align:  center;">
+  <section class="example">
+    <div id="example2" class="accordion-slider">
+      <div class="as-panels">
+        <% @news.avatars.each do |a| %>
 
-              <div class="as-panel">
-                <%= image_tag a.url(:medium) , :class => "as-background" %>
-                <%= link_to a.url do %>
-                    <%= image_tag a.url() , :class => "as-background-opened" %>
-                <% end %>
-              </div>
-
+        <div class="as-panel">
+          <%= image_tag a.url(:medium) , :class => "as-background" %>
+          <%= link_to a.url do %>
+          <%= image_tag a.url() , :class => "as-background-opened" %>
           <% end %>
-
         </div>
+
+        <% end %>
+
       </div>
-    </section>
-    <br>    <br>
-    <br>
+    </div>
+  </section>
+  <br>    <br>
+  <br>
 
-    <hr>
-    <br>
-    <br>
-
-  </div>
-
-  <!--<div class="row">-->
-  <!--<article class="span6 well offset3">-->
-
-  <!--</article>-->
-  <!--</div>-->
-
+  <hr>
+  <br>
+  <br>
 
 </div>
 
+<!--<div class="row">-->
+<!--<article class="span6 well offset3">-->
 
+<!--</article>-->
+<!--</div>-->
+
+
+</div>

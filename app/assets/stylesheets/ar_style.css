@@ -779,6 +779,7 @@ time {
     position: relative;
     padding: 0;
     margin-top: 54px;
+    direction: ltr !important;
     /*background: #333;*/
 }
 .thumb-pad8:hover .icon img {
@@ -1707,6 +1708,7 @@ header p > span {
 /*-----form-----*/
 .form-box {
     position: relative;
+    direction: ltr;
 }
 #contact-form {
     position: relative;
