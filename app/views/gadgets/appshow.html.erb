@@ -3,59 +3,61 @@
     <article class="span12 list6-box padTop">
       <div class="holder">
         <h2>
+          <% if is_arab %>
+          <%= @gadget.arabic_name %>
+          <% else %>
           <%= @gadget.name %>
+          <% end %>
         </h2>
         <p style="    line-height: 30px;
-                text-align: center;
-                font-weight: bold;">
-          <i class="icon icon-wrench"></i>
-          <%= @gadget.caption %>
-        </p>
-        <br>
-        <p>
-        </p>
-        <br>
-        <br>
-        <hr>
-      </div>
+        text-align: center;
+        font-weight: bold;">
+        <i class="icon icon-wrench"></i>
+        <%= @gadget.caption %>
+      </p>
+      <br>
+      <p>
+      </p>
+      <br>
+      <br>
+      <hr>
+    </div>
 
-    </article>
-  </div>
-  <div class="row" style="text-align:  center;">
-    <section class="example">
-      <div id="example2" class="accordion-slider">
-        <div class="as-panels">
-          <% @gadget.avatars.each do |a| %>
+  </article>
+</div>
+<div class="row" style="text-align:  center;">
+  <section class="example">
+    <div id="example2" class="accordion-slider">
+      <div class="as-panels">
+        <% @gadget.avatars.each do |a| %>
 
-              <div class="as-panel">
+        <div class="as-panel">
 
-                <%= image_tag a.url(:medium) , :class => "as-background" %>
-                <%= link_to a.url do %>
-                    <%= image_tag a.url() , :class => "as-background-opened" %>
-                <% end %>
-              </div>
-
+          <%= image_tag a.url(:medium) , :class => "as-background" %>
+          <%= link_to a.url do %>
+          <%= image_tag a.url() , :class => "as-background-opened" %>
           <% end %>
-
         </div>
+
+        <% end %>
+
       </div>
-    </section>
-    <br>    <br>
-    <br>
+    </div>
+  </section>
+  <br>    <br>
+  <br>
 
-    <hr>
-    <br>
-    <br>
-
-  </div>
-
-  <!--<div class="row">-->
-  <!--<article class="span6 well offset3">-->
-
-  <!--</article>-->
-  <!--</div>-->
-
+  <hr>
+  <br>
+  <br>
 
 </div>
 
+<!--<div class="row">-->
+<!--<article class="span6 well offset3">-->
 
+<!--</article>-->
+<!--</div>-->
+
+
+</div>
