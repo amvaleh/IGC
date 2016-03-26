@@ -16,24 +16,14 @@
               </li>
             </ul>
             <%=form_tag({controller: "/main" , action: "search" },method: "get" ,class:"search",:id => "search" ) do%>
-            <%#=text_field_tag :query , nil ,placeholder: "search"  ,  autocomplete: :off , :class => "",:style=>""%>
-            <%#= button_tag"جستجو" , :class=>"btn btn-primary pull-left search_commit" %>
             <input type="text" onfocus="if(this.value =='' ) this.value=''" onblur="if(this.value=='') this.value=''" value="" name="query">
             <a href="#" onclick="document.getElementById('search').submit()">
               <%= image_tag "magnify.png"%>
             </a>
             <% end %>
-
-            <!--<form id="search" class="search" action="search.php" method="GET" accept-charset="utf-8">-->
-            <!--<input type="text" onfocus="if(this.value =='' ) this.value=''" onblur="if(this.value=='') this.value=''" value="" name="s">-->
-            <!--<a href="#" onclick="document.getElementById('search').submit()">-->
-            <!--<%= image_tag "magnify.png"%>-->
-            <!--</a>-->
-            <!--</form>-->
           </div>
         </div>
         <h1 class="brand" style="text-align: center">
-
           <%= link_to main_home_path do %>
           <%= image_tag "logonewblue.png" , :width => "100px"  %>
           <br>
@@ -48,6 +38,149 @@
               <div class="clearfix">
                 <div class="nav-collapse nav-collapse_ collapse">
                   <ul class="nav sf-menu clearfix sf-js-enabled">
+                    ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    <% if is_arab %>
+                    <li>
+                      <%= link_to main_contact_us_path do %>
+                      <%= t("header.contact_us") %>
+                      <% end %>
+                    </li>
+                    <li>
+                      <%= link_to appindex_news_index_path do  %>
+                      <%= t("header.news") %>
+                      <% end %>
+                    </li>
+                    <li class="sub-menu">
+                      <a >
+                        <%= t("header.assets") %>
+                        <span></span>
+                        <b class="sf-sub-indicator"></b>
+                      </a>
+                      <ul class="submenu sub-menu" style="display: none;">
+                        <% Gadget.all.each do |g| %>
+                        <li>
+                          <% if is_arab %>
+                          <%= link_to g.arabic_name , appshow_gadget_path(g) %>
+                          <% else %>
+                          <%= link_to g.name , appshow_gadget_path(g) %>
+                          <% end %>
+                        </li>
+                        <% end %>
+                        <li>
+                          <%= link_to "#{t("onshoreyards")}" , appindex_onshore_yards_path %>
+                        </li>
+                        <li>
+                          <%= link_to "#{t("offshorefacilities")}" , appindex_offshore_facilities_path %>
+                        </li>
+                        <li>
+                          <%= link_to "#{t("construction_equipments")}" , appindex_construction_equipments_path %>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sub-menu">
+
+                      <%= link_to appindex_projects_path do  %>
+                      <%= t("header.projects") %>
+                      <span></span>
+                      <b class="sf-sub-indicator"></b>
+                      <% end %>
+                      <ul class="submenu sub-menu" style="display: none;">
+                        <li>
+                          <!--<a href="#">-->
+                          <%= link_to appindex_projects_path(:status => 1) do%>
+                          <%= t("header.sub_projects.ongoing") %>
+                          <% end %>
+                          <!--</a>-->
+                        </li>
+                        <li class="">
+                          <!--<a href="#" class="sf-with-ul">-->
+                          <%= link_to appindex_projects_path(:status=> 0) , :class=>"sf-with-ul" do %>
+                          <%= t("header.sub_projects.completed") %>
+                          <span></span>
+                          <b class="sf-sub-indicator"></b>
+                          <% end %>
+                          <!--</a>-->
+                          <ul class="submenu-1 sub-menu" style="display: none;">
+                            <li>
+                              <!--<a href="#">-->
+                              <%= link_to appindex_projects_path(:status=> 0,:type=>"onshore") do %>
+                              <%= t("header.sub_projects.sub_completed.onshore") %>
+                              <% end %>
+                              <!--</a>-->
+                            </li>
+                            <li>
+                              <!--<a href="#">-->
+                              <%= link_to appindex_projects_path(:status=> 0,:type=>"offshore") do %>
+                              <%= t("header.sub_projects.sub_completed.offshore") %>
+                              <% end %>
+                              <!--</a>-->
+                            </li>
+                            <li>
+                              <!--<a href="#">-->
+                              <%= link_to appindex_projects_path(:status=> 0,:type=>"powerplant") do %>
+                              <%= t("header.sub_projects.sub_completed.powerplant") %>
+                              <% end %>
+                              <!--</a>-->
+                            </li>
+                            <li>
+                              <!--<a href="#">-->
+                              <%= link_to appindex_projects_path(:status => 0 , :type => "abroad") do %>
+                              <%= t("header.sub_projects.sub_completed.abroad") %>
+                              <% end %>
+                              <!--</a>-->
+                            </li>
+                            <!--<li><a href="#">Mauris accum</a></li>-->
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sub-menu">
+
+                      <a >
+                        <%= t("header.activities") %>
+                        <span></span>
+                        <b class="sf-sub-indicator"></b>
+                      </a>
+                      <ul class="submenu sub-menu" style="display: none;">
+                        <li class="">
+                          <%= link_to main_onshore_activities_path, class: "sf-with-ul"  do%>
+                          <%= t("header.sub_activities.onshore") %>
+                          <b class="sf-sub-indicator"></b>
+                          <% end %>
+                        </li>
+                        <li>
+                          <%= link_to main_offshore_activities_path do %>
+                          <%= t("header.sub_activities.offshore") %>
+                          <% end %>
+                        </li>
+                        <li>
+                          <%= link_to main_powerplant_activities_path do %>
+                          <%= t("header.sub_activities.powerplant") %>
+                          <% end %>
+                        </li>
+                        <li class="">
+                          <%= link_to main_about_us_path do  %>
+                          <%= t("header.about_us") %>
+                          <% end %>
+                        </li>
+                        <li>
+                          <%= link_to root_path do %>
+                          <%= t("header.root") %>
+                          <% end %>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="">
+                      <%= link_to main_about_us_path do  %>
+                      <%= t("header.about_us") %>
+                      <% end %>
+                    </li>
+                    <li>
+                      <%= link_to root_path do %>
+                      <%= t("header.root") %>
+                      <% end %>
+                    </li>
+                    <% else %>
                     <li>
                       <%= link_to root_path do %>
                       <%= t("header.root") %>
@@ -58,7 +191,6 @@
                       <%= t("header.about_us") %>
                       <% end %>
                     </li>
-
                     <li class="sub-menu">
 
                       <a >
@@ -182,6 +314,8 @@
                       <%= t("header.contact_us") %>
                       <% end %>
                     </li>
+                    <% end %>
+
                   </ul>
                   <select class="select-menu" style="display: inline-block;" onChange="window.location.href=this.value">
                     <option value="#"><%= t("header.navigate_to") %></option>

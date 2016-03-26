@@ -5,6 +5,7 @@ class Gadget < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   serialize :avatars, JSON
-
+  validates_presence_of [:name , :arabic_name]
+  
   mount_uploaders :avatars, AvatarUploader
 end

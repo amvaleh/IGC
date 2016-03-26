@@ -78,6 +78,6 @@ class GadgetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gadget_params
-      params.require(:gadget).permit(:name, :caption, {avatars: []} )
+      params.require(:gadget).permit(:name, :caption, {avatars: []} , :arabic_name)
     end
 end
