@@ -18,7 +18,7 @@
             <%=form_tag({controller: "/main" , action: "search" },method: "get" ,class:"search",:id => "search" ) do%>
             <input type="text" onfocus="if(this.value =='' ) this.value=''" onblur="if(this.value=='') this.value=''" value="" name="query">
             <a href="#" onclick="document.getElementById('search').submit()">
-              <%= image_tag "magnify.png"%>
+              <%= image_tag "magnify.png", alt: ""%>
             </a>
             <% end %>
           </div>
