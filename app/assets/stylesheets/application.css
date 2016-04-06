@@ -297,6 +297,15 @@
     width:200px;
 
     /* css3 animation */
+    animation-name: anim_titles;
+    animation-duration: 24.0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 0;
+    animation-play-state: 0;
+    animation-fill-mode: forwards;
+
     -webkit-animation-name: anim_titles;
     -webkit-animation-duration: 24.0s;
     -webkit-animation-timing-function: linear;
