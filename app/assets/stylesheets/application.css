@@ -193,6 +193,24 @@
         opacity:0;
     }
 }
+@-ms-keyframes anim_slides {
+    0% {
+        opacity:0;
+    }
+    6% {
+        opacity:1;
+    }
+    24% {
+        opacity:1;
+    }
+    30% {
+        opacity:0;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
 
 .slides ul li {
     width: 100%;
@@ -201,6 +219,24 @@
     top:0;
 
     /* css3 animation */
+    animation-name: anim_titles;
+    animation-duration: 24.0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 0;
+    animation-play-state: running;
+
+    animation-fill-mode: forwards;
+    -ms-animation-name: anim_slides;
+    -ms-animation-duration: 24.0s;
+    -ms-animation-timing-function: linear;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-direction: normal;
+    -ms-animation-delay: 0;
+    -ms-animation-play-state: running;
+    -ms-animation-fill-mode: forwards;
+
     -webkit-animation-name: anim_slides;
     -webkit-animation-duration: 24.0s;
     -webkit-animation-timing-function: linear;
@@ -224,14 +260,17 @@
 .slides ul  li:nth-child(2), .slides ul  li:nth-child(2) div {
     -webkit-animation-delay: 6.0s;
     -moz-animation-delay: 6.0s;
+    animation-delay: 6.0s;
 }
 .slides ul  li:nth-child(3), .slides ul  li:nth-child(3) div {
     -webkit-animation-delay: 12.0s;
     -moz-animation-delay: 12.0s;
+    animation-delay: 12.0s;
 }
 .slides ul  li:nth-child(4), .slides ul  li:nth-child(4) div {
     -webkit-animation-delay: 18.0s;
     -moz-animation-delay: 18.0s;
+    animation-delay: 18.0s;
 }
 .slides ul li img {
     display:block;
@@ -283,6 +322,34 @@
     }
 }
 
+
+@-ms-keyframes anim_titles {
+    0% {
+        left:100%;
+        opacity:0;
+    }
+    5% {
+        left:10%;
+        opacity:1;
+    }
+    20% {
+        left:10%;
+        opacity:1;
+    }
+    25% {
+        left:100%;
+        opacity:0;
+    }
+    100% {
+        left:100%;
+        opacity:0;
+    }
+}
+
+
+
+
+
 .slides ul li div {
     background-color:#000000;
     border-radius:10px 10px 10px 10px;
@@ -303,7 +370,7 @@
     animation-iteration-count: infinite;
     animation-direction: normal;
     animation-delay: 0;
-    animation-play-state: 0;
+    animation-play-state: running;
     animation-fill-mode: forwards;
 
     -webkit-animation-name: anim_titles;
