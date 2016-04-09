@@ -1,38 +1,41 @@
-  <div class="thumb-pad8 maxheight2" >
-    <div class="box_inner">
-      <div class="thumbnail">
-        <figure>
-          <div id="owl-project" name="project"  >
-            <%# x.avatars.first do |a| %>
-                <!-- <div class="item"> -->
-                  <div class="eqsize" style="background-image:url(<%= image_path x.avatars.first.url(:medium) %>);"></div>
-                <!-- </div> -->
-            <%# end %>
-          </div>
-        </figure>
-        <%= link_to appshow_project_path(x) do %>
-            <div class="caption" >
-              <div class="icon">
-                <%= image_tag "icon2.png" %>
-              </div>
-              <br>
-              <p style="    min-height: 35px;">
-                <%= truncate(x.title , :length => 30)%>
-              </p>
-              <hr class="hr">
-              <p>
-                <i class="icon-user"></i>
-                <%= truncate(x.client_name , :length => 15)%>
-              </p>
-              <p>
-                <i class="icon-map-marker"></i>
-                <%= truncate(x.location , :length => 15)%>
-              </p>
-              <p>
-                <i class="icon-bookmark"></i>
-                <%= location %>
-              </p>
-        <% end %>
+<div class="thumb-pad8 maxheight2" >
+  <div class="box_inner">
+    <div class="thumbnail">
+      <figure>
+        <div id="owl-project" name="project"  >
+          <%# x.avatars.first do |a| %>
+          <!-- <div class="item"> -->
+
+          <% if x.avatars.first.present?%>
+          <div class="eqsize" style="background-image:url(<%= image_path x.avatars.first.url(:medium)%>);"></div>
+          <% end %>
+          <!-- </div> -->
+          <%# end %>
         </div>
+      </figure>
+      <%= link_to appshow_project_path(x) do %>
+      <div class="caption" >
+        <div class="icon">
+          <%= image_tag "icon2.png" %>
+        </div>
+        <br>
+        <p style="    min-height: 35px;">
+          <%= truncate(x.title , :length => 30)%>
+        </p>
+        <hr class="hr">
+        <p>
+          <i class="icon-user"></i>
+          <%= truncate(x.client_name , :length => 15)%>
+        </p>
+        <p>
+          <i class="icon-map-marker"></i>
+          <%= truncate(x.location , :length => 15)%>
+        </p>
+        <p>
+          <i class="icon-bookmark"></i>
+          <%= location %>
+        </p>
+        <% end %>
       </div>
-    </div></div>
+    </div>
+  </div></div>
