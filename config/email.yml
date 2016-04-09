@@ -1,14 +1,31 @@
+# development:
+#   :address: mail.igc-ir.com
+#   :port: 110
+#   :authentication: plain
+#   :domain: igc-ir.com
+#   :user_name: website@igc-ir.com
+#   :password: 124578
+#   :enable_starttls_auto: true
+# production:
+#   :address: mail.igc-ir.com
+#   :port: 110
+#   :authentication: plain
+#   :domain: igc-ir.com
+#   :user_name: webs@igc-ir.com
+#   :password: 124578
+#   :enable_starttls_auto: true
+
 development:
   :address: smtp.gmail.com
   :port: 587
   :authentication: plain
-  :user_name: user
-  :password: pass
+  :user_name: websiteigc2016
+  :password: info8531
   :enable_starttls_auto: true
 production:
   :address: smtp.gmail.com
   :port: 587
   :authentication: plain
-  :user_name: user
-  :password: pass
+  :user_name: websiteigc2016
+  :password: info8531
   :enable_starttls_auto: true

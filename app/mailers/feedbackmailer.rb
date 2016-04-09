@@ -1,8 +1,12 @@
 class Feedbackmailer < ApplicationMailer
 
   def notif(feedback)
-  mail(:to => feedback.email , :subject => "new feedback reciedved on IGC website." )
     @msg = feedback.message
+    @user = feedback.email
+    @name = feedback.name
+    @tele = feedback.telephone
+    mail(:to => "info@igc-ir.com" , :subject => "new feedback reciedved on IGC website." )
+
   end
 
 end
