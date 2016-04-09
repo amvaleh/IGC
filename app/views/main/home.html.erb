@@ -33,144 +33,200 @@
         </div>
         <div class="row">
           <!-- <article class="banner-holder">
-            <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
-              <figure>
+          <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
+          <figure>
 
-                <%= image_tag "contract.png", :width => "60%" %>
+          <%= image_tag "contract.png", :width => "60%" %>
 
-              </figure>
-              <a href="#">
-                <%= t("home.b1") %>
-              </a>
-            </div></div>
-            <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
-              <figure>
-                <%= image_tag "map.png", :width => "60%" %>
-              </figure>
-              <a href="#">
-                <%= t("home.b2") %>
+        </figure>
+        <a href="#">
+        <%= t("home.b1") %>
+      </a>
+    </div></div>
+    <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
+    <figure>
+    <%= image_tag "map.png", :width => "60%" %>
+  </figure>
+  <a href="#">
+  <%= t("home.b2") %>
 
-              </a>
-            </div></div>
-            <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
-              <figure>
-                <%= image_tag "duration.png", :width => "60%" %>
-              </figure>
-              <a href="#">
-                <%= t("home.b3") %>
+</a>
+</div></div>
+<div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
+<figure>
+<%= image_tag "duration.png", :width => "60%" %>
+</figure>
+<a href="#">
+<%= t("home.b3") %>
 
-              </a>
-            </div></div>
-            <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
-              <figure>
-                <%= image_tag "capacity.png", :width => "60%" %>
-              </figure>
-              <a href="#">
-                <%= t("home.b4") %>
+</a>
+</div></div>
+<div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
+<figure>
+<%= image_tag "capacity.png", :width => "60%" %>
+</figure>
+<a href="#">
+<%= t("home.b4") %>
 
-              </a>
-            </div></div>
-            <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
-              <figure>
-                <%= image_tag "manhour.png", :width => "60%" %>
-              </figure>
-              <a href="#">
-                <%= t("home.b5") %>
+</a>
+</div></div>
+<div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
+<figure>
+<%= image_tag "manhour.png", :width => "60%" %>
+</figure>
+<a href="#">
+<%= t("home.b5") %>
 
-              </a>
-            </div></div>
-            <div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
-              <figure>
-                <%= image_tag "date.png", :width => "60%" %>
-              </figure>
-              <a href="#">
-                <%= t("home.b6") %>
+</a>
+</div></div>
+<div class="span2 thumb-pad-bann maxheight" style="height: 346px;"><div class="box_inner">
+<figure>
+<%= image_tag "date.png", :width => "60%" %>
+</figure>
+<a href="#">
+<%= t("home.b6") %>
 
-              </a>
-            </div></div>
-          </article> -->
-          <br>
-          <br>
-          <br>
-          <br>
-        </div>
-      </article>
+</a>
+</div></div>
+</article> -->
+<br>
+<br>
+<br>
+<br>
+</div>
+</article>
 
-      <article class="span12 operationsBox">
-        <div class="holder">
-          <%= link_to appindex_projects_path do %>
-          <h2><%= (t"projects.title") %></h2>
-          <% end %>
-          <br>
-          <hr>
-          <h3>
-            <%= (t"projects.caption") %>
-          </h3>
-        </div>
-        <div class="row">
-          <% Project.all.first(4).each do |x| %>
-          <%= render "projects/project" , :x => x %>
-          <% end %>
-        </div>
-      </article>
-      <article class="span12 newsBox">
-        <div class="holder">
-          <%= link_to appindex_news_index_path do %>
-          <h2><%= (t"news.title") %></h2>
-          <%end %>
-          <br>
-          <hr>
-        </div>
-        <div class="row">
-          <% News.all.visible.first(4).each do |x| %>
-          <%= render "news/news" , :x => x %>
-          <% end %>
-        </div>
-      </article>
-
-      <!-- <article class="span12" style="    margin-bottom: 150px;">
-        <div class="holder">
-          <h2>
-            <%= (t"home.clients") %>
-          </h2>
-          <br>
-          <hr>
-        </div>
-        <div class="row">
-          <article class="span2 maxheight3 box4 offset2">
-            <%= link_to "http://pogc.ir" do %>
-            <%= image_tag "pogc.jpg"   , :width => "45%" %>
-            <% end %>
-          </article>
-
-          <article class="span2 maxheight3 box4">
-
-            <a href="http://iooc.co.ir" >
-              <%= image_tag "IOOC.jpg" , :width => "45%" %>
-            </a>
-          </article>
-
-          <article class="span2 maxheight3 box4">
-
-            <a href="http://pedec.ir">
-              <%= image_tag "pedecmade.jpg" , :width => "45%" %>
-            </a>
-          </article>
-
-          <article class="span2 maxheight3 box4">
-
-            <a href="http://petropars.com">
-              <%= image_tag "ppl.jpg"   , :width => "45%" %>
-            </a>
-          </article>
-        </div>
-      </article> -->
-    </div>
+<article class="span12 operationsBox">
+  <div class="holder">
+    <%= link_to appindex_projects_path do %>
+    <h2><%= (t"projects.title") %></h2>
+    <% end %>
+    <br>
+    <hr>
+    <h3>
+      <%= (t"projects.caption") %>
+    </h3>
   </div>
+
+  <div class="row">
+
+    <!-- powerplants -->
+    <div class="span3 box4">
+      <div class="categ owl-carousel owl-theme" >
+        <% Project.all.where(:project_type => "onshore").first(3).each do |proj| %>
+        <div class="item">
+          <%= render "projects/sample" , :x => proj %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="span3 box4">
+      <div class="categ owl-carousel owl-theme" >
+        <% Project.all.where(:project_type => "offshore").first(3).each do |proj| %>
+        <div class="item">
+          <%= render "projects/sample" , :x => proj %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="span3 box4">
+      <div class="categ owl-carousel owl-theme" >
+        <% Project.all.where(:project_type => "powerplant").first(3).each do |proj| %>
+        <div class="item">
+          <%= render "projects/sample" , :x => proj %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="span3 box4">
+      <div class="categ owl-carousel owl-theme" >
+        <% Project.all.where(:project_type => "abroad").first(3).each do |proj| %>
+        <div class="item">
+          <%= render "projects/sample" , :x => proj %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- offshore -->
+    <!-- onshore -->
+    <!-- abroad -->
+
+
+    <% Project.all.first(4).each do |x| %>
+    <%#= render "projects/project" , :x => x %>
+    <% end %>
+  </div>
+
+</article>
+<article class="span12 newsBox">
+  <div class="holder">
+    <%= link_to appindex_news_index_path do %>
+    <h2><%= (t"news.title") %></h2>
+    <%end %>
+    <br>
+    <hr>
+  </div>
+  <div class="row">
+    <% News.all.visible.first(4).each do |x| %>
+    <%= render "news/news" , :x => x %>
+    <% end %>
+  </div>
+</article>
+
+<!-- <article class="span12" style="    margin-bottom: 150px;">
+<div class="holder">
+<h2>
+<%= (t"home.clients") %>
+</h2>
+<br>
+<hr>
+</div>
+<div class="row">
+<article class="span2 maxheight3 box4 offset2">
+<%= link_to "http://pogc.ir" do %>
+<%= image_tag "pogc.jpg"   , :width => "45%" %>
+<% end %>
+</article>
+
+<article class="span2 maxheight3 box4">
+
+<a href="http://iooc.co.ir" >
+<%= image_tag "IOOC.jpg" , :width => "45%" %>
+</a>
+</article>
+
+<article class="span2 maxheight3 box4">
+
+<a href="http://pedec.ir">
+<%= image_tag "pedecmade.jpg" , :width => "45%" %>
+</a>
+</article>
+
+<article class="span2 maxheight3 box4">
+
+<a href="http://petropars.com">
+<%= image_tag "ppl.jpg"   , :width => "45%" %>
+</a>
+</article>
+</div>
+</article> -->
+</div>
+</div>
 </section>
 
 <script type="application/javascript">
 $(document).ready(function() {
+
+  $(".categ").owlCarousel({
+    autoPlay : 6000,
+    stopOnHover : true,
+    navigation:false,
+    paginationSpeed : 1000,
+    goToFirstSpeed : 2000,
+    singleItem : true,
+    autoHeight : false
+  });
 
   $(".proj").owlCarousel({
     autoPlay : 6000,

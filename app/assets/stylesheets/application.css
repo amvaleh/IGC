@@ -391,3 +391,16 @@
     -moz-animation-play-state: running;
     -moz-animation-fill-mode: forwards;
 }
+
+.owl-theme .owl-controls .owl-page span{
+  display: block;
+    width: 9px !important;
+    height: 9px !important;
+    margin: 5px 7px;
+    filter: Alpha(Opacity=50);
+    opacity: 0.5;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background: #869791;
+}

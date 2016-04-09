@@ -1,14 +1,13 @@
-<article class="span3 box4">
   <div class="thumb-pad8 maxheight2" >
     <div class="box_inner">
       <div class="thumbnail">
         <figure>
-          <div id="owl-project" name="project" class="proj owl-carousel owl-theme" >
-            <% x.avatars.first(4).each do |a| %>
-                <div class="item">
-                  <div class="eqsize" style="background-image:url(<%= image_path a.url(:medium) %>);"></div>
-                </div>
-            <% end  %>
+          <div id="owl-project" name="project"  >
+            <%# x.avatars.first do |a| %>
+                <!-- <div class="item"> -->
+                  <div class="eqsize" style="background-image:url(<%= image_path x.avatars.first.url(:medium) %>);"></div>
+                <!-- </div> -->
+            <%# end %>
           </div>
         </figure>
         <%= link_to appshow_project_path(x) do %>
@@ -38,4 +37,3 @@
         </div>
       </div>
     </div></div>
-</article>
