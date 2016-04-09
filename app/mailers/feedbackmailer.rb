@@ -5,7 +5,6 @@ class Feedbackmailer < ApplicationMailer
     @user = feedback.email
     @name = feedback.name
     @tele = feedback.telephone
-    byebug
     mail(:to => "info@igc-ir.com" , :subject => "new feedback reciedved on IGC website." )
 
   end
