@@ -30,7 +30,11 @@
               </p>
               <p>
                 <i class="icon-bookmark"></i>
+                <% if x.is_abroad %>
+                abroad
+                <% else %>
                 <%= x.project_type %>
+                <% end %>
               </p>
         <% end %>
         </div>
