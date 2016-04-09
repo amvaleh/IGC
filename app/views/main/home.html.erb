@@ -115,7 +115,7 @@
       <div class="categ owl-carousel owl-theme" >
         <% Project.all.where(:project_type => "onshore").first(3).each do |proj| %>
         <div class="item">
-          <%= render "projects/sample" , :x => proj %>
+          <%= render "projects/sample" , :x => proj , :location => "onshore" %>
         </div>
         <% end %>
       </div>
@@ -124,7 +124,7 @@
       <div class="categ owl-carousel owl-theme" >
         <% Project.all.where(:project_type => "offshore").first(3).each do |proj| %>
         <div class="item">
-          <%= render "projects/sample" , :x => proj %>
+          <%= render "projects/sample" , :x => proj , :location => "offshore" %>
         </div>
         <% end %>
       </div>
@@ -133,7 +133,7 @@
       <div class="categ owl-carousel owl-theme" >
         <% Project.all.where(:project_type => "powerplant").first(3).each do |proj| %>
         <div class="item">
-          <%= render "projects/sample" , :x => proj %>
+          <%= render "projects/sample" , :x => proj , :location => "powerplant" %>
         </div>
         <% end %>
       </div>
@@ -142,7 +142,7 @@
       <div class="categ owl-carousel owl-theme" >
         <% Project.all.where(:is_abroad => true).first(3).each do |proj| %>
         <div class="item">
-          <%= render "projects/sample" , :x => proj %>
+          <%= render "projects/sample" , :x => proj , :location => "abroad" %>
         </div>
         <% end %>
       </div>
