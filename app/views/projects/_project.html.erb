@@ -31,19 +31,8 @@
                 <%= truncate(x.location , :length => 15)%>
               </p>
               <p>
-                <% if not x.status.present? %>
-                    <i class="icon-check"></i>
-                    <%= t("projects.completed") %>
-                <% else %>
-                    <% case x.status %>
-                <% when true %>
-                        <i class="icon-play"></i>
-                        <%= t("projects.ongonin") %>
-                    <% when false %>
-                        <i class="icon-check"></i>
-                        <%= t("projects.completed") %>
-                    <% end %>
-                <% end %>
+                <i class="icon-briefcase"></i>
+                <%= x.contract_type %>
               </p>
         <% end %>
         </div>
