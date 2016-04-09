@@ -140,7 +140,7 @@
     </div>
     <div class="span3 box4">
       <div class="categ owl-carousel owl-theme" >
-        <% Project.all.where(:project_type => "abroad").first(3).each do |proj| %>
+        <% Project.all.where(:is_abroad => true).first(3).each do |proj| %>
         <div class="item">
           <%= render "projects/sample" , :x => proj %>
         </div>
