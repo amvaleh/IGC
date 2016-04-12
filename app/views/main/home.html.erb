@@ -96,7 +96,7 @@
 </div>
 </article>
 
-<article class="span12 operationsBox">
+<article class="span12 operationsBox" style="direction: ltr !important;">
   <div class="holder">
     <%= link_to appindex_projects_path do %>
     <h2><%= (t"projects.title") %></h2>
@@ -162,7 +162,7 @@
 <article class="span12 newsBox">
   <div class="holder">
     <%= link_to appindex_news_index_path do %>
-    <h2><%= (t"news.title") %></h2>
+    <h2><%= (t"news.latest") %></h2>
     <%end %>
     <br>
     <hr>
@@ -216,7 +216,7 @@
 </section>
 
 <script type="application/javascript">
-$(document).ready(function() {
+$(document).on('ready', function(event) {
 
   $(".categ").owlCarousel({
     autoPlay : 6000,
@@ -246,5 +246,6 @@ $(document).ready(function() {
     autoHeight: true
 
   });
+
 });
 </script>

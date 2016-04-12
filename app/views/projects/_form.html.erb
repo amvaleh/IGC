@@ -36,7 +36,7 @@
 
           <div class="field">
             <%= f.label :project_type %><br>
-            <%= f.select :project_type ,options_for_select([["Select One", ""] , "onshore", "offshore", "powerplant", "abroad"]),{},:class=>"form-control"%>
+            <%= f.select :project_type ,options_for_select([["Select One", ""] , "onshore", "offshore", "powerplant" ]),{},:class=>"form-control"%>
           </div>
 
           <div class="field">
@@ -45,9 +45,9 @@
           </div>
 
           <div class="field">
-            <%= f.label :start_date %><br>
+            <%= f.label :start_date %> <%= @project.start_date %> <br>
             <%#= f.date_select :start_date ,:class=>"form-control" , :html => {data_provide: 'datepicker'}%>
-            <input name="project[start_date]" type="text" data-provide='datepicker' class="form-control"  placeholder="click to choose">
+            <input name="project[start_date]" type="text" data-provide='datepicker' class="form-control"  placeholder="click to choose" >
           </div>
 
           <div class="field">
@@ -61,7 +61,7 @@
 
           <div class="field">
             <%= f.label "is abroad ?" %><br>
-            <%= f.select :is_abroad ,options_for_select([["No", false],["Yes", true] ]),{},:class=>"form-control"%>
+            <%= f.select :is_abroad ,options_for_select([["Select One", ""],["No", false],["Yes", true] ]),{},:class=>"form-control"%>
           </div>
           <br>
 
@@ -81,6 +81,9 @@
             <%= f.label :avatars %><br>
             <%= f.file_field :avatars, multiple: true ,:class=>"form-control" %>
           </div>
+          <br>
+          <br>
+
           <div class="actions">
             <%= f.submit "Submit" , :class => "btn btn-default pull-right" %>
             <%= link_to 'Back', projects_path , class: "btn btn-warning"%>
@@ -94,4 +97,3 @@
 
 
 </div>
-

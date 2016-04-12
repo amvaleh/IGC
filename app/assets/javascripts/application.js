@@ -30,7 +30,3 @@
 //= require jquery.fancybox.pack
 //= require jquery.accordionSlider.min
 //= require examples
-
-
-
-

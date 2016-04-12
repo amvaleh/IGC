@@ -6,7 +6,6 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy,:appshow]
   before_action :authenticate_admin!, except: [:appindex,:appshow]
 
-
   #  app show
 
   def appshow
@@ -72,6 +71,25 @@ class ProjectsController < ApplicationController
   # PATCH/PUT /projects/1.json
   def update
     respond_to do |format|
+
+      if project_params[:status].empty?
+        params[:project].delete :status
+      end
+
+      if project_params[:is_abroad].empty?
+        params[:project].delete :is_abroad
+      end
+
+      if project_params[:start_date].empty?
+        params[:project].delete :start_date
+      end
+
+      if project_params[:project_type].empty?
+        params[:project].delete :project_type
+      end
+
+      # project_params = newp
+
       if @project.update(project_params)
         if params[:project][:start_date].present?
           @project.start_date = Timeliness.parse(params[:project][:start_date], :format => 'mm/dd/yyyy')
@@ -102,7 +120,7 @@ class ProjectsController < ApplicationController
     @project = Project.friendly.find(params[:id])
     @title = @project.title
     @content = @project.title + ' started at ' + @project.start_date.to_s + ' for ' + @project.client_name.to_s +
-        ' with ' + @project.contract_type + ' contract type ' + 'and lasted '+ @project.duration.to_s + ' month, located at '  + @project.location + ', ' + @project.design_capacity + ' design capacity and ' + @project.construction_man_hour.to_s + ' construction man hour.'
+    ' with ' + @project.contract_type + ' contract type ' + 'and lasted '+ @project.duration.to_s + ' month, located at '  + @project.location + ', ' + @project.design_capacity + ' design capacity and ' + @project.construction_man_hour.to_s + ' construction man hour.'
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

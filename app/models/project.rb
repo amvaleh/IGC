@@ -7,6 +7,8 @@ class Project < ActiveRecord::Base
 	serialize :avatars, JSON
 	mount_uploaders :avatars, AvatarUploader
 
+	# validates_presence_of: [:status , :project_type, :client_name , :
+
 
 
 

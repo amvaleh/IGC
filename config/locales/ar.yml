@@ -74,6 +74,7 @@ ar:
     clients: "العملاء"
   news:
     title: "الأخبار"
+    latest: "أحدث الأخبار"
     read_more : " للمزید من المعلومات"
   projects:
     title: "المشاریع"
