@@ -168,7 +168,7 @@
     <hr>
   </div>
   <div class="row">
-    <% News.all.visible.order('created_at DESC').last(4).each do |x| %>
+    <% News.all.visible.order('created_at ASC').last(4).each do |x| %>
     <%= render "news/news" , :x => x %>
     <% end %>
   </div>
