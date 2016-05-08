@@ -24,7 +24,7 @@
                   <td><%= feedback.name %></td>
                   <td><%= feedback.email %></td>
                   <td><%= feedback.telephone %></td>
-                  <td><%= feedback.message %></td>
+                  <td><%= truncate(feedback.message,length: 50) %></td>
                   <td><%= feedback.created_at %></td>
                   <td><%= link_to 'Show', feedback , class: "btn btn-info"%></td>
                   <!--<td><%#= link_to 'Edit', edit_feedback_path(feedback) %></td>-->
@@ -43,4 +43,3 @@
 
 
 <br>
-
